@@ -354,8 +354,13 @@ ul { list-style: none; margin: 0; padding: 0; }
 
 .section-rail { position: sticky; top: 110px; }
 .viewer .section-rail { top: clamp(24px, 3vw, 40px); }
-.section-rail ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
-.section-rail a { display: block; font-size: 0.9375rem; white-space: nowrap; transition: opacity 0.4s var(--ease); }
+.section-rail ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.section-rail ol { justify-items: start; }
+.section-rail a {
+  display: inline-block; font-size: 0.8125rem; line-height: 1.5; white-space: nowrap;
+  padding: 4px 12px; border-radius: 999px; border: 1px solid currentColor;
+  transition: opacity 0.4s var(--ease);
+}
 .section-rail.has-active a { opacity: 0.4; }
 .section-rail.has-active a.is-active, .section-rail a:hover { opacity: 1; }
 
