@@ -63,6 +63,23 @@
     };
   }
 
+  // Colour shown when a touch browser bounces past the top or bottom:
+  // white above the page, the footer's khaki below it.
+  (function () {
+    var bottom = false;
+    function paint() {
+      var nearEnd = window.scrollY > (document.documentElement.scrollHeight - window.innerHeight) / 2;
+      if (nearEnd !== bottom) {
+        bottom = nearEnd;
+        root.style.backgroundColor = nearEnd ? "#7a7a4f" : "#ffffff";
+      }
+    }
+    window.addEventListener("scroll", paint, { passive: true });
+    window.addEventListener("resize", paint);
+    root.style.backgroundColor = "#ffffff";
+    paint();
+  })();
+
   // Pages always open at the top; the browser shouldn't restore an old position.
   if ("scrollRestoration" in history) history.scrollRestoration = "manual";
 
@@ -218,10 +235,15 @@
     var stack = document.elementsFromPoint(x, y);
     for (var i = 0; i < stack.length; i++) {
       var el = stack[i];
+      if (el.classList && el.classList.contains("cursor")) continue;
       if (el.tagName === "IMG") {
         var v = imageBrightness(el, x, y);
         if (v !== null) return v;
+        continue;
       }
+      // the first solid background hides everything beneath it (e.g. the project viewer)
+      var c = parseColor(getComputedStyle(el).backgroundColor);
+      if (c && c.a > 0.4) return (0.299 * c.r + 0.587 * c.g + 0.114 * c.b) / 255;
     }
     return backgroundBrightness(stack[0]);
   }

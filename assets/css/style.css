@@ -30,9 +30,10 @@ html {
   -webkit-text-size-adjust: 100%;
   /* iPad/iPhone bounce past the edges: show white above the page and the
      footer's khaki below it, instead of a white strip under the footer */
-  background: linear-gradient(to bottom, #ffffff 0 50%, #7a7a4f 50% 100%);
+  background: #ffffff;
   overscroll-behavior-y: none;
 }
+body { overscroll-behavior-y: none; }
 html.has-smooth { scroll-behavior: auto; }
 
 body {
