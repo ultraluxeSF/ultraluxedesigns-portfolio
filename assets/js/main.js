@@ -95,6 +95,16 @@
     var a = e.target.closest('a[href^="#"]');
     if (!a) return;
     var id = a.getAttribute("href");
+    var vs = a.closest(".viewer-scroll");
+    if (vs) {
+      // links inside the project viewer scroll the viewer, not the page
+      var t = vs.querySelector(id);
+      if (!t) return;
+      e.preventDefault();
+      var y = t.getBoundingClientRect().top - vs.getBoundingClientRect().top + vs.scrollTop - 24;
+      if (viewerScroller) viewerScroller.to(y); else vs.scrollTo({ top: y, behavior: reduceMotion ? "auto" : "smooth" });
+      return;
+    }
     var el = id === "#" || id === "#top" ? document.body : document.querySelector(id);
     if (!el) return;
     e.preventDefault();
@@ -411,15 +421,49 @@
       }
       el.meta.hidden = !el.meta.children.length;
       el.images.innerHTML = "";
-      p.images.forEach(function (src, i) {
-        var img = document.createElement("img");
-        img.src = src;
-        img.alt = p.title + ", image " + (i + 1) + " of " + p.images.length;
-        if (p.dims && p.dims[i]) { img.width = p.dims[i][0]; img.height = p.dims[i][1]; }
-        img.decoding = "async";
-        if (i > 1) img.loading = "lazy";
-        el.images.appendChild(img);
-      });
+      function addImages(parent, list, dims, label) {
+        list.forEach(function (src, i) {
+          var img = document.createElement("img");
+          img.src = src;
+          img.alt = label + ", image " + (i + 1) + " of " + list.length;
+          if (dims && dims[i]) { img.width = dims[i][0]; img.height = dims[i][1]; }
+          img.decoding = "async";
+          if (i > 1) img.loading = "lazy";
+          parent.appendChild(img);
+        });
+      }
+      if (p.sections) {
+        // volumes: a cover index first, then each volume under its own heading
+        var nav = document.createElement("nav");
+        nav.className = "sections-index";
+        nav.setAttribute("aria-label", "Sections");
+        p.sections.forEach(function (sec, i) {
+          var a = document.createElement("a");
+          a.href = "#viewer-section-" + (i + 1);
+          a.innerHTML = '<img alt="" loading="lazy"><span></span>';
+          a.querySelector("img").src = sec.cover;
+          var span = a.querySelector("span");
+          span.textContent = sec.title;
+          var small = document.createElement("small"); small.textContent = sec.date; span.appendChild(small);
+          nav.appendChild(a);
+        });
+        el.images.appendChild(nav);
+        p.sections.forEach(function (sec, i) {
+          var wrap = document.createElement("section");
+          wrap.className = "gallery-section";
+          wrap.id = "viewer-section-" + (i + 1);
+          var head = document.createElement("header");
+          head.className = "section-label";
+          var h = document.createElement("h3"); h.textContent = sec.title;
+          var d = document.createElement("span"); d.textContent = sec.date;
+          head.appendChild(h); head.appendChild(d);
+          wrap.appendChild(head);
+          addImages(wrap, sec.images, sec.dims, p.title + " " + sec.title);
+          el.images.appendChild(wrap);
+        });
+      } else {
+        addImages(el.images, p.images, p.dims, p.title);
+      }
       resetViewerScroll();
     }
     function resetViewerScroll() {
@@ -511,7 +555,6 @@
   var headWrap = document.querySelector(".hero-head");
   if (headWrap && finePointer && !reduceMotion) {
     var head = headWrap.querySelector(".head");
-    var shadow = headWrap.querySelector(".head-shadow");
     var area = headWrap.parentElement;
     var headTX = 0, headTY = 0, hx = 0, hy = 0;
     var STRENGTH = 60;
@@ -529,8 +572,6 @@
       hx += (headTX - hx) * 0.06;
       hy += (headTY - hy) * 0.06;
       head.style.transform = "translate3d(" + hx.toFixed(2) + "px," + hy.toFixed(2) + "px,0) rotate(" + (hx * 0.04).toFixed(3) + "deg)";
-      // the shadow moves less, which reads as depth
-      if (shadow) shadow.style.transform = "translate3d(" + (hx * 0.45 + 18).toFixed(2) + "px," + (hy * 0.45 + 26).toFixed(2) + "px,0)";
       requestAnimationFrame(float);
     })();
   }

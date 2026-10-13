@@ -30,7 +30,7 @@ const head = ({ title, description, prefix, image }) => `<!doctype html>
 <meta property="og:description" content="${esc(description)}">
 <meta property="og:type" content="website">
 ${image ? `<meta property="og:image" content="${esc(image)}">` : ""}
-<link rel="icon" href="${prefix}assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="${prefix}assets/favicon.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
@@ -105,6 +105,9 @@ function buildHome() {
   const data = projects.map((p) => ({
     slug: p.slug, title: p.title, category: CATS[p.category], date: p.date, description: p.description,
     tags: p.tags, links: p.links, images: p.images.map((i) => asset(i, prefix)), dims: p.dims,
+    sections: p.sections
+      ? p.sections.map((s) => ({ title: s.title, date: s.date, cover: asset(s.cover, prefix), images: s.images.map((i) => asset(i, prefix)), dims: s.dims }))
+      : undefined,
   }));
 
   const rows = projects
@@ -138,7 +141,6 @@ ${header(prefix, "home")}
 <main id="main">
   <section class="hero">
     <div class="hero-head" aria-hidden="true">
-      <img class="head-shadow" src="images/head-shadow.webp" alt="" width="820" height="1100">
       <img class="head" src="images/head.webp" alt="" width="820" height="1100" fetchpriority="high">
     </div>
     <div class="wrap">
@@ -236,12 +238,27 @@ function buildProjects() {
     const links = p.links.length
       ? `<dt>Links</dt><dd>${p.links.map(([n, u]) => `<a href="${u}">${esc(n)}</a>`).join(", ")}</dd>`
       : "";
-    const gallery = p.images
-      .map(
-        (src, k) =>
-          `<img src="${asset(src, prefix)}" width="${p.dims[k][0]}" height="${p.dims[k][1]}" alt="${esc(p.title)}, image ${k + 1} of ${p.images.length}" ${k > 1 ? 'loading="lazy" ' : ""}decoding="async">`
-      )
-      .join("\n      ");
+    const imgs = (list, dims, label) =>
+      list
+        .map(
+          (src, k) =>
+            `<img src="${asset(src, prefix)}" width="${dims[k][0]}" height="${dims[k][1]}" alt="${esc(label)}, image ${k + 1} of ${list.length}" ${k > 1 ? 'loading="lazy" ' : ""}decoding="async">`
+        )
+        .join("\n      ");
+    const gallery = p.sections
+      ? `<nav class="sections-index" aria-label="Sections">${p.sections
+          .map(
+            (s, i) =>
+              `<a href="#section-${i + 1}"><img src="${asset(s.cover, prefix)}" alt="" loading="lazy"><span>${esc(s.title)}<small>${esc(s.date)}</small></span></a>`
+          )
+          .join("")}</nav>` +
+        p.sections
+          .map(
+            (s, i) =>
+              `<section class="gallery-section" id="section-${i + 1}"><header class="section-label"><h2>${esc(s.title)}</h2><span>${esc(s.date)}</span></header>${imgs(s.images, s.dims, p.title + " " + s.title)}</section>`
+          )
+          .join("")
+      : imgs(p.images, p.dims, p.title);
 
     const html = `${head({
       title: `${p.title}, ${CATS[p.category]} | Ultraluxe Designs`,
@@ -298,7 +315,7 @@ function build404() {
     document.write('<base href="' + base + '">');
   })();
 </script>
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
@@ -308,7 +325,6 @@ function build404() {
 ${header("", "404")}
 <main id="main" class="nf">
   <div class="hero-head" aria-hidden="true">
-    <img class="head-shadow" src="images/head-shadow.webp" alt="" width="820" height="1100">
     <img class="head" src="images/head.webp" alt="" width="820" height="1100">
   </div>
   <div class="wrap nf-inner">
