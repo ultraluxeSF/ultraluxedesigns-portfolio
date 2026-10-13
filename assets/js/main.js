@@ -366,6 +366,44 @@
   }
 
   /* ---------------------------------------------------------------
+     Section rail: sticky list of sections; the one in view stays bright
+  --------------------------------------------------------------- */
+  var railUpdaters = [];
+  function initRail(container, scrollRoot) {
+    var sections = container.querySelectorAll(".gallery-section");
+    var links = container.querySelectorAll("[data-rail]");
+    var rail = container.querySelector(".section-rail");
+    if (!sections.length || !rail) return;
+    var queued = false;
+    function update() {
+      queued = false;
+      if (!container.isConnected) return;
+      // not laid out yet (viewer still hidden): try again next frame
+      if (!container.getClientRects().length) { onScroll(); return; }
+      var line = window.innerHeight * 0.4;
+      var active = -1;
+      sections.forEach(function (sec, i) { if (sec.getBoundingClientRect().top <= line) active = i; });
+      links.forEach(function (a, i) {
+        a.classList.toggle("is-active", i === active);
+        if (i === active) a.setAttribute("aria-current", "true"); else a.removeAttribute("aria-current");
+      });
+      rail.classList.toggle("has-active", active >= 0);
+    }
+    function onScroll() { if (!queued) { queued = true; requestAnimationFrame(update); } }
+    // a re-render in the same scroll root replaces the previous listener
+    railUpdaters = railUpdaters.filter(function (r) {
+      if (r.root === scrollRoot) { r.root.removeEventListener("scroll", r.fn); return false; }
+      return true;
+    });
+    scrollRoot.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    railUpdaters.push({ root: scrollRoot, fn: onScroll });
+    update();
+  }
+  var pageGallery = document.querySelector(".gallery");
+  if (pageGallery) initRail(pageGallery, window);
+
+  /* ---------------------------------------------------------------
      Project viewer: clicking a project opens its images, description and tags
   --------------------------------------------------------------- */
   var dataEl = document.getElementById("projects-data");
@@ -432,35 +470,9 @@
           parent.appendChild(img);
         });
       }
-      if (p.sections) {
-        // volumes: a cover index first, then each volume under its own heading
-        var nav = document.createElement("nav");
-        nav.className = "sections-index";
-        nav.setAttribute("aria-label", "Sections");
-        p.sections.forEach(function (sec, i) {
-          var a = document.createElement("a");
-          a.href = "#viewer-section-" + (i + 1);
-          a.innerHTML = '<img alt="" loading="lazy"><span></span>';
-          a.querySelector("img").src = sec.cover;
-          var span = a.querySelector("span");
-          span.textContent = sec.title;
-          var small = document.createElement("small"); small.textContent = sec.date; span.appendChild(small);
-          nav.appendChild(a);
-        });
-        el.images.appendChild(nav);
-        p.sections.forEach(function (sec, i) {
-          var wrap = document.createElement("section");
-          wrap.className = "gallery-section";
-          wrap.id = "viewer-section-" + (i + 1);
-          var head = document.createElement("header");
-          head.className = "section-label";
-          var h = document.createElement("h3"); h.textContent = sec.title;
-          var d = document.createElement("span"); d.textContent = sec.date;
-          head.appendChild(h); head.appendChild(d);
-          wrap.appendChild(head);
-          addImages(wrap, sec.images, sec.dims, p.title + " " + sec.title);
-          el.images.appendChild(wrap);
-        });
+      if (p.sectionsHtml) {
+        el.images.innerHTML = p.sectionsHtml;
+        initRail(el.images, scrollEl);
       } else {
         addImages(el.images, p.images, p.dims, p.title);
       }

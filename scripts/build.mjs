@@ -84,6 +84,39 @@ const contact = (prefix) => `
 </body>
 </html>`;
 
+// Projects split into sections (Inter Nation volumes): a cover index, then the
+// sections next to a sticky text rail that highlights the one being viewed.
+function sectionsHTML(p, prefix, idPrefix) {
+  const img = (src, d, alt, k) =>
+    `<img src="${asset(src, prefix)}" width="${d[0]}" height="${d[1]}" alt="${esc(alt)}" ${k > 1 ? 'loading="lazy" ' : ""}decoding="async">`;
+  const index = p.sections
+    .map(
+      (s, i) => `<a href="#${idPrefix}${i + 1}" class="${s.hover ? "has-hover" : ""}">
+        <img class="cover" src="${asset(s.cover, prefix)}" alt="" loading="lazy">${
+          s.hover ? `<img class="cover-hover" src="${asset(s.hover, prefix)}" alt="" loading="lazy">` : ""
+        }
+        <span class="cover-label"><strong>${esc(s.title)}</strong><small>${esc(s.date)}</small></span>
+      </a>`
+    )
+    .join("");
+  const body = p.sections
+    .map(
+      (s, i) => `<section class="gallery-section" id="${idPrefix}${i + 1}" data-section="${i}">
+        <header class="section-label"><h3>${esc(s.title)}</h3><span>${esc(s.date)}</span></header>
+        ${s.images.map((src, k) => img(src, s.dims[k], `${p.title} ${s.title}, image ${k + 1} of ${s.images.length}`, k)).join("")}
+      </section>`
+    )
+    .join("");
+  const rail = p.sections
+    .map((s, i) => `<li><a href="#${idPrefix}${i + 1}" data-rail="${i}">${esc(s.title)}</a></li>`)
+    .join("");
+  return `<nav class="sections-index" aria-label="Sections">${index}</nav>
+    <div class="sections-body">
+      <div class="sections-list">${body}</div>
+      <nav class="section-rail" aria-label="Jump to section"><ol>${rail}</ol></nav>
+    </div>`;
+}
+
 // ---------------- Home ----------------
 function buildHome() {
   const prefix = "";
@@ -105,9 +138,7 @@ function buildHome() {
   const data = projects.map((p) => ({
     slug: p.slug, title: p.title, category: CATS[p.category], date: p.date, description: p.description,
     tags: p.tags, links: p.links, images: p.images.map((i) => asset(i, prefix)), dims: p.dims,
-    sections: p.sections
-      ? p.sections.map((s) => ({ title: s.title, date: s.date, cover: asset(s.cover, prefix), images: s.images.map((i) => asset(i, prefix)), dims: s.dims }))
-      : undefined,
+    sectionsHtml: p.sections ? sectionsHTML(p, prefix, "viewer-section-") : undefined,
   }));
 
   const rows = projects
@@ -246,18 +277,7 @@ function buildProjects() {
         )
         .join("\n      ");
     const gallery = p.sections
-      ? `<nav class="sections-index" aria-label="Sections">${p.sections
-          .map(
-            (s, i) =>
-              `<a href="#section-${i + 1}"><img src="${asset(s.cover, prefix)}" alt="" loading="lazy"><span>${esc(s.title)}<small>${esc(s.date)}</small></span></a>`
-          )
-          .join("")}</nav>` +
-        p.sections
-          .map(
-            (s, i) =>
-              `<section class="gallery-section" id="section-${i + 1}"><header class="section-label"><h2>${esc(s.title)}</h2><span>${esc(s.date)}</span></header>${imgs(s.images, s.dims, p.title + " " + s.title)}</section>`
-          )
-          .join("")
+      ? sectionsHTML(p, prefix, "section-")
       : imgs(p.images, p.dims, p.title);
 
     const html = `${head({

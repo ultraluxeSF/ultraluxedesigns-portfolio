@@ -316,25 +316,48 @@ ul { list-style: none; margin: 0; padding: 0; }
 .next:hover strong { transform: translateX(2vw); }
 
 /* ---------- Sections (e.g. Inter Nation volumes) ---------- */
-.sections-index { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; margin-bottom: clamp(32px, 4vw, 56px); }
+.sections-index { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; margin-bottom: clamp(40px, 5vw, 72px); }
 .sections-index a { position: relative; display: block; aspect-ratio: 1 / 1; overflow: hidden; background: var(--ink-2); }
-.sections-index img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
+.sections-index img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity 0.45s var(--ease), transform 1.2s var(--ease); }
+.sections-index .cover-hover { opacity: 0; }
+.sections-index a.has-hover:hover .cover-hover,
+.sections-index a.has-hover:focus-visible .cover-hover { opacity: 1; }
 .sections-index a:hover img { transform: scale(1.04); }
-.sections-index span {
-  position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 16px 14px; color: #fff;
-  background: linear-gradient(to top, rgba(27, 27, 29, 0.8), rgba(27, 27, 29, 0));
-  font-size: 0.9375rem; display: flex; justify-content: space-between; align-items: baseline; gap: 8px;
+/* dim the busy covers so the label always reads */
+.sections-index a::after {
+  content: ""; position: absolute; inset: 0; z-index: 1;
+  background: rgba(27, 27, 29, 0.64); transition: background-color 0.45s var(--ease);
 }
-.sections-index small { font-size: 0.8125rem; color: rgba(255,255,255,0.7); white-space: nowrap; }
+.sections-index a:hover::after, .sections-index a:focus-visible::after { background: rgba(27, 27, 29, 0.3); }
+/* the hover images are titled cards already, so the label steps aside */
+.sections-index a.has-hover:hover::after, .sections-index a.has-hover:focus-visible::after { background: transparent; }
+.cover-label { transition: opacity 0.35s var(--ease); }
+.sections-index a.has-hover:hover .cover-label, .sections-index a.has-hover:focus-visible .cover-label { opacity: 0; }
+.cover-label {
+  position: absolute; inset: 0; z-index: 2; color: #fff;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-align: center;
+  padding: 16px;
+}
+.cover-label strong { font-size: clamp(1.25rem, 2vw, 1.75rem); font-weight: 400; letter-spacing: -0.01em; line-height: 1.15; }
+.cover-label small { font-size: 0.875rem; color: rgba(255,255,255,0.8); }
+
+.sections-body { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: clamp(20px, 2.4vw, 40px); align-items: start; }
+.sections-list { min-width: 0; }
 .gallery-section { display: grid; gap: 0; scroll-margin-top: 90px; }
 .gallery-section + .gallery-section { margin-top: clamp(40px, 5vw, 72px); }
-.section-label { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 0 0 16px; border-bottom: 1px solid var(--line-light); margin-bottom: 0; }
-.section-label h2, .section-label h3 { font-size: var(--fs-lg); font-weight: 300; letter-spacing: -0.02em; }
+.section-label { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 0 0 16px; border-bottom: 1px solid var(--line-light); margin-bottom: 16px; }
+.section-label h3 { font-size: var(--fs-lg); font-weight: 300; letter-spacing: -0.02em; }
 .section-label span { font-size: 0.9375rem; color: var(--stone); }
-.section-label + img { margin-top: 16px; }
 .viewer .section-label { border-color: var(--line-dark); }
 .viewer .section-label span { color: rgba(255,255,255,0.5); }
 .viewer .gallery-section { scroll-margin-top: 24px; }
+
+.section-rail { position: sticky; top: 110px; }
+.viewer .section-rail { top: clamp(24px, 3vw, 40px); }
+.section-rail ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.section-rail a { display: block; font-size: 0.9375rem; white-space: nowrap; transition: opacity 0.4s var(--ease); }
+.section-rail.has-active a { opacity: 0.4; }
+.section-rail.has-active a.is-active, .section-rail a:hover { opacity: 1; }
 
 /* ---------- Project viewer ---------- */
 .viewer {
@@ -446,6 +469,8 @@ html.viewer-open, html.viewer-open body { overflow: hidden; }
   .viewer-close { margin-bottom: 32px; }
   .viewer-images { grid-column: 1; }
   .sections-index { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sections-body { grid-template-columns: minmax(0, 1fr); }
+  .section-rail { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {

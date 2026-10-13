@@ -745,7 +745,8 @@
       2000,
       833
      ]
-    ]
+    ],
+    "hover": "images/designs/SMM/internation/vol6/vol6-onm.webp"
    },
    {
     "title": "Vol. 5",
@@ -784,7 +785,8 @@
       2000,
       833
      ]
-    ]
+    ],
+    "hover": "images/designs/SMM/internation/vol5/vol5-onm.webp"
    },
    {
     "title": "Vol. 4",
@@ -888,7 +890,8 @@
       2000,
       833
      ]
-    ]
+    ],
+    "hover": "images/designs/SMM/internation/vol4/vol4-onm.webp"
    },
    {
     "title": "Vol. 3",
@@ -957,7 +960,8 @@
       2000,
       667
      ]
-    ]
+    ],
+    "hover": "images/designs/SMM/internation/vol3/vol3-onm.webp"
    },
    {
     "title": "Vol. 2",
@@ -1031,7 +1035,8 @@
       2000,
       667
      ]
-    ]
+    ],
+    "hover": "images/designs/SMM/internation/vol2/vol2-onm.webp"
    },
    {
     "title": "Vol. 1",
@@ -1075,10 +1080,11 @@
       1620,
       810
      ]
-    ]
+    ],
+    "hover": "images/designs/SMM/internation/vol1/vol1-onm.webp"
    },
    {
-    "title": "YouTube thumbnails",
+    "title": "YouTube Thumbnails",
     "date": "Apr 2025",
     "cover": "images/designs/SMM/internation/yt/yt-thumb.webp",
     "images": [
