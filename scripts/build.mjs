@@ -39,6 +39,7 @@ ${image ? `<meta property="og:image" content="${esc(image)}">` : ""}
 
 const header = (prefix, current) => {
   const base = current === "home" ? "" : prefix + "index.html";
+  // on the 404 page links resolve against <base>, so no prefix is needed
   return `
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
@@ -95,8 +96,8 @@ function buildHome() {
             <img class="thumb" data-fade src="${asset(p.thumb, prefix)}" alt="${esc(p.title)}" loading="lazy" decoding="async">${
               p.hover ? `\n            <img class="thumb-hover" src="${asset(p.hover, prefix)}" alt="" loading="lazy" decoding="async">` : ""
             }
+            <div class="caption"><h3>${esc(p.title)}</h3><span>${CATS[p.category]}${p.year ? ", " + p.year : ""}</span></div>
           </div>
-          <div class="caption"><h3>${esc(p.title)}</h3><span>${CATS[p.category]}${p.year ? ", " + p.year : ""}</span></div>
         </a>
       </article>`
     )
@@ -136,6 +137,10 @@ function buildHome() {
 ${header(prefix, "home")}
 <main id="main">
   <section class="hero">
+    <div class="hero-head" aria-hidden="true">
+      <img class="head-shadow" src="images/head-shadow.webp" alt="" width="820" height="1100">
+      <img class="head" src="images/head.webp" alt="" width="820" height="1100" fetchpriority="high">
+    </div>
     <div class="wrap">
       <h1 aria-label="${esc(site.heroPlain)}">${site.heroLines
         .map((l) => `<span class="reveal-line" aria-hidden="true"><span>${esc(l)}</span></span>`)
@@ -273,7 +278,54 @@ ${contact(prefix)}`;
   });
 }
 
+// ---------------- 404 ----------------
+// GitHub Pages serves this file for any missing URL, at any depth, so asset
+// paths are resolved at runtime from the site root (works on a project page
+// URL like /ultraluxedesigns-portfolio/ and on a custom domain).
+function build404() {
+  const html = `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found | Ultraluxe Designs</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#1b1b1d">
+<script>
+  (function () {
+    var repo = "/ultraluxedesigns-portfolio/";
+    var base = location.pathname.indexOf(repo) === 0 ? repo : "/";
+    document.write('<base href="' + base + '">');
+  })();
+</script>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body id="top" class="page-404">
+${header("", "404")}
+<main id="main" class="nf">
+  <div class="hero-head" aria-hidden="true">
+    <img class="head-shadow" src="images/head-shadow.webp" alt="" width="820" height="1100">
+    <img class="head" src="images/head.webp" alt="" width="820" height="1100">
+  </div>
+  <div class="wrap nf-inner">
+    <p class="nf-code">404</p>
+    <h1>This page doesn't exist.</h1>
+    <p class="nf-text">The link may be old or mistyped. Everything I've made is on the home page.</p>
+    <a class="nf-link" href="index.html#work">See all work</a>
+  </div>
+</main>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>`;
+  fs.writeFileSync(path.join(ROOT, "404.html"), html);
+}
+
 fs.rmSync(path.join(ROOT, "work"), { recursive: true, force: true });
+build404();
 buildHome();
 buildProjects();
 console.log(`Built index.html and ${projects.length} project pages.`);

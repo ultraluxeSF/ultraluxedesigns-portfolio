@@ -9,35 +9,62 @@
   /* ---------------------------------------------------------------
      Smooth scroll (wheel is eased; touch, keys and scrollbar stay native)
   --------------------------------------------------------------- */
-  // One eased scroller per scroll container: the page, or the open project viewer.
+  // Inertia scrolling, one per scroll container (the page, or the open project viewer).
+  // Each wheel movement adds velocity; friction then lets the page glide to a stop.
+  var SPEED = 0.11;     // velocity added per pixel of wheel delta
+  var MAX_KICK = 14;    // cap per event so one hard flick isn't a jump
+  var FRICTION = 0.955; // per 60fps frame: lower = shorter glide
   function makeScroller(el) {
     var isWin = el === window;
-    var current = 0, target = 0, running = false, ownScroll = false;
-    var EASE = 0.095;
-    function pos() { return isWin ? window.scrollY : el.scrollTop; }
+    var velocity = 0, pos = 0, target = null, running = false, ownScroll = false, last = 0;
+    function read() { return isWin ? window.scrollY : el.scrollTop; }
     function max() {
       return isWin ? document.documentElement.scrollHeight - window.innerHeight : el.scrollHeight - el.clientHeight;
     }
-    function clamp(v) { return Math.max(0, Math.min(max(), v)); }
-    function set(y) { ownScroll = true; if (isWin) window.scrollTo(0, y); else el.scrollTop = y; }
-    function tick() {
-      var diff = target - current;
-      if (Math.abs(diff) < 0.4) { current = target; running = false; }
-      else current += diff * EASE;
-      set(current);
-      if (running) requestAnimationFrame(tick);
+    function write(y) { ownScroll = true; if (isWin) window.scrollTo(0, y); else el.scrollTop = y; }
+    function tick(now) {
+      var dt = last ? Math.min(64, now - last) / 16.667 : 1;
+      last = now;
+      var m = max();
+      if (target !== null) {
+        // anchor jumps: ease toward a fixed point
+        pos += (target - pos) * (1 - Math.pow(1 - 0.1, dt));
+        if (Math.abs(target - pos) < 0.5) { pos = target; target = null; }
+      } else {
+        pos += velocity * dt;
+        velocity *= Math.pow(FRICTION, dt);
+      }
+      if (pos <= 0) { pos = 0; velocity = 0; }
+      if (pos >= m) { pos = m; velocity = 0; }
+      write(pos);
+      if (target !== null || Math.abs(velocity) > 0.05) requestAnimationFrame(tick);
+      else { running = false; velocity = 0; }
     }
-    function start() { if (!running) { running = true; requestAnimationFrame(tick); } }
+    function start() {
+      if (!running) { running = true; last = 0; requestAnimationFrame(tick); }
+    }
     (isWin ? window : el).addEventListener("scroll", function () {
       if (ownScroll) { ownScroll = false; return; }
-      if (!running) current = target = pos();
+      // scrollbar drag, keyboard or find-in-page: hand control back
+      pos = read(); velocity = 0; target = null;
     }, { passive: true });
     return {
-      by: function (d) { if (!running) current = target = pos(); target = clamp(target + d); start(); },
-      to: function (y) { if (!running) current = target = pos(); target = clamp(y); start(); },
-      reset: function () { running = false; current = target = pos(); }
+      by: function (d) {
+        if (!running) pos = read();
+        target = null;
+        var kick = Math.max(-MAX_KICK, Math.min(MAX_KICK, d * SPEED));
+        // reversing direction cancels the glide immediately
+        if (velocity && (kick > 0) !== (velocity > 0)) velocity = 0;
+        velocity += kick;
+        start();
+      },
+      to: function (y) { if (!running) pos = read(); velocity = 0; target = Math.max(0, Math.min(max(), y)); start(); },
+      reset: function () { velocity = 0; target = null; pos = read(); }
     };
   }
+
+  // Pages always open at the top; the browser shouldn't restore an old position.
+  if ("scrollRestoration" in history) history.scrollRestoration = "manual";
 
   var smooth = null;
   var viewerScroller = null;
@@ -393,6 +420,9 @@
         if (i > 1) img.loading = "lazy";
         el.images.appendChild(img);
       });
+      resetViewerScroll();
+    }
+    function resetViewerScroll() {
       scrollEl.scrollTop = 0;
       if (viewerScroller) viewerScroller.reset();
     }
@@ -407,6 +437,7 @@
         lastFocus = document.activeElement;
         pageY = window.scrollY;
         viewer.hidden = false;
+        resetViewerScroll(); // only takes effect once the viewer is displayed
         root.classList.add("viewer-open");
         viewerOpen = true;
         requestAnimationFrame(function () { viewer.classList.add("is-open"); });
@@ -422,7 +453,9 @@
       viewer.classList.remove("is-open");
       root.classList.remove("viewer-open");
       window.scrollTo(0, pageY);
-      setTimeout(function () { if (!viewerOpen) { viewer.hidden = true; el.images.innerHTML = ""; } }, 450);
+      setTimeout(function () {
+        if (!viewerOpen) { viewer.hidden = true; el.images.innerHTML = ""; scrollEl.scrollTop = 0; }
+      }, 450);
       if (!fromHistory) {
         if (history.state && history.state.project) history.back();
         else history.replaceState(null, "", "#work");
@@ -470,5 +503,35 @@
       history.replaceState(null, "", "#work");
       open(m[1], true);
     }
+  }
+
+  /* ---------------------------------------------------------------
+     Head: drifts smoothly away from the pointer
+  --------------------------------------------------------------- */
+  var headWrap = document.querySelector(".hero-head");
+  if (headWrap && finePointer && !reduceMotion) {
+    var head = headWrap.querySelector(".head");
+    var shadow = headWrap.querySelector(".head-shadow");
+    var area = headWrap.parentElement;
+    var headTX = 0, headTY = 0, hx = 0, hy = 0;
+    var STRENGTH = 60;
+    area.addEventListener("mousemove", function (e) {
+      var r = headWrap.getBoundingClientRect();
+      var cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+      // -1..1 relative to the head's centre, measured across the whole section
+      var nx = Math.max(-1, Math.min(1, (e.clientX - cx) / (window.innerWidth / 2)));
+      var ny = Math.max(-1, Math.min(1, (e.clientY - cy) / (window.innerHeight / 2)));
+      headTX = -nx * STRENGTH;
+      headTY = -ny * STRENGTH;
+    });
+    area.addEventListener("mouseleave", function () { headTX = 0; headTY = 0; });
+    (function float() {
+      hx += (headTX - hx) * 0.06;
+      hy += (headTY - hy) * 0.06;
+      head.style.transform = "translate3d(" + hx.toFixed(2) + "px," + hy.toFixed(2) + "px,0) rotate(" + (hx * 0.04).toFixed(3) + "deg)";
+      // the shadow moves less, which reads as depth
+      if (shadow) shadow.style.transform = "translate3d(" + (hx * 0.45 + 18).toFixed(2) + "px," + (hy * 0.45 + 26).toFixed(2) + "px,0)";
+      requestAnimationFrame(float);
+    })();
   }
 })();
