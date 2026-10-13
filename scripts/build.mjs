@@ -354,9 +354,7 @@ ${header("", "404")}
     <a class="nf-link" href="index.html#work">See all work</a>
   </div>
 </main>
-<script src="assets/js/main.js" defer></script>
-</body>
-</html>`;
+${contact("")}`;
   fs.writeFileSync(path.join(ROOT, "404.html"), html);
 }
 

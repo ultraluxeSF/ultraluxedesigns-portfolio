@@ -443,7 +443,9 @@ html.viewer-open, html.viewer-open body { overflow: hidden; }
   .nav .nav-services { display: none; }
   .hero { padding-top: 120px; }
   .hero h1 { font-size: 10.5vw; letter-spacing: -0.03em; }
-  .hero-head { height: 40vh; right: 4vw; top: calc(84px + 20vh); }
+  .hero-head { height: 40vh; right: auto; left: 50%; top: calc(84px + 20vh); transform: translate(-50%, -50%); }
+  .footer-brand .logo-mark { width: 32px; height: 32px; }
+  .mail { font-size: 7.4vw; white-space: nowrap; letter-spacing: -0.04em; }
   .hero-foot { grid-template-columns: 1fr; gap: 14px; }
   .hero-foot p, .hero-foot .status, .hero-foot .scroll { grid-column: 1; justify-self: start; }
   .hero-foot .scroll { display: none; }
