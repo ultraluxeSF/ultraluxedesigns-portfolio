@@ -247,6 +247,7 @@ ${header(prefix, "home")}
       <div class="viewer-images"></div>
     </div>
   </div>
+  <button type="button" class="to-top" data-to-top aria-label="Scroll to top" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5.5 11.5 12 5l6.5 6.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
 </div>
 <script type="application/json" id="projects-data">${JSON.stringify(data).replace(/</g, "\\u003c")}</script>
 ${contact(prefix)}`;
@@ -308,6 +309,7 @@ ${header(prefix, "work")}
     <div class="wrap"><small>Next project</small><strong>${esc(next.title)}</strong></div>
   </a>
 </main>
+<button type="button" class="to-top" data-to-top aria-label="Scroll to top" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5.5 11.5 12 5l6.5 6.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
 ${contact(prefix)}`;
     const dir = path.join(ROOT, "work", p.slug);
     fs.mkdirSync(dir, { recursive: true });

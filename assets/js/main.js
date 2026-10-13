@@ -404,6 +404,28 @@
   if (pageGallery) initRail(pageGallery, window);
 
   /* ---------------------------------------------------------------
+     Scroll-to-top button on long project pages and in the viewer
+  --------------------------------------------------------------- */
+  function initToTop(btn, scrollRoot, scroller) {
+    if (!btn) return null;
+    var isWin = scrollRoot === window;
+    btn.hidden = false;
+    function update() {
+      var y = isWin ? window.scrollY : scrollRoot.scrollTop;
+      btn.classList.toggle("is-shown", y > window.innerHeight * 0.8);
+    }
+    scrollRoot.addEventListener("scroll", update, { passive: true });
+    btn.addEventListener("click", function () {
+      var s = scroller();
+      if (s) s.to(0);
+      else (isWin ? window : scrollRoot).scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+    });
+    update();
+    return update;
+  }
+  initToTop(document.querySelector("main ~ [data-to-top], body > [data-to-top]"), window, function () { return smooth; });
+
+  /* ---------------------------------------------------------------
      Project viewer: clicking a project opens its images, description and tags
   --------------------------------------------------------------- */
   var dataEl = document.getElementById("projects-data");
@@ -423,6 +445,7 @@
       close: viewer.querySelector("[data-close]")
     };
     if (smooth) viewerScroller = makeScroller(scrollEl);
+    var updateViewerTop = initToTop(viewer.querySelector("[data-to-top]"), scrollEl, function () { return viewerScroller; });
     var current = null, lastFocus = null, pageY = 0;
 
     function text(node, value) { node.textContent = value || ""; node.hidden = !value; }
@@ -481,6 +504,7 @@
     function resetViewerScroll() {
       scrollEl.scrollTop = 0;
       if (viewerScroller) viewerScroller.reset();
+      if (updateViewerTop) updateViewerTop();
     }
 
     function open(slug, push) {

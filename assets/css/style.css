@@ -419,6 +419,24 @@ html.viewer-open, html.viewer-open body { overflow: hidden; }
 .nf-link { display: inline-block; margin-top: 32px; padding: 14px 26px; border-radius: 999px; background: var(--ink); color: var(--paper); font-size: 0.9375rem; transition: background-color 0.3s; }
 .nf-link:hover { background: var(--khaki); }
 
+/* ---------- Scroll to top ---------- */
+.to-top {
+  position: fixed; right: var(--gutter); bottom: clamp(20px, 3vw, 36px); z-index: 60;
+  width: 52px; height: 52px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--ink); color: var(--paper);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.14);
+  opacity: 0; transform: translateY(12px); pointer-events: none;
+  transition: opacity 0.35s var(--ease), transform 0.45s var(--ease), background-color 0.3s;
+}
+.to-top[hidden] { display: grid; }
+.to-top.is-shown { opacity: 1; transform: none; pointer-events: auto; }
+.to-top:hover { background: var(--khaki); }
+.to-top svg { width: 22px; height: 22px; }
+.viewer .to-top { position: absolute; background: var(--paper); color: var(--ink); box-shadow: none; }
+.viewer .to-top:hover { background: var(--khaki-light); }
+@media (max-width: 760px) { .to-top { width: 44px; height: 44px; } }
+
 /* ---------- Custom cursor ---------- */
 .cursor {
   position: fixed; left: 0; top: 0; z-index: 9999; pointer-events: none;
