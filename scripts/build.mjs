@@ -13,6 +13,7 @@ const REMOTE = "https://ultraluxedesigns.com/";
 const asset = (p, prefix) =>
   fs.existsSync(path.join(ROOT, decodeURIComponent(p))) ? prefix + p : REMOTE + p;
 
+const LOGO = fs.readFileSync(path.join(ROOT, "assets/logo-inline.svg"), "utf8");
 const CATS = { branding: "Branding", ui: "UI/UX", social: "Social media", "3d": "3D" };
 const esc = (s = "") =>
   String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -42,7 +43,7 @@ const header = (prefix, current) => {
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="${current === "home" ? "#top" : prefix + "index.html"}">Ultraluxe <span>Designs</span></a>
+    <a class="brand" href="${current === "home" ? "#top" : prefix + "index.html"}" aria-label="Ultraluxe Designs, home">${LOGO}<span class="brand-name">Ultraluxe <span>Designs</span></span></a>
     <nav class="nav" aria-label="Main">
       <a href="${base}#work"${current === "work" ? ' aria-current="page"' : ""}>Work</a>
       <a class="nav-services" href="${base}#services">Services</a>
@@ -73,7 +74,7 @@ const contact = (prefix) => `
       </div>
     </div>
     <footer class="site-footer">
-      <span>© ${new Date().getFullYear()} Ultraluxe Designs</span>
+      <span class="footer-brand">${LOGO}<span>© ${new Date().getFullYear()} Ultraluxe Designs</span></span>
       <a href="#top">Back to top</a>
     </footer>
   </div>
@@ -85,24 +86,31 @@ const contact = (prefix) => `
 // ---------------- Home ----------------
 function buildHome() {
   const prefix = "";
-  const featured = projects.filter((p) => !p.archive);
-  const cards = featured
+  const cards = projects
     .map(
       (p) => `
       <article class="card" data-cat="${p.category}">
-        <a href="work/${p.slug}/">
-          <div class="media"><img data-fade src="${asset(p.thumb, prefix)}" alt="${esc(p.title)}" loading="lazy" decoding="async"></div>
+        <a href="work/${p.slug}/" data-project="${p.slug}">
+          <div class="media${p.hover ? " has-hover" : ""}">
+            <img class="thumb" data-fade src="${asset(p.thumb, prefix)}" alt="${esc(p.title)}" loading="lazy" decoding="async">${
+              p.hover ? `\n            <img class="thumb-hover" src="${asset(p.hover, prefix)}" alt="" loading="lazy" decoding="async">` : ""
+            }
+          </div>
           <div class="caption"><h3>${esc(p.title)}</h3><span>${CATS[p.category]}${p.year ? ", " + p.year : ""}</span></div>
         </a>
       </article>`
     )
     .join("");
+  const data = projects.map((p) => ({
+    slug: p.slug, title: p.title, category: CATS[p.category], date: p.date, description: p.description,
+    tags: p.tags, links: p.links, images: p.images.map((i) => asset(i, prefix)), dims: p.dims,
+  }));
 
   const rows = projects
     .map(
       (p) => `
         <li class="row" data-cat="${p.category}" data-thumb="${asset(p.thumb, prefix)}">
-          <a href="work/${p.slug}/"><span>${esc(p.title)}</span><span>${CATS[p.category]}</span><span>${p.archive ? "Archive" : esc(p.tags.slice(0, 2).join(", "))}</span><span>${p.year || "—"}</span></a>
+          <a href="work/${p.slug}/" data-project="${p.slug}"><span>${esc(p.title)}</span><span>${CATS[p.category]}</span><span>${esc(p.tags.slice(0, 2).map((t) => "#" + t).join(" "))}</span><span>${p.year || "—"}</span></a>
         </li>`
     )
     .join("");
@@ -122,7 +130,7 @@ function buildHome() {
     title: "Ultraluxe Designs, graphic and UI/UX design in Tashkent",
     description: site.description,
     prefix,
-    image: asset("images/LogoThumbnail.jpg", REMOTE),
+    image: REMOTE + "images/LogoThumbnail.jpg",
   })}
 <body id="top">
 ${header(prefix, "home")}
@@ -183,6 +191,26 @@ ${header(prefix, "home")}
     </div>
   </section>
 </main>
+<div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-labelledby="viewer-title" hidden>
+  <div class="viewer-scroll" data-native-scroll>
+    <div class="viewer-inner wrap">
+      <aside class="viewer-info">
+        <button type="button" class="viewer-close" data-close>Close</button>
+        <p class="viewer-cat"></p>
+        <h2 id="viewer-title"></h2>
+        <p class="viewer-desc"></p>
+        <ul class="viewer-tags" aria-label="Tags"></ul>
+        <dl class="viewer-meta"></dl>
+        <nav class="viewer-nav" aria-label="Projects">
+          <button type="button" data-step="-1">Previous</button>
+          <button type="button" data-step="1">Next</button>
+        </nav>
+      </aside>
+      <div class="viewer-images"></div>
+    </div>
+  </div>
+</div>
+<script type="application/json" id="projects-data">${JSON.stringify(data).replace(/</g, "\\u003c")}</script>
 ${contact(prefix)}`;
   fs.writeFileSync(path.join(ROOT, "index.html"), html);
 }
@@ -196,15 +224,17 @@ function buildProjects() {
     const metaRows = [
       ["Discipline", CATS[p.category]],
       p.date ? ["Date", p.date] : null,
-      p.tags.length ? ["Keywords", p.tags.slice(0, 6).join(", ")] : null,
     ].filter(Boolean);
+    const tagList = p.tags.length
+      ? `<ul class="tags">${p.tags.map((t) => `<li>#${esc(t)}</li>`).join("")}</ul>`
+      : "";
     const links = p.links.length
       ? `<dt>Links</dt><dd>${p.links.map(([n, u]) => `<a href="${u}">${esc(n)}</a>`).join(", ")}</dd>`
       : "";
     const gallery = p.images
       .map(
         (src, k) =>
-          `<img src="${asset(src, prefix)}" alt="${esc(p.title)}, image ${k + 1} of ${p.images.length}" ${k > 1 ? 'loading="lazy" ' : ""}decoding="async">`
+          `<img src="${asset(src, prefix)}" width="${p.dims[k][0]}" height="${p.dims[k][1]}" alt="${esc(p.title)}, image ${k + 1} of ${p.images.length}" ${k > 1 ? 'loading="lazy" ' : ""}decoding="async">`
       )
       .join("\n      ");
 
@@ -223,7 +253,7 @@ ${header(prefix, "work")}
       <h1>${esc(p.title)}</h1>
       <div class="project-meta">
         <dl>${metaRows.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join("")}${links}</dl>
-        ${p.description ? `<p class="summary">${esc(p.description)}</p>` : ""}
+        <div class="summary-wrap">${p.description ? `<p class="summary">${esc(p.description)}</p>` : ""}${tagList}</div>
       </div>
     </div>
   </section>

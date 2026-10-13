@@ -1,36 +1,94 @@
 {
   "email": "hi@ultraluxedesigns.com",
-  "telegram": { "handle": "@ultraluxe", "url": "https://t.me/ultraluxe" },
+  "telegram": {
+    "handle": "@ultraluxe",
+    "url": "https://t.me/ultraluxe"
+  },
   "location": "Tashkent, Uzbekistan",
-  "description": "Ultraluxe Designs is the portfolio of Iskandar Norkulov, a graphic and UI/UX designer in Tashkent, Uzbekistan: brand identity, logos, interfaces, social media design and 3D.",
-  "heroLines": ["Brand identities,", "interfaces and social", "media that look the part."],
-  "heroPlain": "Brand identities, interfaces and social media that look the part.",
+  "description": "Ultraluxe Designs is the portfolio of Iskandar Norkulov, a graphic and UI/UX designer in Tashkent, Uzbekistan: graphic design, brand identity, logos, interfaces, social media design and 3D.",
+  "heroLines": [
+    "Graphic design, brand",
+    "identities, interfaces",
+    "and social media."
+  ],
+  "heroPlain": "Graphic design, brand identities, interfaces and social media.",
   "intro": "Ultraluxe Designs is the studio of Iskandar Norkulov, a graphic and UI/UX designer in Tashkent working with companies in Uzbekistan and abroad.",
   "services": [
-    ["Branding and identity", "Logotypes, brand books and full identity systems. A logo can also be ordered on its own."],
-    ["UI/UX design", "Interfaces for websites, web applications, dashboards and mobile apps."],
-    ["Social media design", "Post and story templates, YouTube thumbnails, profile covers and icons."],
-    ["Graphic design", "Print and digital graphics: banners, presentations, merch and packaging."],
-    ["Photo processing", "Retouching, colour correction, noise removal, AI enhancement and upscaling."],
-    ["Photoshop work", "Photo manipulation, background removal and composites."],
-    ["Motion and 3D", "Logo animation, motion graphics and 3D models rendered in Blender."]
+    [
+      "Graphic design",
+      "Print and digital graphics: banners, presentations, merch and packaging."
+    ],
+    [
+      "Branding and identity",
+      "Logotypes, brand books and full identity systems. A logo can also be ordered on its own."
+    ],
+    [
+      "UI/UX design",
+      "Interfaces for websites, web applications, dashboards and mobile apps."
+    ],
+    [
+      "Social media design",
+      "Post and story templates, YouTube thumbnails, profile covers and icons."
+    ],
+    [
+      "Photo processing",
+      "Retouching, colour correction, noise removal, AI enhancement and upscaling."
+    ],
+    [
+      "Photoshop work",
+      "Photo manipulation, background removal and composites."
+    ],
+    [
+      "Motion and 3D",
+      "Logo animation, motion graphics and 3D models rendered in Blender."
+    ]
   ],
   "about": [
-    "Hello, I'm Iskandar. I design brands, interfaces and social media for businesses that want to look as good as they are.",
+    "Hello, I'm Iskandar. I'm a graphic designer: I design brands, interfaces and social media for businesses that want to look as good as they are.",
     "I've worked with clients in Uzbekistan, the UK, Germany, Austria, Turkey and Russia, from a yarn store in Berlin to an investment company in the UK. Since 2023 I've also designed every Instagram graphic for Inter Nation English School."
   ],
   "facts": [
-    ["Based in", "Tashkent, Uzbekistan"],
-    ["Disciplines", "Branding, UI/UX, social media, 3D"],
-    ["Clients from", "Uzbekistan, UK, Germany, Austria, Turkey, Russia"]
+    [
+      "Based in",
+      "Tashkent, Uzbekistan"
+    ],
+    [
+      "Disciplines",
+      "Graphic design, branding, UI/UX, social media, 3D"
+    ],
+    [
+      "Clients from",
+      "Uzbekistan, UK, Germany, Austria, Turkey, Russia"
+    ]
   ],
   "social": [
-    ["Behance", "https://www.behance.net/ultraluxedesigns"],
-    ["Instagram", "https://www.instagram.com/utraluxe/"],
-    ["LinkedIn", "https://www.linkedin.com/in/ultraluxe/"],
-    ["YouTube", "https://youtube.com/c/ultraluxe"],
-    ["ArtStation", "https://www.artstation.com/ultraluxe"],
-    ["Teepublic", "https://www.teepublic.com/user/ultraluxe"],
-    ["Google reviews", "https://maps.app.goo.gl/PrbVArp5Sr2XBEWz7"]
+    [
+      "Behance",
+      "https://www.behance.net/ultraluxedesigns"
+    ],
+    [
+      "Instagram",
+      "https://www.instagram.com/utraluxe/"
+    ],
+    [
+      "LinkedIn",
+      "https://www.linkedin.com/in/ultraluxe/"
+    ],
+    [
+      "YouTube",
+      "https://youtube.com/c/ultraluxe"
+    ],
+    [
+      "ArtStation",
+      "https://www.artstation.com/ultraluxe"
+    ],
+    [
+      "Teepublic",
+      "https://www.teepublic.com/user/ultraluxe"
+    ],
+    [
+      "Google reviews",
+      "https://maps.app.goo.gl/PrbVArp5Sr2XBEWz7"
+    ]
   ]
 }

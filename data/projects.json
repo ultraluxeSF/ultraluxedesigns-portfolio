@@ -44,6 +44,7 @@
    "images/designs/mverse/mverse-35.webp"
   ],
   "tags": [
+   "mverse",
    "tech",
    "automatization",
    "solutions",
@@ -54,7 +55,150 @@
    "logo"
   ],
   "description": "Brand identity and logo design for Mverse, a technology and automation company.",
-  "links": []
+  "links": [],
+  "hover": "images/designs/onm/mverse-onm.webp",
+  "dims": [
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1126
+   ],
+   [
+    2000,
+    1126
+   ],
+   [
+    2000,
+    1126
+   ],
+   [
+    2000,
+    1126
+   ],
+   [
+    2000,
+    1126
+   ],
+   [
+    2000,
+    1126
+   ],
+   [
+    2000,
+    1126
+   ],
+   [
+    2000,
+    1126
+   ],
+   [
+    2000,
+    1126
+   ],
+   [
+    2000,
+    1126
+   ],
+   [
+    2000,
+    1126
+   ],
+   [
+    2000,
+    1126
+   ],
+   [
+    2000,
+    1126
+   ],
+   [
+    2000,
+    1126
+   ],
+   [
+    2000,
+    1126
+   ],
+   [
+    2000,
+    1126
+   ],
+   [
+    2000,
+    1126
+   ],
+   [
+    2000,
+    1126
+   ],
+   [
+    2000,
+    1126
+   ],
+   [
+    2000,
+    1126
+   ],
+   [
+    2000,
+    1126
+   ],
+   [
+    2000,
+    1126
+   ],
+   [
+    2000,
+    1126
+   ],
+   [
+    2000,
+    1126
+   ],
+   [
+    2000,
+    1126
+   ],
+   [
+    2000,
+    1126
+   ],
+   [
+    2000,
+    1126
+   ],
+   [
+    2000,
+    1126
+   ],
+   [
+    2000,
+    1126
+   ],
+   [
+    2000,
+    1126
+   ]
+  ]
  },
  {
   "slug": "inter-nation",
@@ -64,15 +208,93 @@
   "year": 2023,
   "thumb": "images/designs/SMM/internation-thumb.webp",
   "images": [
-   "images/designs/SMM/internation/vol6/vol6-thumb.jpg",
-   "images/designs/SMM/internation/vol5/vol5-thumb.jpg",
-   "images/designs/SMM/internation/vol4/vol4-thumb.jpg",
-   "images/designs/SMM/internation/vol3/vol3-thumb.jpg",
-   "images/designs/SMM/internation/vol2/vol2-thumb.jpg",
-   "images/designs/SMM/internation/vol1/vol1-thumb.jpg",
-   "images/designs/SMM/internation/yt/yt-thumb.webp"
+   "images/designs/SMM/internation/vol6/vol6-1.webp",
+   "images/designs/SMM/internation/vol6/vol6-2.webp",
+   "images/designs/SMM/internation/vol6/vol6-3.webp",
+   "images/designs/SMM/internation/vol6/vol6-4.webp",
+   "images/designs/SMM/internation/vol6/vol6-5.webp",
+   "images/designs/SMM/internation/vol6/vol6-6.webp",
+   "images/designs/SMM/internation/vol6/vol6-7.webp",
+   "images/designs/SMM/internation/vol6/vol6-8.webp",
+   "images/designs/SMM/internation/vol6/vol6-9.webp",
+   "images/designs/SMM/internation/vol6/vol6-10.webp",
+   "images/designs/SMM/internation/vol6/vol6-11.webp",
+   "images/designs/SMM/internation/vol6/vol6-12.webp",
+   "images/designs/SMM/internation/vol6/vol6-13.webp",
+   "images/designs/SMM/internation/vol6/vol6-14.webp",
+   "images/designs/SMM/internation/vol6/vol6-15.webp",
+   "images/designs/SMM/internation/vol6/vol6-16.webp",
+   "images/designs/SMM/internation/vol6/vol6-17.webp",
+   "images/designs/SMM/internation/vol6/vol6-18.webp",
+   "images/designs/SMM/internation/vol5/vol5-1.webp",
+   "images/designs/SMM/internation/vol5/vol5-2.webp",
+   "images/designs/SMM/internation/vol5/vol5-3.webp",
+   "images/designs/SMM/internation/vol5/vol5-4.webp",
+   "images/designs/SMM/internation/vol5/vol5-5.webp",
+   "images/designs/SMM/internation/vol5/vol5-6.webp",
+   "images/designs/SMM/internation/vol4/vol4-1.webp",
+   "images/designs/SMM/internation/vol4/vol4-2.webp",
+   "images/designs/SMM/internation/vol4/vol4-3.webp",
+   "images/designs/SMM/internation/vol4/vol4-4.webp",
+   "images/designs/SMM/internation/vol4/vol4-5.webp",
+   "images/designs/SMM/internation/vol4/vol4-6.webp",
+   "images/designs/SMM/internation/vol4/vol4-7.webp",
+   "images/designs/SMM/internation/vol4/vol4-8.webp",
+   "images/designs/SMM/internation/vol4/vol4-9.webp",
+   "images/designs/SMM/internation/vol4/vol4-10.webp",
+   "images/designs/SMM/internation/vol4/vol4-11.webp",
+   "images/designs/SMM/internation/vol4/vol4-12.webp",
+   "images/designs/SMM/internation/vol4/vol4-13.webp",
+   "images/designs/SMM/internation/vol4/vol4-14.webp",
+   "images/designs/SMM/internation/vol4/vol4-15.webp",
+   "images/designs/SMM/internation/vol4/vol4-16.webp",
+   "images/designs/SMM/internation/vol4/vol4-17.webp",
+   "images/designs/SMM/internation/vol4/vol4-18.webp",
+   "images/designs/SMM/internation/vol4/vol4-19.webp",
+   "images/designs/SMM/internation/vol3/vol3-1.webp",
+   "images/designs/SMM/internation/vol3/vol3-2.webp",
+   "images/designs/SMM/internation/vol3/vol3-3.webp",
+   "images/designs/SMM/internation/vol3/vol3-4.webp",
+   "images/designs/SMM/internation/vol3/vol3-5.webp",
+   "images/designs/SMM/internation/vol3/vol3-6.webp",
+   "images/designs/SMM/internation/vol3/vol3-7.webp",
+   "images/designs/SMM/internation/vol3/vol3-8.webp",
+   "images/designs/SMM/internation/vol3/vol3-9.webp",
+   "images/designs/SMM/internation/vol3/vol3-10.webp",
+   "images/designs/SMM/internation/vol3/vol3-11.webp",
+   "images/designs/SMM/internation/vol3/vol3-12.webp",
+   "images/designs/SMM/internation/vol2/vol2-1.webp",
+   "images/designs/SMM/internation/vol2/vol2-2.webp",
+   "images/designs/SMM/internation/vol2/vol2-3.webp",
+   "images/designs/SMM/internation/vol2/vol2-4.webp",
+   "images/designs/SMM/internation/vol2/vol2-5.webp",
+   "images/designs/SMM/internation/vol2/vol2-6.webp",
+   "images/designs/SMM/internation/vol2/vol2-7.webp",
+   "images/designs/SMM/internation/vol2/vol2-8.webp",
+   "images/designs/SMM/internation/vol2/vol2-9.webp",
+   "images/designs/SMM/internation/vol2/vol2-10.webp",
+   "images/designs/SMM/internation/vol2/vol2-11.webp",
+   "images/designs/SMM/internation/vol2/vol2-12.webp",
+   "images/designs/SMM/internation/vol2/vol2-13.webp",
+   "images/designs/SMM/internation/vol1/vol1-1.webp",
+   "images/designs/SMM/internation/vol1/vol1-2.webp",
+   "images/designs/SMM/internation/vol1/vol1-3.webp",
+   "images/designs/SMM/internation/vol1/vol1-4.webp",
+   "images/designs/SMM/internation/vol1/vol1-5.webp",
+   "images/designs/SMM/internation/vol1/vol1-6.webp",
+   "images/designs/SMM/internation/vol1/vol1-7.webp",
+   "images/designs/SMM/internation/yt/yt1.webp",
+   "images/designs/SMM/internation/yt/yt2.webp",
+   "images/designs/SMM/internation/yt/yt3.webp",
+   "images/designs/SMM/internation/yt/yt4.webp",
+   "images/designs/SMM/internation/yt/yt5.webp",
+   "images/designs/SMM/internation/yt/yt6.webp",
+   "images/designs/SMM/internation/yt/yt7.webp",
+   "images/designs/SMM/internation/yt/yt8.webp",
+   "images/designs/SMM/internation/yt/yt9.webp"
   ],
   "tags": [
+   "internation",
    "english",
    "yellow",
    "smmdesign",
@@ -84,6 +306,345 @@
    [
     "Instagram",
     "https://www.instagram.com/inter_nation_english_school/"
+   ]
+  ],
+  "hover": "images/designs/SMM/internation-onm.webp",
+  "dims": [
+   [
+    2000,
+    833
+   ],
+   [
+    2000,
+    833
+   ],
+   [
+    2000,
+    833
+   ],
+   [
+    2000,
+    625
+   ],
+   [
+    2000,
+    833
+   ],
+   [
+    2000,
+    833
+   ],
+   [
+    1642,
+    1026
+   ],
+   [
+    2000,
+    665
+   ],
+   [
+    2000,
+    833
+   ],
+   [
+    2000,
+    833
+   ],
+   [
+    1642,
+    1026
+   ],
+   [
+    2000,
+    833
+   ],
+   [
+    2000,
+    537
+   ],
+   [
+    2000,
+    537
+   ],
+   [
+    2000,
+    537
+   ],
+   [
+    2000,
+    833
+   ],
+   [
+    2000,
+    833
+   ],
+   [
+    2000,
+    833
+   ],
+   [
+    2000,
+    833
+   ],
+   [
+    2000,
+    833
+   ],
+   [
+    2000,
+    833
+   ],
+   [
+    2000,
+    833
+   ],
+   [
+    2000,
+    833
+   ],
+   [
+    2000,
+    833
+   ],
+   [
+    2000,
+    667
+   ],
+   [
+    2000,
+    667
+   ],
+   [
+    2000,
+    833
+   ],
+   [
+    2000,
+    833
+   ],
+   [
+    2000,
+    833
+   ],
+   [
+    2000,
+    667
+   ],
+   [
+    2000,
+    833
+   ],
+   [
+    2000,
+    833
+   ],
+   [
+    2000,
+    833
+   ],
+   [
+    2000,
+    833
+   ],
+   [
+    2000,
+    833
+   ],
+   [
+    2000,
+    250
+   ],
+   [
+    2000,
+    750
+   ],
+   [
+    2000,
+    833
+   ],
+   [
+    2000,
+    833
+   ],
+   [
+    2000,
+    667
+   ],
+   [
+    2000,
+    667
+   ],
+   [
+    2000,
+    667
+   ],
+   [
+    2000,
+    833
+   ],
+   [
+    2000,
+    667
+   ],
+   [
+    2000,
+    667
+   ],
+   [
+    2000,
+    625
+   ],
+   [
+    1620,
+    1013
+   ],
+   [
+    2000,
+    667
+   ],
+   [
+    2000,
+    667
+   ],
+   [
+    2000,
+    667
+   ],
+   [
+    1920,
+    1080
+   ],
+   [
+    2000,
+    667
+   ],
+   [
+    2000,
+    667
+   ],
+   [
+    2000,
+    667
+   ],
+   [
+    2000,
+    667
+   ],
+   [
+    2000,
+    667
+   ],
+   [
+    2000,
+    667
+   ],
+   [
+    2000,
+    667
+   ],
+   [
+    2000,
+    667
+   ],
+   [
+    2000,
+    667
+   ],
+   [
+    2000,
+    667
+   ],
+   [
+    2000,
+    667
+   ],
+   [
+    2000,
+    667
+   ],
+   [
+    2000,
+    667
+   ],
+   [
+    2000,
+    751
+   ],
+   [
+    2000,
+    889
+   ],
+   [
+    2000,
+    751
+   ],
+   [
+    2000,
+    667
+   ],
+   [
+    2000,
+    667
+   ],
+   [
+    2000,
+    667
+   ],
+   [
+    2000,
+    667
+   ],
+   [
+    2000,
+    667
+   ],
+   [
+    2000,
+    667
+   ],
+   [
+    1920,
+    1280
+   ],
+   [
+    1620,
+    810
+   ],
+   [
+    2000,
+    947
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
    ]
   ]
  },
@@ -103,12 +664,35 @@
   "tags": [
    "3d",
    "ice",
+   "cube",
+   "internation",
+   "melting",
    "winter",
    "blender",
+   "modeling",
    "render"
   ],
-  "description": "",
-  "links": []
+  "description": "A phone frozen in a melting ice cube, modelled and rendered in Blender for an Inter Nation winter post.",
+  "links": [],
+  "hover": "images/designs/3d/IceCube/IceCube-onm.webp",
+  "dims": [
+   [
+    900,
+    900
+   ],
+   [
+    1080,
+    1080
+   ],
+   [
+    1080,
+    1080
+   ],
+   [
+    900,
+    900
+   ]
+  ]
  },
  {
   "slug": "cagu",
@@ -121,13 +705,22 @@
    "images/designs/SMM/GIUT-SMD.webp"
   ],
   "tags": [
+   "cagu",
+   "giut",
    "university",
    "green",
    "smmdesign",
    "energy"
   ],
   "description": "Social media design for Central Asian Green University.",
-  "links": []
+  "links": [],
+  "hover": "images/designs/SMM/GIUT-onm.webp",
+  "dims": [
+   [
+    2000,
+    4500
+   ]
+  ]
  },
  {
   "slug": "abstract-glass",
@@ -144,12 +737,29 @@
   "tags": [
    "abstract",
    "glass",
+   "shiny",
    "wallpaper",
+   "dispersed",
    "blender",
    "render"
   ],
   "description": "A collection of abstract dispersed-glass wallpapers.",
-  "links": []
+  "links": [],
+  "hover": "images/designs/3d/abstractwp/abstractwp-onm.webp",
+  "dims": [
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ]
+  ]
  },
  {
   "slug": "gorinvestment",
@@ -157,42 +767,45 @@
   "category": "branding",
   "date": "7 Sep 2023",
   "year": 2023,
-  "thumb": "images/designs/gor.jpg",
+  "thumb": "images/designs/gor.webp",
   "images": [
-   "images/designs/gor/g1.jpg",
-   "images/designs/gor/g2.jpg",
-   "images/designs/gor/g3.jpg",
-   "images/designs/gor/g4.jpg",
-   "images/designs/gor/g5.jpg",
-   "images/designs/gor/g6.jpg",
-   "images/designs/gor/g7.jpg",
-   "images/designs/gor/g8.jpg",
-   "images/designs/gor/g9.jpg",
-   "images/designs/gor/g10.jpg",
-   "images/designs/gor/g11.jpg",
-   "images/designs/gor/g12.jpg",
-   "images/designs/gor/g13.jpg",
-   "images/designs/gor/g14.jpg",
-   "images/designs/gor/g15.jpg",
-   "images/designs/gor/g16.jpg",
-   "images/designs/gor/g17.jpg",
-   "images/designs/gor/g18.jpg",
-   "images/designs/gor/g19.jpg",
-   "images/designs/gor/g20.jpg",
-   "images/designs/gor/g21.jpg",
-   "images/designs/gor/g22.jpg",
-   "images/designs/gor/g23.jpg",
-   "images/designs/gor/g24.jpg",
-   "images/designs/gor/g25.jpg",
-   "images/designs/gor/g26.jpg",
-   "images/designs/gor/g27.jpg",
-   "images/designs/gor/g28.jpg",
-   "images/designs/gor/g29.jpg",
-   "images/designs/gor/g30.jpg"
+   "images/designs/gor/g1.webp",
+   "images/designs/gor/g2.webp",
+   "images/designs/gor/g3.webp",
+   "images/designs/gor/g4.webp",
+   "images/designs/gor/g5.webp",
+   "images/designs/gor/g6.webp",
+   "images/designs/gor/g7.webp",
+   "images/designs/gor/g8.webp",
+   "images/designs/gor/g9.webp",
+   "images/designs/gor/g10.webp",
+   "images/designs/gor/g11.webp",
+   "images/designs/gor/g12.webp",
+   "images/designs/gor/g13.webp",
+   "images/designs/gor/g14.webp",
+   "images/designs/gor/g15.webp",
+   "images/designs/gor/g16.webp",
+   "images/designs/gor/g17.webp",
+   "images/designs/gor/g18.webp",
+   "images/designs/gor/g19.webp",
+   "images/designs/gor/g20.webp",
+   "images/designs/gor/g21.webp",
+   "images/designs/gor/g22.webp",
+   "images/designs/gor/g23.webp",
+   "images/designs/gor/g24.webp",
+   "images/designs/gor/g25.webp",
+   "images/designs/gor/g26.webp",
+   "images/designs/gor/g27.webp",
+   "images/designs/gor/g28.webp",
+   "images/designs/gor/g29.webp",
+   "images/designs/gor/g30.webp"
   ],
   "tags": [
    "investment",
-   "guidelines",
+   "finance",
+   "uk",
+   "uzbekistan",
+   "brandbook",
    "branding",
    "identity",
    "logo"
@@ -207,6 +820,129 @@
     "Afzal Khamidov",
     "https://www.instagram.com/nonsimplay/"
    ]
+  ],
+  "hover": "images/designs/onm/goronm.webp",
+  "dims": [
+   [
+    1920,
+    1080
+   ],
+   [
+    1920,
+    1080
+   ],
+   [
+    1920,
+    1080
+   ],
+   [
+    1920,
+    1080
+   ],
+   [
+    1920,
+    1080
+   ],
+   [
+    1920,
+    1080
+   ],
+   [
+    1920,
+    1080
+   ],
+   [
+    1920,
+    1080
+   ],
+   [
+    1920,
+    1080
+   ],
+   [
+    1920,
+    1080
+   ],
+   [
+    1920,
+    1080
+   ],
+   [
+    1920,
+    1080
+   ],
+   [
+    1920,
+    1080
+   ],
+   [
+    1920,
+    1080
+   ],
+   [
+    1920,
+    1080
+   ],
+   [
+    1920,
+    1080
+   ],
+   [
+    1920,
+    1080
+   ],
+   [
+    1920,
+    1080
+   ],
+   [
+    1920,
+    1080
+   ],
+   [
+    1920,
+    1080
+   ],
+   [
+    1920,
+    1080
+   ],
+   [
+    1920,
+    1080
+   ],
+   [
+    1920,
+    1080
+   ],
+   [
+    1920,
+    1080
+   ],
+   [
+    1920,
+    1080
+   ],
+   [
+    1920,
+    1080
+   ],
+   [
+    1920,
+    1080
+   ],
+   [
+    1920,
+    1080
+   ],
+   [
+    1920,
+    1080
+   ],
+   [
+    1920,
+    1080
+   ]
   ]
  },
  {
@@ -215,38 +951,120 @@
   "category": "branding",
   "date": "7 Sep 2023",
   "year": 2023,
-  "thumb": "images/designs/onm/onlinepizza-onm.jpg",
+  "thumb": "images/designs/onlinepizza-thumb.webp",
   "images": [
-   "images/designs/onlinepizza-bb/OnlinePizza-Pres-v2-01.jpg",
-   "images/designs/onlinepizza-bb/OnlinePizza-Pres-v2-02.jpg",
-   "images/designs/onlinepizza-bb/OnlinePizza-Pres-v2-03.jpg",
-   "images/designs/onlinepizza-bb/OnlinePizza-Pres-v2_Artboard%203.jpg",
-   "images/designs/onlinepizza-bb/OnlinePizza-Pres-v2_Artboard%204.jpg",
-   "images/designs/onlinepizza-bb/OnlinePizza-Pres-v2-06.jpg",
-   "images/designs/onlinepizza-bb/OnlinePizza-Pres-v2-07.jpg",
-   "images/designs/onlinepizza-bb/OnlinePizza-Pres-v2-08.jpg",
-   "images/designs/onlinepizza-bb/OnlinePizza-Pres-v2-09.jpg",
-   "images/designs/onlinepizza-bb/OnlinePizza-Pres-v2-10.jpg",
-   "images/designs/onlinepizza-bb/OnlinePizza-Pres-v2-11.jpg",
-   "images/designs/onlinepizza-bb/OnlinePizza-Pres-v2-12.jpg",
-   "images/designs/onlinepizza-bb/OnlinePizza-Pres-v2-13.jpg",
-   "images/designs/onlinepizza-bb/OnlinePizza-Pres-v2-14.jpg",
-   "images/designs/onlinepizza-bb/OnlinePizza-Pres-v2-15.jpg",
-   "images/designs/onlinepizza-bb/OnlinePizza-Pres-v2-16.jpg",
-   "images/designs/onlinepizza-bb/OnlinePizza-Pres-v2-17.jpg",
-   "images/designs/onlinepizza-bb/OnlinePizza-Pres-v2-18.jpg",
-   "images/designs/onlinepizza-bb/OnlinePizza-Pres-v2-19.jpg"
+   "images/designs/onlinepizza-bb/OnlinePizza-Pres-v2-01.webp",
+   "images/designs/onlinepizza-bb/OnlinePizza-Pres-v2-02.webp",
+   "images/designs/onlinepizza-bb/OnlinePizza-Pres-v2-03.webp",
+   "images/designs/onlinepizza-bb/OnlinePizza-Pres-v2_Artboard-3.webp",
+   "images/designs/onlinepizza-bb/OnlinePizza-Pres-v2_Artboard-4.webp",
+   "images/designs/onlinepizza-bb/OnlinePizza-Pres-v2-06.webp",
+   "images/designs/onlinepizza-bb/OnlinePizza-Pres-v2-07.webp",
+   "images/designs/onlinepizza-bb/OnlinePizza-Pres-v2-08.webp",
+   "images/designs/onlinepizza-bb/OnlinePizza-Pres-v2-09.webp",
+   "images/designs/onlinepizza-bb/OnlinePizza-Pres-v2-10.webp",
+   "images/designs/onlinepizza-bb/OnlinePizza-Pres-v2-11.webp",
+   "images/designs/onlinepizza-bb/OnlinePizza-Pres-v2-12.webp",
+   "images/designs/onlinepizza-bb/OnlinePizza-Pres-v2-13.webp",
+   "images/designs/onlinepizza-bb/OnlinePizza-Pres-v2-14.webp",
+   "images/designs/onlinepizza-bb/OnlinePizza-Pres-v2-15.webp",
+   "images/designs/onlinepizza-bb/OnlinePizza-Pres-v2-16.webp",
+   "images/designs/onlinepizza-bb/OnlinePizza-Pres-v2-17.webp",
+   "images/designs/onlinepizza-bb/OnlinePizza-Pres-v2-18.webp",
+   "images/designs/onlinepizza-bb/OnlinePizza-Pres-v2-19.webp"
   ],
   "tags": [
    "pizza",
+   "online",
    "delivery",
+   "italian",
    "food",
+   "fastfood",
    "branding",
    "identity",
    "logo"
   ],
   "description": "Brand identity for an online pizza delivery service.",
-  "links": []
+  "links": [],
+  "hover": "images/designs/onm/onlinepizza-onm.webp",
+  "dims": [
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1126
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1126
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1126
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1126
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1126
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ]
+  ]
  },
  {
   "slug": "isometric-livingroom",
@@ -260,11 +1078,20 @@
   ],
   "tags": [
    "isometric",
+   "vibe",
    "blender",
+   "modeling",
    "render"
   ],
-  "description": "",
-  "links": []
+  "description": "An isometric living room modelled and rendered in Blender.",
+  "links": [],
+  "hover": null,
+  "dims": [
+   [
+    2000,
+    1125
+   ]
+  ]
  },
  {
   "slug": "visualaddiction",
@@ -272,26 +1099,30 @@
   "category": "branding",
   "date": "7 May 2023",
   "year": 2023,
-  "thumb": "images/designs/onm/va-onm.jpg",
+  "thumb": "images/designs/va-thumb.webp",
   "images": [
-   "images/designs/visualaddiction/va-pres-01.jpg",
-   "images/designs/visualaddiction/va-pres-02.jpg",
-   "images/designs/visualaddiction/va-pres-03.jpg",
-   "images/designs/visualaddiction/va-pres-04.jpg",
-   "images/designs/visualaddiction/va-pres-05.jpg",
-   "images/designs/visualaddiction/va-pres-06.jpg",
-   "images/designs/visualaddiction/va-pres-07.jpg",
-   "images/designs/visualaddiction/va-pres-08.jpg",
-   "images/designs/visualaddiction/va-pres-09.jpg",
-   "images/designs/visualaddiction/va-pres-10.jpg",
-   "images/designs/visualaddiction/va-pres-11.jpg",
-   "images/designs/visualaddiction/va-pres-12.jpg",
-   "images/designs/visualaddiction/va-pres-13.jpg"
+   "images/designs/visualaddiction/va-pres-01.webp",
+   "images/designs/visualaddiction/va-pres-02.webp",
+   "images/designs/visualaddiction/va-pres-03.webp",
+   "images/designs/visualaddiction/va-pres-04.webp",
+   "images/designs/visualaddiction/va-pres-05.webp",
+   "images/designs/visualaddiction/va-pres-06.webp",
+   "images/designs/visualaddiction/va-pres-07.webp",
+   "images/designs/visualaddiction/va-pres-08.webp",
+   "images/designs/visualaddiction/va-pres-09.webp",
+   "images/designs/visualaddiction/va-pres-10.webp",
+   "images/designs/visualaddiction/va-pres-11.webp",
+   "images/designs/visualaddiction/va-pres-12.webp",
+   "images/designs/visualaddiction/va-pres-13.webp"
   ],
   "tags": [
+   "visual",
    "austria",
    "agency",
+   "design",
    "redesign",
+   "branding",
+   "identity",
    "logo"
   ],
   "description": "Logo redesign for an Austrian design agency.",
@@ -299,6 +1130,61 @@
    [
     "visualaddiction.at",
     "https://www.visualaddiction.at/"
+   ]
+  ],
+  "hover": "images/designs/onm/va-onm.webp",
+  "dims": [
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
    ]
   ]
  },
@@ -314,9 +1200,11 @@
   ],
   "tags": [
    "yarn",
+   "lieblingsgarn",
+   "german",
+   "berlin",
    "knitting",
    "store",
-   "berlin",
    "logo"
   ],
   "description": "Logo for a German yarn store.",
@@ -324,6 +1212,13 @@
    [
     "lieblingsgarn.de",
     "https://lieblingsgarn.de/"
+   ]
+  ],
+  "hover": "images/designs/onm/lieblingsgarn-onm.webp",
+  "dims": [
+   [
+    1920,
+    11882
    ]
   ]
  },
@@ -333,16 +1228,27 @@
   "category": "social",
   "date": "Mar 2023",
   "year": 2023,
-  "thumb": "images/designs/SMM/AAB-thumb.jpg",
+  "thumb": "images/designs/SMM/AAB-thumb.webp",
   "images": [
-   "images/designs/SMM/AAB1.jpg"
+   "images/designs/SMM/AAB1.webp"
   ],
   "tags": [
    "bank",
-   "smmdesign"
+   "smm",
+   "smmdesign",
+   "aab",
+   "asiaalliancebank",
+   "asia"
   ],
   "description": "Social media design for Asia Alliance Bank.",
-  "links": []
+  "links": [],
+  "hover": null,
+  "dims": [
+   [
+    2000,
+    6250
+   ]
+  ]
  },
  {
   "slug": "euroasia-insurance",
@@ -350,16 +1256,27 @@
   "category": "social",
   "date": "Feb 2023",
   "year": 2023,
-  "thumb": "images/designs/SMM/EAI-thumb.jpg",
+  "thumb": "images/designs/SMM/EAI-thumb.webp",
   "images": [
-   "images/designs/SMM/EAI.jpg"
+   "images/designs/SMM/EAI.webp"
   ],
   "tags": [
    "insurance",
-   "smmdesign"
+   "health",
+   "smmdesign",
+   "eai",
+   "euroasiainsurance",
+   "asia"
   ],
   "description": "Social media design for Euroasia Insurance.",
-  "links": []
+  "links": [],
+  "hover": null,
+  "dims": [
+   [
+    2000,
+    4688
+   ]
+  ]
  },
  {
   "slug": "air-travel-link",
@@ -367,17 +1284,27 @@
   "category": "social",
   "date": "Feb 2023",
   "year": 2023,
-  "thumb": "images/designs/SMM/ATL-thumb.jpg",
+  "thumb": "images/designs/SMM/ATL-thumb.webp",
   "images": [
-   "images/designs/SMM/ATL.jpg"
+   "images/designs/SMM/ATL.webp"
   ],
   "tags": [
    "tourism",
    "travel",
-   "smmdesign"
+   "smmdesign",
+   "air",
+   "abroad",
+   "asia"
   ],
   "description": "Social media design for a travel agency.",
-  "links": []
+  "links": [],
+  "hover": null,
+  "dims": [
+   [
+    2000,
+    2344
+   ]
+  ]
  },
  {
   "slug": "agisept",
@@ -385,17 +1312,26 @@
   "category": "social",
   "date": "Jan 2023",
   "year": 2023,
-  "thumb": "images/designs/SMM/Agisept-rhumb.jpg",
+  "thumb": "images/designs/SMM/Agisept-rhumb.webp",
   "images": [
-   "images/designs/SMM/Agisept.jpg"
+   "images/designs/SMM/Agisept.webp"
   ],
   "tags": [
    "health",
+   "pills",
+   "smmdesign",
    "healthcare",
-   "smmdesign"
+   "russia"
   ],
   "description": "Social media design for Agisept, Russia.",
-  "links": []
+  "links": [],
+  "hover": null,
+  "dims": [
+   [
+    2000,
+    3906
+   ]
+  ]
  },
  {
   "slug": "cerom",
@@ -403,17 +1339,26 @@
   "category": "branding",
   "date": "24 Nov 2022",
   "year": 2022,
-  "thumb": "images/designs/cerom-thumb.jpg",
+  "thumb": "images/designs/cerom-thumb.webp",
   "images": [
-   "images/designs/ceromDesign.jpg"
+   "images/designs/ceromDesign.webp"
   ],
   "tags": [
    "tiled",
    "stove",
+   "fire",
+   "kitchen",
    "logo"
   ],
   "description": "Logo for an Austrian company that crafts tiled stoves.",
-  "links": []
+  "links": [],
+  "hover": "images/designs/onm/cerom-onm.webp",
+  "dims": [
+   [
+    1920,
+    6250
+   ]
+  ]
  },
  {
   "slug": "insurance-uz",
@@ -421,17 +1366,26 @@
   "category": "social",
   "date": "Dec 2022",
   "year": 2022,
-  "thumb": "images/designs/SMM/Insurance-thumb.jpg",
+  "thumb": "images/designs/SMM/Insurance-thumb.webp",
   "images": [
-   "images/designs/SMM/InsuranceUz.jpg"
+   "images/designs/SMM/InsuranceUz.webp"
   ],
   "tags": [
    "insurance",
    "uzbekistan",
-   "smmdesign"
+   "smmdesign",
+   "association",
+   "safety"
   ],
   "description": "Social media design for the insurance association of Uzbekistan.",
-  "links": []
+  "links": [],
+  "hover": null,
+  "dims": [
+   [
+    2000,
+    2344
+   ]
+  ]
  },
  {
   "slug": "tad-industries",
@@ -439,18 +1393,27 @@
   "category": "social",
   "date": "Dec 2022",
   "year": 2022,
-  "thumb": "images/designs/SMM/TADI-thumb.jpg",
+  "thumb": "images/designs/SMM/TADI-thumb.webp",
   "images": [
-   "images/designs/SMM/TADI.jpg"
+   "images/designs/SMM/TADI.webp"
   ],
   "tags": [
+   "tadi",
    "industries",
+   "smmdesign",
    "cameras",
-   "faceid",
-   "smmdesign"
+   "safety",
+   "faceid"
   ],
   "description": "Social media design for TAD Industries.",
-  "links": []
+  "links": [],
+  "hover": null,
+  "dims": [
+   [
+    2000,
+    2344
+   ]
+  ]
  },
  {
   "slug": "garanti-express",
@@ -458,18 +1421,27 @@
   "category": "branding",
   "date": "30 Oct 2022",
   "year": 2022,
-  "thumb": "images/designs/ge-thumb.jpg",
+  "thumb": "images/designs/ge-thumb.webp",
   "images": [
-   "images/designs/GE-Pres-v3.jpg"
+   "images/designs/GE-Pres-v3.webp"
   ],
   "tags": [
    "turkey",
    "ecommerce",
    "delivery",
+   "express",
+   "turkish",
    "logo"
   ],
   "description": "Logo for a Turkish e-commerce company.",
-  "links": []
+  "links": [],
+  "hover": "images/designs/onm/ge-onm.webp",
+  "dims": [
+   [
+    1920,
+    5644
+   ]
+  ]
  },
  {
   "slug": "iconsult",
@@ -477,20 +1449,31 @@
   "category": "ui",
   "date": "20 Oct 2022",
   "year": 2022,
-  "thumb": "images/designs/iConsult-thumb.jpg",
+  "thumb": "images/designs/iConsult-thumb.webp",
   "images": [
-   "images/designs/iConsultBehance.jpg"
+   "images/designs/iConsultBehance.webp"
   ],
   "tags": [
-   "conferencing",
+   "online",
+   "freelance",
+   "light",
    "web",
-   "app",
+   "desktop",
+   "conferencing",
    "landing",
+   "app",
    "ui",
    "ux"
   ],
   "description": "UI and UX design for an online conferencing web application.",
-  "links": []
+  "links": [],
+  "hover": "images/designs/onm/iconsult-onm.webp",
+  "dims": [
+   [
+    1440,
+    15564
+   ]
+  ]
  },
  {
   "slug": "mywork",
@@ -498,19 +1481,30 @@
   "category": "ui",
   "date": "31 Aug 2022",
   "year": 2022,
-  "thumb": "images/designs/onm/MW-onm.jpg",
+  "thumb": "images/designs/MW-thumb.webp",
   "images": [
-   "images/designs/MW.jpg"
+   "images/designs/MW.webp"
   ],
   "tags": [
+   "work",
    "freelance",
+   "light",
+   "web",
+   "desktop",
    "admin",
    "dashboard",
    "ui",
    "ux"
   ],
   "description": "Admin panel UI for MyWork, a job platform for construction workers.",
-  "links": []
+  "links": [],
+  "hover": "images/designs/onm/MW-onm.webp",
+  "dims": [
+   [
+    1920,
+    4421
+   ]
+  ]
  },
  {
   "slug": "ehub",
@@ -518,19 +1512,29 @@
   "category": "ui",
   "date": "5 Aug 2022",
   "year": 2022,
-  "thumb": "images/designs/onm/Ehub-onm.jpg",
+  "thumb": "images/designs/ehub-thumb.webp",
   "images": [
-   "images/designs/Ehub.jpg"
+   "images/designs/Ehub.webp"
   ],
   "tags": [
+   "learning",
    "education",
+   "school",
    "web",
    "mobile",
+   "admin",
    "ui",
    "ux"
   ],
   "description": "Web and mobile UI for an education platform.",
-  "links": []
+  "links": [],
+  "hover": "images/designs/onm/Ehub-onm.webp",
+  "dims": [
+   [
+    1920,
+    5345
+   ]
+  ]
  },
  {
   "slug": "bmc",
@@ -538,42 +1542,137 @@
   "category": "branding",
   "date": "25 Jun 2022",
   "year": 2022,
-  "thumb": "images/designs/bmc-thumb.jpg",
+  "thumb": "images/designs/bmc-thumb.webp",
   "images": [
-   "images/designs/bmc-bb/BMC-Brandbook_Front.jpg",
-   "images/designs/bmc-bb/BMC-Brandbook_Logo-02.jpg",
-   "images/designs/bmc-bb/BMC-Brandbook_Logo-03.jpg",
-   "images/designs/bmc-bb/BMC-Brandbook_Spacing.jpg",
-   "images/designs/bmc-bb/BMC-Brandbook_Kerning.jpg",
-   "images/designs/bmc-bb/BMC-Brandbook_Colors.jpg",
-   "images/designs/bmc-bb/BMC-Brandbook_Mono1.jpg",
-   "images/designs/bmc-bb/BMC-Brandbook_Mono2.jpg",
-   "images/designs/bmc-bb/BMC-Brandbook_Inappropriate.jpg",
-   "images/designs/bmc-bb/BMC-Brandbook_Fonts.jpg",
-   "images/designs/bmc-bb/BMC-Brandbook_A4.jpg",
-   "images/designs/bmc-bb/BMC-Brandbook_COFFEEEEE.jpg",
-   "images/designs/bmc-bb/BMC-Brandbook_Pattern.jpg",
-   "images/designs/bmc-bb/BMC-Brandbook_Sticker.jpg",
-   "images/designs/bmc-bb/BMC-Brandbook_Apron.jpg",
-   "images/designs/bmc-bb/BMC-Brandbook_Cap.jpg",
-   "images/designs/bmc-bb/BMC-Brandbook_Tshirt.jpg",
-   "images/designs/bmc-bb/BMC-Brandbook_Cup.jpg",
-   "images/designs/bmc-bb/BMC-Brandbook_Bag.jpg",
-   "images/designs/bmc-bb/BMC-Brandbook_Menu.jpg",
-   "images/designs/bmc-bb/BMC-Brandbook_Damas.jpg",
-   "images/designs/bmc-bb/BMC-Brandbook_Container.jpg",
-   "images/designs/bmc-bb/BMC-Brandbook_LastPage.jpg"
+   "images/designs/bmc-bb/BMC-Brandbook_Front.webp",
+   "images/designs/bmc-bb/BMC-Brandbook_Logo-02.webp",
+   "images/designs/bmc-bb/BMC-Brandbook_Logo-03.webp",
+   "images/designs/bmc-bb/BMC-Brandbook_Spacing.webp",
+   "images/designs/bmc-bb/BMC-Brandbook_Kerning.webp",
+   "images/designs/bmc-bb/BMC-Brandbook_Colors.webp",
+   "images/designs/bmc-bb/BMC-Brandbook_Mono1.webp",
+   "images/designs/bmc-bb/BMC-Brandbook_Mono2.webp",
+   "images/designs/bmc-bb/BMC-Brandbook_Inappropriate.webp",
+   "images/designs/bmc-bb/BMC-Brandbook_Fonts.webp",
+   "images/designs/bmc-bb/BMC-Brandbook_A4.webp",
+   "images/designs/bmc-bb/BMC-Brandbook_COFFEEEEE.webp",
+   "images/designs/bmc-bb/BMC-Brandbook_Pattern.webp",
+   "images/designs/bmc-bb/BMC-Brandbook_Sticker.webp",
+   "images/designs/bmc-bb/BMC-Brandbook_Apron.webp",
+   "images/designs/bmc-bb/BMC-Brandbook_Cap.webp",
+   "images/designs/bmc-bb/BMC-Brandbook_Tshirt.webp",
+   "images/designs/bmc-bb/BMC-Brandbook_Cup.webp",
+   "images/designs/bmc-bb/BMC-Brandbook_Bag.webp",
+   "images/designs/bmc-bb/BMC-Brandbook_Menu.webp",
+   "images/designs/bmc-bb/BMC-Brandbook_Damas.webp",
+   "images/designs/bmc-bb/BMC-Brandbook_Container.webp",
+   "images/designs/bmc-bb/BMC-Brandbook_LastPage.webp"
   ],
   "tags": [
+   "bmc",
    "coffee",
-   "brandbook",
-   "merch",
    "branding",
    "identity",
+   "dark",
    "logo"
   ],
   "description": "Brand book and identity for Boylaga Mazza Coffee.",
-  "links": []
+  "links": [],
+  "hover": "images/designs/onm/bmc-onm.webp",
+  "dims": [
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ]
+  ]
  },
  {
   "slug": "bmc-container",
@@ -581,21 +1680,42 @@
   "category": "3d",
   "date": "17 Jun 2022",
   "year": 2022,
-  "thumb": "images/designs/3d/bmc-container/container-thumb.jpg",
+  "thumb": "images/designs/3d/bmc-container/container-thumb.webp",
   "images": [
-   "images/designs/3d/bmc-container/Co1.jpg",
-   "images/designs/3d/bmc-container/Co2.jpg",
-   "images/designs/3d/bmc-container/Co3.jpg",
-   "images/designs/3d/bmc-container/Co4.jpg"
+   "images/designs/3d/bmc-container/Co1.webp",
+   "images/designs/3d/bmc-container/Co2.webp",
+   "images/designs/3d/bmc-container/Co3.webp",
+   "images/designs/3d/bmc-container/Co4.webp"
   ],
   "tags": [
    "container",
+   "bmc",
    "coffee",
    "blender",
+   "modeling",
    "render"
   ],
   "description": "A 3D model of the BMC coffee container.",
-  "links": []
+  "links": [],
+  "hover": "images/designs/onm/container-onm.webp",
+  "dims": [
+   [
+    1920,
+    1080
+   ],
+   [
+    1920,
+    1080
+   ],
+   [
+    1920,
+    1080
+   ],
+   [
+    1920,
+    1080
+   ]
+  ]
  },
  {
   "slug": "sk1n",
@@ -603,18 +1723,28 @@
   "category": "branding",
   "date": "6 Jun 2022",
   "year": 2022,
-  "thumb": "images/designs/onm/skinonm.jpg",
+  "thumb": "images/designs/skin-thumb.webp",
   "images": [
-   "images/designs/Sk1nPRSNTTNws.jpg"
+   "images/designs/Sk1nPRSNTTNws.webp"
   ],
   "tags": [
-   "skincare",
+   "skin",
    "cosmetics",
    "beauty",
+   "cream",
+   "gentle",
+   "feminine",
    "logo"
   ],
   "description": "Logo for a skincare brand.",
-  "links": []
+  "links": [],
+  "hover": "images/designs/onm/skinonm.webp",
+  "dims": [
+   [
+    1920,
+    5650
+   ]
+  ]
  },
  {
   "slug": "oks",
@@ -622,19 +1752,28 @@
   "category": "ui",
   "date": "25 May 2022",
   "year": 2022,
-  "thumb": "images/designs/oks-thumb.jpg",
+  "thumb": "images/designs/oks-thumb.webp",
   "images": [
-   "images/designs/Index-iMac1c.jpg"
+   "images/designs/Index-iMac1c.webp"
   ],
   "tags": [
    "it",
-   "landing",
+   "oks",
+   "technologies",
    "redesign",
+   "landing",
    "ui",
    "ux"
   ],
   "description": "Landing page redesign for OKS Technologies.",
-  "links": []
+  "links": [],
+  "hover": "images/designs/onm/oks-onm.webp",
+  "dims": [
+   [
+    1920,
+    7503
+   ]
+  ]
  },
  {
   "slug": "deadlines",
@@ -642,19 +1781,28 @@
   "category": "ui",
   "date": "17 May 2022",
   "year": 2022,
-  "thumb": "images/designs/deadlines-thumb.jpg",
+  "thumb": "images/designs/deadlines-thumb.webp",
   "images": [
-   "images/designs/deadlines-prsn.jpg"
+   "images/designs/deadlines-prsn.webp"
   ],
   "tags": [
    "taskmanager",
+   "deadlines",
    "dark",
    "dashboard",
+   "todo",
    "ui",
    "ux"
   ],
   "description": "Dashboard UI for a task manager app.",
-  "links": []
+  "links": [],
+  "hover": "images/designs/onm/deadlines-onm.webp",
+  "dims": [
+   [
+    1920,
+    1080
+   ]
+  ]
  },
  {
   "slug": "bmp",
@@ -662,18 +1810,27 @@
   "category": "branding",
   "date": "14 May 2022",
   "year": 2022,
-  "thumb": "images/designs/bmpthumb.jpg",
+  "thumb": "images/designs/bmpthumb.webp",
   "images": [
-   "images/designs/BMProd-prsntn.jpg"
+   "images/designs/BMProd-prsntn.webp"
   ],
   "tags": [
    "media",
    "production",
+   "bloggers",
+   "recording",
    "studio",
    "logo"
   ],
   "description": "Logo for Boylaga Mazza Production, a media production studio.",
-  "links": []
+  "links": [],
+  "hover": "images/designs/onm/bmp-onm.webp",
+  "dims": [
+   [
+    1920,
+    8000
+   ]
+  ]
  },
  {
   "slug": "isometric-room",
@@ -681,19 +1838,32 @@
   "category": "3d",
   "date": "14 May 2022",
   "year": 2022,
-  "thumb": "images/designs/3d/Night-thumb.jpg",
+  "thumb": "images/designs/3d/Night-thumb.webp",
   "images": [
-   "images/designs/3d/Night-des.jpg",
-   "images/designs/3d/IsometricRoom2ed.jpg"
+   "images/designs/3d/Night-des.webp",
+   "images/designs/3d/IsometricRoom2ed.webp"
   ],
   "tags": [
-   "isometric",
+   "3d",
    "room",
+   "isometric",
    "blender",
+   "modeling",
    "render"
   ],
-  "description": "",
-  "links": []
+  "description": "An isometric night-time room modelled and rendered in Blender.",
+  "links": [],
+  "hover": "images/designs/onm/Isometric-onm.webp",
+  "dims": [
+   [
+    2000,
+    2000
+   ],
+   [
+    2000,
+    2000
+   ]
+  ]
  },
  {
   "slug": "hestira",
@@ -701,17 +1871,25 @@
   "category": "branding",
   "date": "20 Apr 2022",
   "year": 2022,
-  "thumb": "images/designs/HestiraThumb.jpg",
+  "thumb": "images/designs/HestiraThumb.webp",
   "images": [
-   "images/designs/HestiraPresentation.jpg"
+   "images/designs/HestiraPresentation.webp"
   ],
   "tags": [
+   "horse",
    "pegasus",
    "industrial",
    "logo"
   ],
-  "description": "Logo concept. Available for purchase.",
-  "links": []
+  "description": "A pegasus logo for an industrial brand. The mark is available for purchase.",
+  "links": [],
+  "hover": "images/designs/onm/hestira-onm.webp",
+  "dims": [
+   [
+    1920,
+    6492
+   ]
+  ]
  },
  {
   "slug": "baby-akademiya",
@@ -719,18 +1897,26 @@
   "category": "branding",
   "date": "31 Mar 2022",
   "year": 2022,
-  "thumb": "images/designs/Baby-Akademiya-Thumb.png",
+  "thumb": "images/designs/Baby-Akademiya-Thumb.webp",
   "images": [
-   "images/designs/BabyAkademiyaPres1.jpg"
+   "images/designs/BabyAkademiyaPres1.webp"
   ],
   "tags": [
    "kids",
+   "house",
    "kindergarten",
    "school",
    "logo"
   ],
   "description": "Logo for a kindergarten.",
-  "links": []
+  "links": [],
+  "hover": "images/designs/onm/BA-Logo-onm.webp",
+  "dims": [
+   [
+    1920,
+    4939
+   ]
+  ]
  },
  {
   "slug": "axe",
@@ -738,26 +1924,72 @@
   "category": "3d",
   "date": "15 Mar 2022",
   "year": 2022,
-  "thumb": "images/designs/3d/axe3d/axe-thumb.jpg",
+  "thumb": "images/designs/3d/axe3d/axe-thumb.webp",
   "images": [
-   "images/designs/3d/axe3d/Axe3.jpg",
-   "images/designs/3d/axe3d/Axe4.jpg",
-   "images/designs/3d/axe3d/AxeWall.jpg",
-   "images/designs/3d/axe3d/s1.png",
-   "images/designs/3d/axe3d/s2.png",
-   "images/designs/3d/axe3d/s3.png",
-   "images/designs/3d/axe3d/s4.png",
-   "images/designs/3d/axe3d/s5.png",
-   "images/designs/3d/axe3d/s6.png",
-   "images/designs/3d/axe3d/s7.png"
+   "images/designs/3d/axe3d/Axe3.webp",
+   "images/designs/3d/axe3d/Axe4.webp",
+   "images/designs/3d/axe3d/AxeWall.webp",
+   "images/designs/3d/axe3d/s1.webp",
+   "images/designs/3d/axe3d/s2.webp",
+   "images/designs/3d/axe3d/s3.webp",
+   "images/designs/3d/axe3d/s4.webp",
+   "images/designs/3d/axe3d/s5.webp",
+   "images/designs/3d/axe3d/s6.webp",
+   "images/designs/3d/axe3d/s7.webp"
   ],
   "tags": [
    "axe",
+   "universitywork",
+   "fancy",
+   "warhammer",
    "blender",
    "render"
   ],
-  "description": "",
-  "links": []
+  "description": "A decorative axe mounted on a wall, modelled in Blender as a university project.",
+  "links": [],
+  "hover": null,
+  "dims": [
+   [
+    1920,
+    1080
+   ],
+   [
+    1920,
+    1080
+   ],
+   [
+    1920,
+    1080
+   ],
+   [
+    1920,
+    1080
+   ],
+   [
+    1920,
+    1080
+   ],
+   [
+    1920,
+    1080
+   ],
+   [
+    1920,
+    1080
+   ],
+   [
+    1920,
+    1080
+   ],
+   [
+    1920,
+    1080
+   ],
+   [
+    1920,
+    1080
+   ]
+  ]
  },
  {
   "slug": "iphone13",
@@ -765,23 +1997,52 @@
   "category": "3d",
   "date": "4 Mar 2022",
   "year": 2022,
-  "thumb": "images/designs/3d/iphone/iphone-thumb.jpg",
+  "thumb": "images/designs/3d/iphone/iphone-thumb.webp",
   "images": [
-   "images/designs/3d/iphone/2ED.png",
-   "images/designs/3d/iphone/11ed.png",
-   "images/designs/3d/iphone/9ed1.png",
-   "images/designs/3d/iphone/9ed.png",
-   "images/designs/3d/iphone/8ed1.png",
-   "images/designs/3d/iphone/8ed.png"
+   "images/designs/3d/iphone/2ED.webp",
+   "images/designs/3d/iphone/11ed.webp",
+   "images/designs/3d/iphone/9ed1.webp",
+   "images/designs/3d/iphone/9ed.webp",
+   "images/designs/3d/iphone/8ed1.webp",
+   "images/designs/3d/iphone/8ed.webp"
   ],
   "tags": [
+   "3d",
    "iphone",
    "asset",
+   "apple",
    "blender",
    "render"
   ],
-  "description": "",
-  "links": []
+  "description": "A detailed iPhone 13 Pro model, built in Blender as a reusable mockup asset.",
+  "links": [],
+  "hover": "images/designs/onm/iphone-onm.webp",
+  "dims": [
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ]
+  ]
  },
  {
   "slug": "erp",
@@ -789,19 +2050,27 @@
   "category": "ui",
   "date": "20 Feb 2022",
   "year": 2022,
-  "thumb": "images/designs/erp-thumb.png",
+  "thumb": "images/designs/erp-thumb.webp",
   "images": [
-   "images/designs/erp-ui-onpage.jpg"
+   "images/designs/erp-ui-onpage.webp"
   ],
   "tags": [
    "erp",
    "payment",
+   "management",
    "admin",
    "ui",
    "ux"
   ],
   "description": "Application UI for an ERP system.",
-  "links": []
+  "links": [],
+  "hover": "images/designs/onm/erp-ui-onm.webp",
+  "dims": [
+   [
+    1920,
+    8002
+   ]
+  ]
  },
  {
   "slug": "utopia-ui",
@@ -809,18 +2078,27 @@
   "category": "ui",
   "date": "20 Jan 2022",
   "year": 2022,
-  "thumb": "images/designs/onm/utopia-ui-onm.jpg",
+  "thumb": "images/designs/utopia-ui-thumb.webp",
   "images": [
-   "images/designs/utopia-UIWEB.jpg"
+   "images/designs/utopia-UIWEB.webp"
   ],
   "tags": [
+   "utopia",
    "residence",
-   "website",
+   "house",
+   "apartment",
    "ui",
    "ux"
   ],
   "description": "Website UI and UX for the Utopia residential complex.",
-  "links": []
+  "links": [],
+  "hover": "images/designs/onm/utopia-ui-onm.webp",
+  "dims": [
+   [
+    1920,
+    4539
+   ]
+  ]
  },
  {
   "slug": "consultantuz",
@@ -828,17 +2106,26 @@
   "category": "branding",
   "date": "30 Dec 2021",
   "year": 2021,
-  "thumb": "images/designs/Consultantuz1.png",
+  "thumb": "images/designs/Consultantuz1.webp",
   "images": [
-   "images/designs/Consultantuz.jpg"
+   "images/designs/Consultantuz.webp"
   ],
   "tags": [
-   "consultation",
+   "consultant",
+   "instagram",
    "letter",
+   "consultation",
    "logo"
   ],
   "description": "Logo for a consulting service.",
-  "links": []
+  "links": [],
+  "hover": "images/designs/onm/Consultantuz2.webp",
+  "dims": [
+   [
+    1080,
+    4320
+   ]
+  ]
  },
  {
   "slug": "utopia-approved",
@@ -846,17 +2133,26 @@
   "category": "branding",
   "date": "21 Dec 2021",
   "year": 2021,
-  "thumb": "images/designs/utopia-v9.1a.png",
+  "thumb": "images/designs/utopia-v9.1a.webp",
   "images": [
-   "images/designs/utopiaPresentationV9.1b.jpg"
+   "images/designs/utopiaPresentationV9.1b.webp"
   ],
   "tags": [
+   "utopia",
    "residence",
-   "apartment",
-   "logo"
+   "house",
+   "logo",
+   "apartment"
   ],
   "description": "The approved logo for the Utopia residential complex.",
-  "links": []
+  "links": [],
+  "hover": "images/designs/onm/utopiav9.1a-onm.webp",
+  "dims": [
+   [
+    1920,
+    8430
+   ]
+  ]
  },
  {
   "slug": "utopia-rejected",
@@ -864,17 +2160,26 @@
   "category": "branding",
   "date": "16 Nov 2021",
   "year": 2021,
-  "thumb": "images/designs/utopiav8.png",
+  "thumb": "images/designs/utopiav8.webp",
   "images": [
-   "images/designs/utopiaPresentation.jpg"
+   "images/designs/utopiaPresentation.webp"
   ],
   "tags": [
+   "utopia",
    "residence",
-   "apartment",
-   "logo"
+   "house",
+   "logo",
+   "apartment"
   ],
   "description": "An earlier Utopia logo direction that the client turned down.",
-  "links": []
+  "links": [],
+  "hover": "images/designs/onm/stationeryMocksqonm.webp",
+  "dims": [
+   [
+    1920,
+    8430
+   ]
+  ]
  },
  {
   "slug": "aristocrat-home",
@@ -882,17 +2187,25 @@
   "category": "branding",
   "date": "15 Oct 2021",
   "year": 2021,
-  "thumb": "images/designs/ahwebsite.png",
+  "thumb": "images/designs/ahwebsite.webp",
   "images": [
-   "images/designs/AHPRes.jpg"
+   "images/designs/AHPRes.webp"
   ],
   "tags": [
+   "aristocrat",
    "luxury",
    "porcelain",
    "logo"
   ],
   "description": "Logo for a luxury porcelain brand.",
-  "links": []
+  "links": [],
+  "hover": "images/designs/onm/ahonm.webp",
+  "dims": [
+   [
+    1080,
+    5318
+   ]
+  ]
  },
  {
   "slug": "bspace",
@@ -900,18 +2213,25 @@
   "category": "ui",
   "date": "16 Sep 2021",
   "year": 2021,
-  "thumb": "images/designs/MainThumbnailBSpace.png",
+  "thumb": "images/designs/MainThumbnailBSpace.webp",
   "images": [
-   "images/designs/WidescreenOnPageBspace.jpg"
+   "images/designs/WidescreenOnPageBspace.webp"
   ],
   "tags": [
+   "bspace",
    "finance",
-   "fintech",
-   "dashboard",
-   "ui"
+   "ui",
+   "dashboard"
   ],
   "description": "Fintech dashboard UI.",
-  "links": []
+  "links": [],
+  "hover": "images/designs/onm/ThumbnailBSpaceonm.webp",
+  "dims": [
+   [
+    1920,
+    2160
+   ]
+  ]
  },
  {
   "slug": "sourcery",
@@ -919,18 +2239,26 @@
   "category": "branding",
   "date": "8 Jun 2021",
   "year": 2021,
-  "thumb": "images/designs/Sourcery.png",
+  "thumb": "images/designs/Sourcery.webp",
   "images": [
-   "images/designs/Sourcery-PR-fv.jpg"
+   "images/designs/Sourcery-PR-fv.webp"
   ],
   "tags": [
+   "source",
    "code",
    "keycap",
    "youtube",
    "logo"
   ],
-  "description": "Logo for a YouTube channel about code.",
-  "links": []
+  "description": "Logo for Sourcery, a YouTube channel about code, built from a keyboard keycap.",
+  "links": [],
+  "hover": "images/designs/onm/Sourcery-full-glowing.webp",
+  "dims": [
+   [
+    1000,
+    3354
+   ]
+  ]
  },
  {
   "slug": "go-anadolu",
@@ -938,17 +2266,25 @@
   "category": "branding",
   "date": "15 Sep 2020",
   "year": 2020,
-  "thumb": "images/designs/rwanadolu.png",
+  "thumb": "images/designs/rwanadolu.webp",
   "images": [
-   "images/designs/GOAnadolu-PresentationRED.jpg"
+   "images/designs/GOAnadolu-PresentationRED.webp"
   ],
   "tags": [
+   "anadolu",
    "turkey",
    "tulip",
    "logo"
   ],
-  "description": "",
-  "links": []
+  "description": "Logo for Go Anadolu, built around a tulip, a symbol of Turkey.",
+  "links": [],
+  "hover": "images/designs/onm/goanadoluonm.webp",
+  "dims": [
+   [
+    1000,
+    7663
+   ]
+  ]
  },
  {
   "slug": "maktab-bozor",
@@ -956,17 +2292,26 @@
   "category": "branding",
   "date": "22 Aug 2020",
   "year": 2020,
-  "thumb": "images/designs/maktabbozor.png",
+  "thumb": "images/designs/maktabbozor.webp",
   "images": [
-   "images/designs/maktabbozor-Presentation.jpg"
+   "images/designs/maktabbozor-Presentation.webp"
   ],
   "tags": [
+   "maktab",
+   "bozor",
    "school",
-   "store",
-   "logo"
+   "logo",
+   "instagram"
   ],
-  "description": "",
-  "links": []
+  "description": "Logo for Maktab Bozor, an online store for school supplies.",
+  "links": [],
+  "hover": "images/designs/onm/mbbonm.webp",
+  "dims": [
+   [
+    1000,
+    5151
+   ]
+  ]
  },
  {
   "slug": "drone",
@@ -974,20 +2319,36 @@
   "category": "3d",
   "date": "14 Mar 2020",
   "year": 2020,
-  "thumb": "images/designs/3d/drone/drone-thumb.jpg",
+  "thumb": "images/designs/3d/drone/drone-thumb.webp",
   "images": [
-   "images/designs/3d/drone/Drone-d0.jpg",
-   "images/designs/3d/drone/Drone-d1.jpg",
-   "images/designs/3d/drone/Drone.png"
+   "images/designs/3d/drone/Drone-d0.webp",
+   "images/designs/3d/drone/Drone-d1.webp",
+   "images/designs/3d/drone/Drone.webp"
   ],
   "tags": [
    "drone",
+   "levitating",
    "futuristic",
    "blender",
    "render"
   ],
-  "description": "",
-  "links": []
+  "description": "A futuristic levitating drone modelled and rendered in Blender.",
+  "links": [],
+  "hover": "images/designs/onm/drone-onm.webp",
+  "dims": [
+   [
+    2000,
+    1125
+   ],
+   [
+    2000,
+    1125
+   ],
+   [
+    1920,
+    1002
+   ]
+  ]
  },
  {
   "slug": "hirerpro",
@@ -995,16 +2356,23 @@
   "category": "branding",
   "date": "",
   "year": null,
-  "thumb": "images/designs/HirerPro-thumb.jpg",
+  "thumb": "images/designs/HirerPro-thumb.webp",
   "images": [
-   "images/designs/HirerPro-thumb.jpg"
+   "images/designs/HirerPro-thumb.webp"
   ],
   "tags": [
    "logo"
   ],
-  "description": "",
+  "description": "Logo for HirerPro, a hiring platform.",
   "links": [],
-  "archive": true
+  "archive": true,
+  "hover": "images/designs/onm/HirerPro-onm.webp",
+  "dims": [
+   [
+    900,
+    900
+   ]
+  ]
  },
  {
   "slug": "happy-horses-nft",
@@ -1012,16 +2380,23 @@
   "category": "branding",
   "date": "",
   "year": null,
-  "thumb": "images/designs/hhs-thumb.jpg",
+  "thumb": "images/designs/hhs-thumb.webp",
   "images": [
-   "images/designs/hhs-thumb.jpg"
+   "images/designs/hhs-thumb.webp"
   ],
   "tags": [
    "logo"
   ],
-  "description": "",
+  "description": "Logo for the Happy Horses NFT collection.",
   "links": [],
-  "archive": true
+  "archive": true,
+  "hover": "images/designs/onm/hhs-dark-onm.webp",
+  "dims": [
+   [
+    900,
+    900
+   ]
+  ]
  },
  {
   "slug": "croc-trading",
@@ -1029,16 +2404,23 @@
   "category": "branding",
   "date": "",
   "year": null,
-  "thumb": "images/designs/ct-thumb.jpg",
+  "thumb": "images/designs/ct-thumb.webp",
   "images": [
-   "images/designs/ct-thumb.jpg"
+   "images/designs/ct-thumb.webp"
   ],
   "tags": [
    "logo"
   ],
-  "description": "",
+  "description": "Logo for Croc Trading.",
   "links": [],
-  "archive": true
+  "archive": true,
+  "hover": "images/designs/onm/ct-onm.webp",
+  "dims": [
+   [
+    900,
+    900
+   ]
+  ]
  },
  {
   "slug": "snail-cream",
@@ -1046,16 +2428,23 @@
   "category": "branding",
   "date": "",
   "year": null,
-  "thumb": "images/designs/snailscream-thumb.jpg",
+  "thumb": "images/designs/snailscream-thumb.webp",
   "images": [
-   "images/designs/snailscream-thumb.jpg"
+   "images/designs/snailscream-thumb.webp"
   ],
   "tags": [
    "logo"
   ],
-  "description": "",
+  "description": "Logo for a snail-cream skincare product.",
   "links": [],
-  "archive": true
+  "archive": true,
+  "hover": "images/designs/onm/snailonm.webp",
+  "dims": [
+   [
+    900,
+    900
+   ]
+  ]
  },
  {
   "slug": "soqoq-food",
@@ -1063,16 +2452,23 @@
   "category": "branding",
   "date": "",
   "year": null,
-  "thumb": "images/designs/soqoqfood-thumb.png",
+  "thumb": "images/designs/soqoqfood-thumb.webp",
   "images": [
-   "images/designs/soqoqfood-thumb.png"
+   "images/designs/soqoqfood-thumb.webp"
   ],
   "tags": [
    "logo"
   ],
-  "description": "",
+  "description": "Logo for Soqoq Food.",
   "links": [],
-  "archive": true
+  "archive": true,
+  "hover": "images/designs/onm/sfonm.webp",
+  "dims": [
+   [
+    900,
+    900
+   ]
+  ]
  },
  {
   "slug": "leslie-allen-hiking",
@@ -1080,16 +2476,23 @@
   "category": "branding",
   "date": "",
   "year": null,
-  "thumb": "images/designs/umount.png",
+  "thumb": "images/designs/umount.webp",
   "images": [
-   "images/designs/umount.png"
+   "images/designs/umount.webp"
   ],
   "tags": [
    "logo"
   ],
-  "description": "",
+  "description": "Logo for Leslie Allen Hiking.",
   "links": [],
-  "archive": true
+  "archive": true,
+  "hover": "images/designs/onm/umountonm.webp",
+  "dims": [
+   [
+    900,
+    900
+   ]
+  ]
  },
  {
   "slug": "economics-with-finance",
@@ -1097,16 +2500,23 @@
   "category": "branding",
   "date": "",
   "year": null,
-  "thumb": "images/designs/EconWithFinance.png",
+  "thumb": "images/designs/EconWithFinance.webp",
   "images": [
-   "images/designs/EconWithFinance.png"
+   "images/designs/EconWithFinance.webp"
   ],
   "tags": [
    "logo"
   ],
-  "description": "",
+  "description": "Logo for Economics with Finance.",
   "links": [],
-  "archive": true
+  "archive": true,
+  "hover": "images/designs/onm/efonm.webp",
+  "dims": [
+   [
+    900,
+    900
+   ]
+  ]
  },
  {
   "slug": "cyprus-holidays",
@@ -1114,16 +2524,23 @@
   "category": "branding",
   "date": "",
   "year": null,
-  "thumb": "images/designs/CHWS.png",
+  "thumb": "images/designs/CHWS.webp",
   "images": [
-   "images/designs/CHWS.png"
+   "images/designs/CHWS.webp"
   ],
   "tags": [
    "logo"
   ],
-  "description": "",
+  "description": "Logo for Cyprus Holidays.",
   "links": [],
-  "archive": true
+  "archive": true,
+  "hover": "images/designs/onm/CHonm.webp",
+  "dims": [
+   [
+    900,
+    900
+   ]
+  ]
  },
  {
   "slug": "imitation",
@@ -1131,16 +2548,23 @@
   "category": "branding",
   "date": "",
   "year": null,
-  "thumb": "images/designs/imitationneww.png",
+  "thumb": "images/designs/imitationneww.webp",
   "images": [
-   "images/designs/imitationneww.png"
+   "images/designs/imitationneww.webp"
   ],
   "tags": [
    "logo"
   ],
-  "description": "",
+  "description": "Logo for Imitation.",
   "links": [],
-  "archive": true
+  "archive": true,
+  "hover": "images/designs/onm/imitationneww1.webp",
+  "dims": [
+   [
+    900,
+    900
+   ]
+  ]
  },
  {
   "slug": "chess",
@@ -1148,16 +2572,23 @@
   "category": "branding",
   "date": "",
   "year": null,
-  "thumb": "images/designs/chess2.png",
+  "thumb": "images/designs/chess2.webp",
   "images": [
-   "images/designs/chess2.png"
+   "images/designs/chess2.webp"
   ],
   "tags": [
    "logo"
   ],
-  "description": "",
+  "description": "Chess logo concept.",
   "links": [],
-  "archive": true
+  "archive": true,
+  "hover": "images/designs/onm/chessonm.webp",
+  "dims": [
+   [
+    900,
+    900
+   ]
+  ]
  },
  {
   "slug": "black-llama",
@@ -1165,16 +2596,23 @@
   "category": "branding",
   "date": "",
   "year": null,
-  "thumb": "images/designs/BlackLlamaRebrand.png",
+  "thumb": "images/designs/BlackLlamaRebrand.webp",
   "images": [
-   "images/designs/BlackLlamaRebrand.png"
+   "images/designs/BlackLlamaRebrand.webp"
   ],
   "tags": [
    "logo"
   ],
-  "description": "",
+  "description": "Rebrand for Black Llama.",
   "links": [],
-  "archive": true
+  "archive": true,
+  "hover": "images/designs/onm/blonm.webp",
+  "dims": [
+   [
+    900,
+    900
+   ]
+  ]
  },
  {
   "slug": "peak",
@@ -1182,16 +2620,23 @@
   "category": "branding",
   "date": "",
   "year": null,
-  "thumb": "images/designs/Peak.png",
+  "thumb": "images/designs/Peak.webp",
   "images": [
-   "images/designs/Peak.png"
+   "images/designs/Peak.webp"
   ],
   "tags": [
    "logo"
   ],
-  "description": "",
+  "description": "Logo for Peak.",
   "links": [],
-  "archive": true
+  "archive": true,
+  "hover": "images/designs/onm/peakonm.webp",
+  "dims": [
+   [
+    900,
+    900
+   ]
+  ]
  },
  {
   "slug": "maine-coon",
@@ -1199,16 +2644,23 @@
   "category": "branding",
   "date": "",
   "year": null,
-  "thumb": "images/designs/Maine-Coon.png",
+  "thumb": "images/designs/Maine-Coon.webp",
   "images": [
-   "images/designs/Maine-Coon.png"
+   "images/designs/Maine-Coon.webp"
   ],
   "tags": [
    "logo"
   ],
-  "description": "",
+  "description": "Maine Coon logo concept.",
   "links": [],
-  "archive": true
+  "archive": true,
+  "hover": "images/designs/onm/mainecoononm.webp",
+  "dims": [
+   [
+    500,
+    500
+   ]
+  ]
  },
  {
   "slug": "arthritis-block",
@@ -1216,16 +2668,23 @@
   "category": "branding",
   "date": "",
   "year": null,
-  "thumb": "images/designs/AB.png",
+  "thumb": "images/designs/AB.webp",
   "images": [
-   "images/designs/AB.png"
+   "images/designs/AB.webp"
   ],
   "tags": [
    "logo"
   ],
-  "description": "",
+  "description": "Logo for Arthritis Block.",
   "links": [],
-  "archive": true
+  "archive": true,
+  "hover": "images/designs/onm/abonm.webp",
+  "dims": [
+   [
+    900,
+    900
+   ]
+  ]
  },
  {
   "slug": "norkulov-i",
@@ -1233,16 +2692,23 @@
   "category": "branding",
   "date": "",
   "year": null,
-  "thumb": "images/designs/norkulovi.jpg",
+  "thumb": "images/designs/norkulovi.webp",
   "images": [
-   "images/designs/norkulovi.jpg"
+   "images/designs/norkulovi.webp"
   ],
   "tags": [
    "logo"
   ],
-  "description": "",
+  "description": "Personal logo design.",
   "links": [],
-  "archive": true
+  "archive": true,
+  "hover": "images/designs/onm/nionm.webp",
+  "dims": [
+   [
+    900,
+    900
+   ]
+  ]
  },
  {
   "slug": "mandolin-mondays",
@@ -1250,16 +2716,23 @@
   "category": "branding",
   "date": "",
   "year": null,
-  "thumb": "images/designs/mandolinmondays.png",
+  "thumb": "images/designs/mandolinmondays.webp",
   "images": [
-   "images/designs/mandolinmondays.png"
+   "images/designs/mandolinmondays.webp"
   ],
   "tags": [
    "logo"
   ],
-  "description": "",
+  "description": "Logo for Mandolin Mondays.",
   "links": [],
-  "archive": true
+  "archive": true,
+  "hover": "images/designs/onm/mmonm.webp",
+  "dims": [
+   [
+    900,
+    900
+   ]
+  ]
  },
  {
   "slug": "stairway",
@@ -1267,16 +2740,23 @@
   "category": "branding",
   "date": "",
   "year": null,
-  "thumb": "images/designs/Stairway1.png",
+  "thumb": "images/designs/Stairway1.webp",
   "images": [
-   "images/designs/Stairway1.png"
+   "images/designs/Stairway1.webp"
   ],
   "tags": [
    "logo"
   ],
-  "description": "",
+  "description": "Logo for Stairway.",
   "links": [],
-  "archive": true
+  "archive": true,
+  "hover": "images/designs/onm/stairwayomw.webp",
+  "dims": [
+   [
+    900,
+    900
+   ]
+  ]
  },
  {
   "slug": "vfx-alert",
@@ -1284,16 +2764,23 @@
   "category": "branding",
   "date": "",
   "year": null,
-  "thumb": "images/designs/vfx.png",
+  "thumb": "images/designs/vfx.webp",
   "images": [
-   "images/designs/vfx.png"
+   "images/designs/vfx.webp"
   ],
   "tags": [
    "logo"
   ],
-  "description": "",
+  "description": "Logo for VFX Alert.",
   "links": [],
-  "archive": true
+  "archive": true,
+  "hover": "images/designs/onm/vfxonm.webp",
+  "dims": [
+   [
+    900,
+    900
+   ]
+  ]
  },
  {
   "slug": "taiga-life",
@@ -1301,16 +2788,23 @@
   "category": "branding",
   "date": "",
   "year": null,
-  "thumb": "images/designs/tlboxonm.jpg",
+  "thumb": "images/designs/tlboxonm.webp",
   "images": [
-   "images/designs/tlboxonm.jpg"
+   "images/designs/tlboxonm.webp"
   ],
   "tags": [
    "logo"
   ],
-  "description": "",
+  "description": "Logo for Taiga Life.",
   "links": [],
-  "archive": true
+  "archive": true,
+  "hover": "images/designs/onm/taigalife.webp",
+  "dims": [
+   [
+    900,
+    900
+   ]
+  ]
  },
  {
   "slug": "sketch",
@@ -1318,16 +2812,23 @@
   "category": "branding",
   "date": "",
   "year": null,
-  "thumb": "images/designs/sketch.png",
+  "thumb": "images/designs/sketch.webp",
   "images": [
-   "images/designs/sketch.png"
+   "images/designs/sketch.webp"
   ],
   "tags": [
    "logo"
   ],
-  "description": "",
+  "description": "Sketch logo concept.",
   "links": [],
-  "archive": true
+  "archive": true,
+  "hover": null,
+  "dims": [
+   [
+    900,
+    900
+   ]
+  ]
  },
  {
   "slug": "morse",
@@ -1335,16 +2836,23 @@
   "category": "branding",
   "date": "",
   "year": null,
-  "thumb": "images/designs/morse.png",
+  "thumb": "images/designs/morse.webp",
   "images": [
-   "images/designs/morse.png"
+   "images/designs/morse.webp"
   ],
   "tags": [
    "logo"
   ],
-  "description": "",
+  "description": "Logo for Morse.",
   "links": [],
-  "archive": true
+  "archive": true,
+  "hover": "images/designs/onm/morseonm.webp",
+  "dims": [
+   [
+    900,
+    900
+   ]
+  ]
  },
  {
   "slug": "bchannels",
@@ -1352,16 +2860,23 @@
   "category": "branding",
   "date": "",
   "year": null,
-  "thumb": "images/designs/bc.jpg",
+  "thumb": "images/designs/bc.webp",
   "images": [
-   "images/designs/bc.jpg"
+   "images/designs/bc.webp"
   ],
   "tags": [
    "logo"
   ],
-  "description": "",
+  "description": "Logo for Bchannels.",
   "links": [],
-  "archive": true
+  "archive": true,
+  "hover": "images/designs/onm/bconm.webp",
+  "dims": [
+   [
+    900,
+    900
+   ]
+  ]
  },
  {
   "slug": "winner-game",
@@ -1369,16 +2884,23 @@
   "category": "branding",
   "date": "",
   "year": null,
-  "thumb": "images/designs/winnergame.png",
+  "thumb": "images/designs/winnergame.webp",
   "images": [
-   "images/designs/winnergame.png"
+   "images/designs/winnergame.webp"
   ],
   "tags": [
    "logo"
   ],
-  "description": "",
+  "description": "Logo for Winner Game.",
   "links": [],
-  "archive": true
+  "archive": true,
+  "hover": "images/designs/onm/wg1.webp",
+  "dims": [
+   [
+    900,
+    900
+   ]
+  ]
  },
  {
   "slug": "annoy",
@@ -1386,16 +2908,23 @@
   "category": "branding",
   "date": "",
   "year": null,
-  "thumb": "images/designs/annoy1.png",
+  "thumb": "images/designs/annoy1.webp",
   "images": [
-   "images/designs/annoy1.png"
+   "images/designs/annoy1.webp"
   ],
   "tags": [
    "logo"
   ],
-  "description": "",
+  "description": "Logo for Annoy.",
   "links": [],
-  "archive": true
+  "archive": true,
+  "hover": "images/designs/onm/annoy.webp",
+  "dims": [
+   [
+    900,
+    900
+   ]
+  ]
  },
  {
   "slug": "unicorn",
@@ -1403,16 +2932,23 @@
   "category": "branding",
   "date": "",
   "year": null,
-  "thumb": "images/designs/unicorn1.png",
+  "thumb": "images/designs/unicorn1.webp",
   "images": [
-   "images/designs/unicorn1.png"
+   "images/designs/unicorn1.webp"
   ],
   "tags": [
    "logo"
   ],
-  "description": "",
+  "description": "Unicorn logo concept.",
   "links": [],
-  "archive": true
+  "archive": true,
+  "hover": "images/designs/onm/unicornonm.webp",
+  "dims": [
+   [
+    900,
+    900
+   ]
+  ]
  },
  {
   "slug": "resort",
@@ -1420,16 +2956,23 @@
   "category": "branding",
   "date": "",
   "year": null,
-  "thumb": "images/designs/resortsq.png",
+  "thumb": "images/designs/resortsq.webp",
   "images": [
-   "images/designs/resortsq.png"
+   "images/designs/resortsq.webp"
   ],
   "tags": [
    "logo"
   ],
-  "description": "",
+  "description": "Logo for a resort.",
   "links": [],
-  "archive": true
+  "archive": true,
+  "hover": "images/designs/onm/resortonm.webp",
+  "dims": [
+   [
+    900,
+    900
+   ]
+  ]
  },
  {
   "slug": "not-news",
@@ -1437,16 +2980,23 @@
   "category": "branding",
   "date": "",
   "year": null,
-  "thumb": "images/designs/notnews.png",
+  "thumb": "images/designs/notnews.webp",
   "images": [
-   "images/designs/notnews.png"
+   "images/designs/notnews.webp"
   ],
   "tags": [
    "logo"
   ],
-  "description": "",
+  "description": "Logo for Not News.",
   "links": [],
-  "archive": true
+  "archive": true,
+  "hover": "images/designs/onm/nnonm.webp",
+  "dims": [
+   [
+    900,
+    900
+   ]
+  ]
  },
  {
   "slug": "spur",
@@ -1454,16 +3004,23 @@
   "category": "branding",
   "date": "",
   "year": null,
-  "thumb": "images/designs/spursmooth.png",
+  "thumb": "images/designs/spursmooth.webp",
   "images": [
-   "images/designs/spursmooth.png"
+   "images/designs/spursmooth.webp"
   ],
   "tags": [
    "logo"
   ],
-  "description": "",
+  "description": "Logo for Spur.",
   "links": [],
-  "archive": true
+  "archive": true,
+  "hover": "images/designs/onm/sponm.webp",
+  "dims": [
+   [
+    900,
+    900
+   ]
+  ]
  },
  {
   "slug": "cirilla",
@@ -1471,16 +3028,24 @@
   "category": "ui",
   "date": "",
   "year": null,
-  "thumb": "images/designs/CirillaUI.jpg",
+  "thumb": "images/designs/CirillaUI.webp",
   "images": [
-   "images/designs/CirillaUI.jpg"
+   "images/designs/CirillaUI.webp"
   ],
   "tags": [
-   "ui"
+   "ui",
+   "ux"
   ],
-  "description": "",
+  "description": "Interface design for Cirilla.",
   "links": [],
-  "archive": true
+  "archive": true,
+  "hover": null,
+  "dims": [
+   [
+    900,
+    899
+   ]
+  ]
  },
  {
   "slug": "bottles",
@@ -1488,16 +3053,24 @@
   "category": "3d",
   "date": "",
   "year": null,
-  "thumb": "images/designs/3d/Bottles.png",
+  "thumb": "images/designs/3d/Bottles.webp",
   "images": [
-   "images/designs/3d/Bottles.png"
+   "images/designs/3d/Bottles.webp"
   ],
   "tags": [
+   "3d",
    "blender",
    "render"
   ],
-  "description": "",
+  "description": "Bottle rendering practice in Blender.",
   "links": [],
-  "archive": true
+  "archive": true,
+  "hover": null,
+  "dims": [
+   [
+    900,
+    900
+   ]
+  ]
  }
 ]

@@ -9,62 +9,59 @@
   /* ---------------------------------------------------------------
      Smooth scroll (wheel is eased; touch, keys and scrollbar stay native)
   --------------------------------------------------------------- */
-  var smooth = (function () {
-    if (reduceMotion || !finePointer) return null;
-    root.classList.add("has-smooth");
-
-    var current = window.scrollY;
-    var target = current;
-    var running = false;
-    var ownScroll = false;
+  // One eased scroller per scroll container: the page, or the open project viewer.
+  function makeScroller(el) {
+    var isWin = el === window;
+    var current = 0, target = 0, running = false, ownScroll = false;
     var EASE = 0.095;
-
-    function max() { return document.documentElement.scrollHeight - window.innerHeight; }
+    function pos() { return isWin ? window.scrollY : el.scrollTop; }
+    function max() {
+      return isWin ? document.documentElement.scrollHeight - window.innerHeight : el.scrollHeight - el.clientHeight;
+    }
     function clamp(v) { return Math.max(0, Math.min(max(), v)); }
-
+    function set(y) { ownScroll = true; if (isWin) window.scrollTo(0, y); else el.scrollTop = y; }
     function tick() {
       var diff = target - current;
-      if (Math.abs(diff) < 0.4) {
-        current = target;
-        running = false;
-      } else {
-        current += diff * EASE;
-      }
-      ownScroll = true;
-      window.scrollTo(0, current);
+      if (Math.abs(diff) < 0.4) { current = target; running = false; }
+      else current += diff * EASE;
+      set(current);
       if (running) requestAnimationFrame(tick);
     }
+    function start() { if (!running) { running = true; requestAnimationFrame(tick); } }
+    (isWin ? window : el).addEventListener("scroll", function () {
+      if (ownScroll) { ownScroll = false; return; }
+      if (!running) current = target = pos();
+    }, { passive: true });
+    return {
+      by: function (d) { if (!running) current = target = pos(); target = clamp(target + d); start(); },
+      to: function (y) { if (!running) current = target = pos(); target = clamp(y); start(); },
+      reset: function () { running = false; current = target = pos(); }
+    };
+  }
 
-    function start() {
-      if (!running) { running = true; requestAnimationFrame(tick); }
-    }
-
+  var smooth = null;
+  var viewerScroller = null;
+  var viewerOpen = false;
+  if (!reduceMotion && finePointer) {
+    root.classList.add("has-smooth");
+    smooth = makeScroller(window);
     window.addEventListener("wheel", function (e) {
       if (e.ctrlKey || e.defaultPrevented) return; // pinch-zoom
-      e.preventDefault();
       var d = e.deltaY;
       if (e.deltaMode === 1) d *= 16;
       else if (e.deltaMode === 2) d *= window.innerHeight;
-      if (!running) current = window.scrollY;
-      target = clamp(target + d);
-      start();
-    }, { passive: false });
-
-    window.addEventListener("scroll", function () {
-      if (ownScroll) { ownScroll = false; return; }
-      if (!running) { current = target = window.scrollY; }
-    }, { passive: true });
-
-    window.addEventListener("resize", function () { target = clamp(target); });
-
-    return {
-      to: function (y) {
-        if (!running) current = window.scrollY;
-        target = clamp(y);
-        start();
+      if (viewerOpen) {
+        // the info column can scroll on short screens: leave it native
+        if (e.target.closest && e.target.closest(".viewer-info") &&
+            e.target.closest(".viewer-info").scrollHeight > e.target.closest(".viewer-info").clientHeight) return;
+        e.preventDefault();
+        if (viewerScroller) viewerScroller.by(d);
+        return;
       }
-    };
-  })();
+      e.preventDefault();
+      smooth.by(d);
+    }, { passive: false });
+  }
 
   // In-page anchors use the same easing
   document.addEventListener("click", function (e) {
@@ -201,8 +198,10 @@
     var updateHeader = function () {
       headerQueued = false;
       siteHeader.style.visibility = "hidden"; // look through the header
-      var b = brightnessAt(window.innerWidth / 2, 38);
-      if (b === "blend") b = backgroundBrightness(document.elementFromPoint(window.innerWidth / 2, 38));
+      // use the section colour, not images, so the bar doesn't flicker over thumbnails
+      var under = document.elementFromPoint(window.innerWidth / 2, 38);
+      var b = backgroundBrightness(under);
+      siteHeader.classList.toggle("on-khaki", !!(under && under.closest(".khaki")));
       siteHeader.style.visibility = "";
       siteHeader.classList.toggle("on-dark", b < 0.55);
     };
@@ -233,6 +232,8 @@
       dirty = true;
       var h = e.target.closest && e.target.closest(HOVERABLE);
       cursor.classList.toggle("is-hover", !!h);
+      cursor.classList.toggle("on-media", !!(h && h.querySelector && h.querySelector(".media")));
+      if (h) dirty = true;
     }, { passive: true });
     window.addEventListener("scroll", function () { dirty = true; }, { passive: true });
     document.addEventListener("mouseleave", function () { cursor.classList.remove("is-visible"); });
@@ -324,6 +325,150 @@
         }
         requestAnimationFrame(follow);
       })();
+    }
+  }
+
+  /* ---------------------------------------------------------------
+     Project viewer: clicking a project opens its images, description and tags
+  --------------------------------------------------------------- */
+  var dataEl = document.getElementById("projects-data");
+  var viewer = document.getElementById("viewer");
+  if (dataEl && viewer) {
+    var projects = JSON.parse(dataEl.textContent);
+    var bySlug = {};
+    projects.forEach(function (p, i) { p.index = i; bySlug[p.slug] = p; });
+    var scrollEl = viewer.querySelector(".viewer-scroll");
+    var el = {
+      cat: viewer.querySelector(".viewer-cat"),
+      title: viewer.querySelector("#viewer-title"),
+      desc: viewer.querySelector(".viewer-desc"),
+      tags: viewer.querySelector(".viewer-tags"),
+      meta: viewer.querySelector(".viewer-meta"),
+      images: viewer.querySelector(".viewer-images"),
+      close: viewer.querySelector("[data-close]")
+    };
+    if (smooth) viewerScroller = makeScroller(scrollEl);
+    var current = null, lastFocus = null, pageY = 0;
+
+    function text(node, value) { node.textContent = value || ""; node.hidden = !value; }
+    function visibleOrder() {
+      // previous / next follow the active filter
+      return Array.prototype.filter.call(document.querySelectorAll(".card"), function (c) {
+        return !c.classList.contains("is-hidden");
+      }).map(function (c) { return c.querySelector("[data-project]").getAttribute("data-project"); });
+    }
+
+    function render(p) {
+      current = p;
+      text(el.cat, p.category);
+      el.title.textContent = p.title;
+      text(el.desc, p.description);
+      el.tags.innerHTML = "";
+      p.tags.forEach(function (t) { var li = document.createElement("li"); li.textContent = "#" + t; el.tags.appendChild(li); });
+      el.meta.innerHTML = "";
+      function row(k, v) {
+        var dt = document.createElement("dt"); dt.textContent = k;
+        var dd = document.createElement("dd");
+        if (typeof v === "string") dd.textContent = v; else dd.appendChild(v);
+        el.meta.appendChild(dt); el.meta.appendChild(dd);
+      }
+      if (p.date) row("Date", p.date);
+      if (p.links && p.links.length) {
+        var frag = document.createDocumentFragment();
+        p.links.forEach(function (l, i) {
+          if (i) frag.appendChild(document.createTextNode(", "));
+          var a = document.createElement("a"); a.href = l[1]; a.textContent = l[0]; a.target = "_blank"; a.rel = "noopener";
+          frag.appendChild(a);
+        });
+        row("Links", frag);
+      }
+      el.meta.hidden = !el.meta.children.length;
+      el.images.innerHTML = "";
+      p.images.forEach(function (src, i) {
+        var img = document.createElement("img");
+        img.src = src;
+        img.alt = p.title + ", image " + (i + 1) + " of " + p.images.length;
+        if (p.dims && p.dims[i]) { img.width = p.dims[i][0]; img.height = p.dims[i][1]; }
+        img.decoding = "async";
+        if (i > 1) img.loading = "lazy";
+        el.images.appendChild(img);
+      });
+      scrollEl.scrollTop = 0;
+      if (viewerScroller) viewerScroller.reset();
+    }
+
+    function open(slug, push) {
+      var p = bySlug[slug];
+      if (!p) return;
+      render(p);
+      var cur = document.querySelector(".cursor");
+      if (cur) cur.classList.remove("is-hover", "on-media");
+      if (!viewerOpen) {
+        lastFocus = document.activeElement;
+        pageY = window.scrollY;
+        viewer.hidden = false;
+        root.classList.add("viewer-open");
+        viewerOpen = true;
+        requestAnimationFrame(function () { viewer.classList.add("is-open"); });
+      }
+      el.close.focus({ preventScroll: true });
+      if (push) history.pushState({ project: slug }, "", "#work/" + slug);
+      else history.replaceState({ project: slug }, "", "#work/" + slug);
+    }
+
+    function close(fromHistory) {
+      if (!viewerOpen) return;
+      viewerOpen = false;
+      viewer.classList.remove("is-open");
+      root.classList.remove("viewer-open");
+      window.scrollTo(0, pageY);
+      setTimeout(function () { if (!viewerOpen) { viewer.hidden = true; el.images.innerHTML = ""; } }, 450);
+      if (!fromHistory) {
+        if (history.state && history.state.project) history.back();
+        else history.replaceState(null, "", "#work");
+      }
+      if (lastFocus && lastFocus.focus) lastFocus.focus({ preventScroll: true });
+    }
+
+    function step(dir) {
+      var order = visibleOrder();
+      var i = order.indexOf(current.slug);
+      if (i < 0) i = 0;
+      open(order[(i + dir + order.length) % order.length], false);
+    }
+
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest("[data-project]");
+      if (!a || e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return;
+      e.preventDefault();
+      open(a.getAttribute("data-project"), true);
+    });
+    el.close.addEventListener("click", function () { close(false); });
+    viewer.querySelectorAll("[data-step]").forEach(function (b) {
+      b.addEventListener("click", function () { step(parseInt(b.getAttribute("data-step"), 10)); });
+    });
+    document.addEventListener("keydown", function (e) {
+      if (!viewerOpen) return;
+      if (e.key === "Escape") close(false);
+      else if (e.key === "ArrowRight") step(1);
+      else if (e.key === "ArrowLeft") step(-1);
+      else if (e.key === "Tab") {
+        // keep focus inside the viewer
+        var f = viewer.querySelectorAll("button, a[href]");
+        if (!f.length) return;
+        var first = f[0], last = f[f.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    });
+    window.addEventListener("popstate", function (e) {
+      var slug = e.state && e.state.project;
+      if (slug) open(slug, false); else close(true);
+    });
+    var m = location.hash.match(/^#work\/(.+)$/);
+    if (m && bySlug[m[1]]) {
+      history.replaceState(null, "", "#work");
+      open(m[1], true);
     }
   }
 })();
