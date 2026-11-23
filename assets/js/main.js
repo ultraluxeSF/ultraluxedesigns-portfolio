@@ -64,14 +64,14 @@
   }
 
   // Colour shown when a touch browser bounces past the top or bottom:
-  // white above the page, the footer's khaki below it.
+  // white above the page, the footer's orange contact block below it.
   (function () {
     var bottom = false;
     function paint() {
       var nearEnd = window.scrollY > (document.documentElement.scrollHeight - window.innerHeight) / 2;
       if (nearEnd !== bottom) {
         bottom = nearEnd;
-        root.style.backgroundColor = nearEnd ? "#7a7a4f" : "#ffffff";
+        root.style.backgroundColor = nearEnd ? "#ff4f1a" : "#ffffff";
       }
     }
     window.addEventListener("scroll", paint, { passive: true });
@@ -260,9 +260,10 @@
       // use the section colour, not images, so the bar doesn't flicker over thumbnails
       var under = document.elementFromPoint(window.innerWidth / 2, 38);
       var b = backgroundBrightness(under);
-      siteHeader.classList.toggle("on-khaki", !!(under && under.closest(".khaki")));
+      var onAccent = !!(under && under.closest(".accent"));
+      siteHeader.classList.toggle("on-accent", onAccent);
       siteHeader.style.visibility = "";
-      siteHeader.classList.toggle("on-dark", b < 0.55);
+      siteHeader.classList.toggle("on-dark", !onAccent && b < 0.5);
     };
     window.addEventListener("scroll", function () {
       if (!headerQueued) { headerQueued = true; requestAnimationFrame(updateHeader); }
@@ -318,7 +319,7 @@
           dirty = true; // keep checking until pixels become readable
         } else {
           cursor.style.mixBlendMode = "";
-          cursor.classList.toggle("on-light", b > 0.55);
+          cursor.classList.toggle("on-light", b > 0.45); // orange counts as light: ink reads better on it
         }
       }
       requestAnimationFrame(loop);

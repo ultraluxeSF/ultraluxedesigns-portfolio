@@ -14,7 +14,11 @@ const asset = (p, prefix) =>
   fs.existsSync(path.join(ROOT, decodeURIComponent(p))) ? prefix + p : REMOTE + p;
 
 const LOGO = fs.readFileSync(path.join(ROOT, "assets/logo-inline.svg"), "utf8");
-const CATS = { branding: "Branding", ui: "UI/UX", social: "Social media", "3d": "3D" };
+const CATS = { branding: "Branding", social: "Social media", "3d": "3D", ui: "UI/UX" };
+// branding and graphic work first, UI/UX last; original order kept within each group
+const RANK = { branding: 0, social: 0, "3d": 1, ui: 2 };
+projects.sort((a, b) => RANK[a.category] - RANK[b.category]);
+const bySlug = Object.fromEntries(projects.map((p) => [p.slug, p]));
 const esc = (s = "") =>
   String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
@@ -25,7 +29,7 @@ const head = ({ title, description, prefix, image }) => `<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}">
-<meta name="theme-color" content="#1b1b1d">
+<meta name="theme-color" content="#ffffff">
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(description)}">
 <meta property="og:type" content="website">
@@ -33,7 +37,7 @@ ${image ? `<meta property="og:image" content="${esc(image)}">` : ""}
 <link rel="icon" href="${prefix}assets/favicon.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="${prefix}assets/css/style.css">
 </head>`;
 
@@ -47,18 +51,23 @@ const header = (prefix, current) => {
     <a class="brand" href="${current === "home" ? "#top" : prefix + "index.html"}" aria-label="Ultraluxe Designs, home">${LOGO}<span class="brand-name">Ultraluxe <span>Designs</span></span></a>
     <nav class="nav" aria-label="Main">
       <a href="${base}#work"${current === "work" ? ' aria-current="page"' : ""}>Work</a>
-      <a class="nav-services" href="${base}#services">Services</a>
-      <a href="${base}#about">About</a>
-      <a href="${base}#contact">Contact</a>
+      <a class="nav-hide-sm" href="${base}#services">Services</a>
+      <a class="nav-hide-sm" href="${base}#about">About</a>
+      <a class="nav-cta" href="${base}#contact">Start a project</a>
     </nav>
   </div>
 </header>`;
 };
 
 const contact = (prefix) => `
-<section class="contact khaki" id="contact">
+<section class="contact accent" id="contact">
   <div class="wrap">
-    <p class="ask">Have a brand, product or campaign that needs design? Write to me.</p>
+    <h2>Got a brand<br>to build?</h2>
+    <p class="ask">Tell me about your company and what you need, and we’ll find the right shape for it.</p>
+    <div class="contact-actions">
+      <a class="btn btn-solid" href="${site.telegram.url}">Message on Telegram</a>
+      <a class="btn btn-line" href="mailto:${site.email}">Send an email</a>
+    </div>
     <a class="mail" href="mailto:${site.email}">${site.email}</a>
     <div class="contact-grid">
       <div>
@@ -157,12 +166,33 @@ function buildHome() {
     )
     .join("");
 
-  const services = site.services
-    .map(([t, d]) => `<li><h3>${esc(t)}</h3><p>${esc(d)}</p></li>`)
+  const mainServices = site.services
+    .filter((s) => s[2] === "main")
+    .map(([t, d]) => `<article class="service-card"><h3>${esc(t)}</h3><p>${esc(d)}</p></article>`)
+    .join("");
+  const moreServices = site.services
+    .filter((s) => s[2] !== "main")
+    .map(([t, d]) => `<li class="${t.startsWith("UI") ? "secondary" : ""}"><h3>${esc(t)}</h3><p>${esc(d)}</p></li>`)
+    .join("");
+  const featured = site.featured
+    .map((f) => {
+      const p = bySlug[f.slug];
+      return `
+        <article class="case">
+          <a href="work/${p.slug}/" data-project="${p.slug}">
+            <div class="case-media">
+              <img src="${asset(f.image, prefix)}" alt="${esc(p.title)}" loading="lazy" decoding="async">
+              <span class="pill">${CATS[p.category]}</span>
+              <span class="case-open">View project</span>
+            </div>
+            <div class="case-text"><h3>${esc(p.title)}</h3><span>${p.year || ""}</span><p>${esc(f.line)}</p></div>
+          </a>
+        </article>`;
+    })
     .join("");
 
   const html = `${head({
-    title: "Ultraluxe Designs, graphic and UI/UX design in Tashkent",
+    title: "Ultraluxe Designs, brand identity and graphic design in Tashkent",
     description: site.description,
     prefix,
     image: REMOTE + "images/LogoThumbnail.jpg",
@@ -173,6 +203,7 @@ ${header(prefix, "home")}
   <section class="hero">
     <div class="hero-head" aria-hidden="true">
       <img class="head" src="images/head.webp" alt="" width="820" height="1100" fetchpriority="high">
+      <span class="hero-badge"><i></i>Taking on new projects</span>
     </div>
     <div class="wrap">
       <h1 aria-label="${esc(site.heroPlain)}">${site.heroLines
@@ -180,22 +211,43 @@ ${header(prefix, "home")}
         .join("")}</h1>
       <div class="hero-foot">
         <p>${esc(site.intro)}</p>
-        <span class="status"><i></i>Taking on new projects</span>
-        <a class="scroll" href="#work">See the work</a>
+        <div class="hero-actions">
+          <a class="btn btn-solid" href="#contact"><span class="dot"></span>Start a project</a>
+          <a class="btn btn-line" href="#cases">See selected work</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="section dark works" id="work" data-view="grid">
+  <div class="marquee" aria-label="Clients">
+    <div class="marquee-track">${[0, 1]
+      .map(
+        (k) => `<ul${k ? ' aria-hidden="true"' : ""}>${site.clients.map((c) => `<li>${esc(c)}${LOGO}</li>`).join("")}</ul>`
+      )
+      .join("")}</div>
+  </div>
+
+  <section class="section" id="cases">
     <div class="wrap">
       <div class="section-head">
-        <h2>Work<sup>${projects.length}</sup></h2>
+        <h2>Selected<br>branding</h2>
+        <p>Identities, brand books and graphic systems for companies in Uzbekistan, Europe and the UK.</p>
+      </div>
+      <div class="cases">${featured}</div>
+    </div>
+  </section>
+
+  <section class="section mist works" id="work" data-view="grid">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>All work<sup>${projects.length}</sup></h2>
+        <p>Branding and graphic design first, then 3D and interface work.</p>
       </div>
       <div class="controls">
         <div class="filters" role="group" aria-label="Filter by discipline">${filters}</div>
         <div class="views" role="group" aria-label="Layout">
           <button type="button" data-view-btn="grid" aria-pressed="true">Grid</button>
-          <button type="button" data-view-btn="index" aria-pressed="false">Index</button>
+          <button type="button" data-view-btn="index" aria-pressed="false">List</button>
         </div>
       </div>
       <div class="grid">${cards}
@@ -211,12 +263,23 @@ ${header(prefix, "home")}
 
   <section class="section" id="services">
     <div class="wrap">
-      <div class="section-head"><h2>Services</h2></div>
-      <ul class="services-list">${services}</ul>
+      <div class="section-head">
+        <h2>What I do</h2>
+        <p>Most clients come for a brand and stay for the graphics that keep it alive every week.</p>
+      </div>
+      <div class="services-main">${mainServices}</div>
+      <ul class="services-more">${moreServices}</ul>
     </div>
   </section>
 
-  <section class="section dark" id="about">
+  <section class="section mist" id="process">
+    <div class="wrap">
+      <div class="section-head"><h2>How it works</h2></div>
+      <ol class="process">${site.process.map(([t, d]) => `<li><h3>${esc(t)}</h3><p>${esc(d)}</p></li>`).join("")}</ol>
+    </div>
+  </section>
+
+  <section class="section" id="about">
     <div class="wrap about-grid">
       <figure><img data-fade src="${asset("images/me.webp", prefix)}" alt="Iskandar Norkulov" loading="lazy"></figure>
       <div class="about-text">
@@ -305,7 +368,7 @@ ${header(prefix, "work")}
       ${gallery}
     </div>
   </section>
-  <a class="next dark" href="${prefix}work/${next.slug}/">
+  <a class="next mist" href="${prefix}work/${next.slug}/">
     <div class="wrap"><small>Next project</small><strong>${esc(next.title)}</strong></div>
   </a>
 </main>
@@ -329,7 +392,7 @@ function build404() {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Page not found | Ultraluxe Designs</title>
 <meta name="robots" content="noindex">
-<meta name="theme-color" content="#1b1b1d">
+<meta name="theme-color" content="#ffffff">
 <script>
   (function () {
     var repo = "/ultraluxedesigns-portfolio/";
@@ -340,7 +403,7 @@ function build404() {
 <link rel="icon" href="assets/favicon.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body id="top" class="page-404">
@@ -353,7 +416,7 @@ ${header("", "404")}
     <p class="nf-code">404</p>
     <h1>This page doesn't exist.</h1>
     <p class="nf-text">The link may be old or mistyped. Everything I've made is on the home page.</p>
-    <a class="nf-link" href="index.html#work">See all work</a>
+    <a class="btn btn-solid" href="index.html#work">See all work</a>
   </div>
 </main>
 ${contact("")}`;
