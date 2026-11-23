@@ -204,8 +204,8 @@
     "name": "Iskandar Norkulov",
     "role": "Graphic and brand identity designer",
     "bio": [
-      "I'm a graphic designer from Tashkent. I build brands from the logo up: identity systems, brand books, packaging, print and the social media graphics that keep a brand visible every day.",
-      "I work with companies of every size, from startups to schools and banks, in Uzbekistan and abroad. No brief yet? I'll help you write one."
+      "Graphic designer based in Tashkent, focused on brand identity and visual communication. I build brands from the logo up: identity systems, brand guidelines, packaging, print and the social media content that keeps a brand visible every day.",
+      "Since 2017 I have worked with startups, schools, banks and insurance companies in Uzbekistan and ten other countries. A background in UI/UX and product design helps my identities work as well on screen as they do in print. No brief yet? I'll help you shape one."
     ],
     "expertise": [
       [
@@ -221,13 +221,13 @@
       {
         "company": "Inter Nation English School",
         "period": "June 2023 – present",
-        "role": "Graphic Designer",
-        "tags": "Social media design, graphic design, print, motion",
+        "role": "Graphic Designer, Marketing department",
+        "tags": "Social media design, print design, motion design",
         "points": [
-          "The company's only graphic designer, working in the marketing team.",
-          "All social media visuals for Instagram, YouTube and Telegram: posts, stories, animations and video covers.",
-          "POS materials and all printed design.",
-          "Keeping the brand consistent across every channel."
+          "Sole graphic designer for the company, working within the marketing team.",
+          "Create all social media visuals for Instagram, YouTube and Telegram, including the main and Samarkand branch accounts: posts, stories, animations and video covers.",
+          "Design POS materials, print collateral and outdoor advertising.",
+          "Work with the marketing team on campaigns and overall strategy, and keep the brand consistent across every channel."
         ],
         "links": [
           [
@@ -237,24 +237,49 @@
         ]
       },
       {
-        "company": "Ultraluxe Designs (freelance)",
+        "company": "Ultraluxe Designs",
         "period": "2017 – present",
-        "role": "Brand identity and graphic designer",
-        "tags": "Branding, logo design, packaging, social media, 3D",
+        "role": "Founder and designer (freelance)",
+        "tags": "Branding, logo design, packaging, social media design, 3D",
         "points": [
-          "Logos, identities and brand books for clients in eleven countries.",
-          "Projects for Gorinvestment, Mverse, Online Pizza, BMC Coffee, Visual Addiction and Lieblingsgarn."
+          "Logos, identity systems and brand guidelines for clients in 11 countries.",
+          "Clients include Gorinvestment, Mverse, Online Pizza, BMC Coffee, Visual Addiction and Lieblingsgarn."
         ],
-        "links": []
+        "links": [
+          [
+            "Gorinvestment",
+            "gorinvestment"
+          ],
+          [
+            "Mverse",
+            "mverse"
+          ],
+          [
+            "Online Pizza",
+            "onlinepizza"
+          ],
+          [
+            "BMC Coffee",
+            "bmc"
+          ],
+          [
+            "Visual Addiction",
+            "visualaddiction"
+          ],
+          [
+            "Lieblingsgarn",
+            "lieblingsgarn"
+          ]
+        ]
       },
       {
         "company": "United Marketing",
         "period": "November 2022 – June 2023",
         "role": "Graphic and UI/UX Designer",
-        "tags": "Branding, logo design, identity, packaging, social media, 3D, UI, motion",
+        "tags": "Branding, logo design, packaging, social media design, 3D, UI design, motion design",
         "points": [
-          "Static and motion graphics for the social media of Euroasia Insurance, Agisept, ART Discoveries Group and Asia Alliance Bank.",
-          "POS materials, branding and logo design, UI and UX design."
+          "Created static and motion content for the social media of Euroasia Insurance, Agisept, ART Discoveries Group and Asia Alliance Bank.",
+          "Designed POS materials, logos and brand identities, as well as UI/UX for client projects."
         ],
         "links": [
           [
@@ -275,10 +300,10 @@
         "company": "International IT Forces (IITF)",
         "period": "January 2022 – November 2022",
         "role": "Product Designer",
-        "tags": "Product design, user flows, UX research, wireframing, prototyping",
+        "tags": "Product design, UX research, user flows, wireframing, prototyping, usability testing",
         "points": [
-          "Responsible for every design process in the company.",
-          "Interfaces for startups: the BSpace fintech CRM, an ERP system for private schools, the Yubor money-transfer app, the MyWork admin panel and the iConsult video-conferencing web app."
+          "Led every stage of design at the company, from research and user flows to wireframes, prototypes and final UI.",
+          "Designed products for startups: a CRM for the BSpace fintech app, an ERP system for private schools, Yubor (a money-transfer app for CIS citizens), the admin panel for MyWork (a job platform for construction workers) and the iConsult web app for video conferences and seminars."
         ],
         "links": [
           [
@@ -303,19 +328,19 @@
         "company": "World.uz",
         "period": "May 2019 – June 2020",
         "role": "Social Media Marketing Manager and Lead Designer",
-        "tags": "Social media marketing, graphic design, motion, targeting, photography",
+        "tags": "Social media marketing, graphic design, motion design, ad targeting, photography",
         "points": [
-          "Responsible for marketing, advertising, content, photography and design, and lead designer for all 13 branches.",
-          "Grew followers across Instagram, Telegram, Facebook and YouTube from 10K to 30K+ in one year."
+          "Ran marketing, advertising, content, photography and design for the company, and served as lead designer for all 13 branches.",
+          "Grew the audience across Instagram, Telegram, Facebook and YouTube from 10K to 30K+ followers in one year, while improving follower retention."
         ],
         "links": []
       }
     ],
     "awards": [
       [
-        "1st place, university logo competition",
+        "1st place, University Logo Competition",
         "March 2020",
-        "Logo for the Economics with Finance module at Westminster International University in Tashkent.",
+        "Winning logo for the Economics with Finance module at Westminster International University in Tashkent.",
         "economics-with-finance"
       ]
     ],
