@@ -357,8 +357,10 @@ ul, ol { list-style: none; margin: 0; padding: 0; }
   display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--gutter);
   border-top: 1.5px solid var(--ink); padding-top: 20px; font-size: 0.9375rem;
 }
-.contact-grid > div:nth-child(1), .contact-grid > div:nth-child(2) { grid-column: span 3; }
-.contact-grid > div:nth-child(3) { grid-column: span 6; }
+.contact-grid > div:nth-child(1) { grid-column: span 2; }
+.contact-grid > div:nth-child(2) { grid-column: span 3; }
+.contact-grid > div:nth-child(3) { grid-column: span 2; }
+.contact-grid > div:nth-child(4) { grid-column: span 5; }
 .contact-grid h3 { font-size: var(--fs-sm); font-weight: 500; opacity: 0.7; margin-bottom: 8px; }
 .contact-grid ul { display: flex; flex-wrap: wrap; gap: 4px 24px; }
 .contact-grid a, .site-footer a { font-weight: 500; }
@@ -373,7 +375,8 @@ ul, ol { list-style: none; margin: 0; padding: 0; }
 
 /* ---------- CV page ---------- */
 .footer-links { display: inline-flex; gap: 24px; }
-.about-cv { margin-top: 32px; }
+.about-cv { margin-top: 24px; }
+.btn-sm { padding: 9px 16px; font-size: 0.8125rem; border-width: 1.25px; }
 .cv-hero { padding: 150px 0 clamp(48px, 6vw, 88px); }
 .cv-hero h1 { font-size: var(--fs-display); font-weight: 600; letter-spacing: -0.055em; line-height: 0.95; }
 .cv-sub { margin-top: 18px; font-size: var(--fs-md); color: var(--muted); }
@@ -610,8 +613,9 @@ html.viewer-open, html.viewer-open body { overflow: hidden; }
   .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .contact h2 { font-size: 15vw; }
   .mail { font-size: 7.4vw; white-space: nowrap; letter-spacing: -0.04em; }
-  .contact-grid { grid-template-columns: 1fr; gap: 24px; }
-  .contact-grid > div:nth-child(n) { grid-column: 1; }
+  .contact-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+  .contact-grid > div:nth-child(n) { grid-column: auto; }
+  .contact-grid > div:nth-child(4) { grid-column: 1 / -1; }
   .footer-brand .logo-mark { width: 32px; height: 32px; }
   .project-hero { padding-top: 120px; }
   .project-meta { grid-template-columns: 1fr; gap: 28px; }
@@ -654,7 +658,9 @@ html.viewer-open, html.viewer-open body { overflow: hidden; }
   :lang(ru) .nav > a:first-child, :lang(uz) .nav > a:first-child { display: none; }
 }
 body { overflow-x: clip; }
-.facts dd, .cv-what, .about-text { overflow-wrap: break-word; hyphens: auto; }
+.facts dd, .cv-what, .about-text { overflow-wrap: break-word; }
+/* Poppins has no Cyrillic, so Russian pages are set entirely in Montserrat to avoid mixing two fonts in one line */
+html:lang(ru) body { font-family: "Montserrat", system-ui, sans-serif; }
 @media (max-width: 760px) {
   :lang(uz) .contact h2, :lang(ru) .contact h2 { font-size: 12.5vw; }
 }

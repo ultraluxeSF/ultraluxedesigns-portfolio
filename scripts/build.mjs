@@ -200,6 +200,10 @@ const contact = (ctx, C) => {
         <p>${esc(site.location)}</p>
       </div>
       <div>
+        <h3>${t.myCv}</h3>
+        <a href="${L(ctx)}cv/">${t.readCv}</a>
+      </div>
+      <div>
         <h3>${t.elsewhere}</h3>
         <ul>${site.social.map(([n, u]) => `<li><a href="${u}">${n}</a></li>`).join("")}</ul>
       </div>
@@ -440,7 +444,7 @@ ${header(ctx, C, "home")}
       <div class="about-text">
         <p class="lead">${esc(site.about[0])}</p>
         <p>${esc(site.about[1])}</p>
-        <a class="btn btn-line about-cv" href="cv/">${t.readCv}</a>
+        <a class="btn btn-line btn-sm about-cv" href="cv/">${t.readCv}</a>
         <dl class="facts">
           ${site.facts.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("")}
         </dl>
