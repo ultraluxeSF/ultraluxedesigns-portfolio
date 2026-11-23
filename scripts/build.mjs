@@ -85,7 +85,7 @@ const contact = (prefix) => `
     </div>
     <footer class="site-footer">
       <span class="footer-brand">${LOGO}<span>© ${new Date().getFullYear()} Ultraluxe Designs</span></span>
-      <a href="#top">Back to top</a>
+      <span class="footer-links"><a href="${prefix}cv/">My CV</a><a href="#top">Back to top</a></span>
     </footer>
   </div>
 </section>
@@ -290,6 +290,7 @@ ${header(prefix, "home")}
       <div class="about-text">
         <p class="lead">${esc(site.about[0])}</p>
         <p>${esc(site.about[1])}</p>
+        <a class="btn btn-line about-cv" href="cv/">Read my CV</a>
         <dl class="facts">
           ${site.facts.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("")}
         </dl>
@@ -385,6 +386,107 @@ ${contact(prefix)}`;
   });
 }
 
+// ---------------- CV ----------------
+function buildCV() {
+  const prefix = "../";
+  const cv = site.cv;
+  const work = (slug, label) => `<a href="${prefix}work/${slug}/">${esc(label)}</a>`;
+  const jobs = cv.jobs
+    .map(
+      (j) => `
+        <li class="cv-row">
+          <p class="cv-when">${esc(j.period)}</p>
+          <div class="cv-what">
+            <h3>${esc(j.company)}</h3>
+            <p class="cv-role">${esc(j.role)}</p>
+            <p class="cv-tags">${esc(j.tags)}</p>
+            <ul class="cv-points">${j.points.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>
+            ${j.links.length ? `<p class="cv-links">See the work: ${j.links.map(([l, s]) => work(s, l)).join(", ")}</p>` : ""}
+          </div>
+        </li>`
+    )
+    .join("");
+  const simple = (rows) =>
+    rows
+      .map(
+        ([t, when, d, slug]) => `
+        <li class="cv-row">
+          <p class="cv-when">${esc(when)}</p>
+          <div class="cv-what"><h3>${esc(t)}</h3><p class="cv-role">${esc(d)}</p>${slug ? `<p class="cv-links">${work(slug, "See the logo")}</p>` : ""}</div>
+        </li>`
+      )
+      .join("");
+  const html = `${head({
+    title: `${cv.name}, CV | Ultraluxe Designs`,
+    description: `CV of ${cv.name}: ${cv.role.toLowerCase()} in Tashkent, Uzbekistan.`,
+    prefix,
+    image: REMOTE + "images/LogoThumbnail.jpg",
+  })}
+<body id="top" class="cv-page">
+${header(prefix, "cv")}
+<main id="main">
+  <section class="cv-hero">
+    <div class="wrap">
+      <a class="back" href="${prefix}index.html#about">Home</a>
+      <h1>${esc(cv.name)}</h1>
+      <p class="cv-sub">${esc(cv.role)}, Tashkent</p>
+      <div class="cv-actions">
+        <a class="btn btn-solid" href="mailto:${site.email}"><span class="dot"></span>${site.email}</a>
+        <a class="btn btn-line" href="${site.telegram.url}">Telegram ${site.telegram.handle}</a>
+        <button class="btn btn-line" type="button" data-print>Save as PDF</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="cv-block">
+    <div class="wrap cv-grid">
+      <h2>About</h2>
+      <div class="cv-body">
+        ${cv.bio.map((x, i) => `<p class="${i ? "" : "cv-lead"}">${esc(x)}</p>`).join("")}
+        <dl class="cv-stats">
+          ${cv.expertise
+            .map(([t, since]) => `<div><dt>${esc(t)}</dt><dd><strong data-years-since="${since}"></strong> years</dd></div>`)
+            .join("")}
+          <div><dt>Clients from</dt><dd><strong>11</strong> countries</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="cv-block">
+    <div class="wrap cv-grid">
+      <h2>Experience</h2>
+      <ol class="cv-list">${jobs}</ol>
+    </div>
+  </section>
+
+  <section class="cv-block">
+    <div class="wrap cv-grid">
+      <h2>Awards</h2>
+      <ol class="cv-list">${simple(cv.awards.map(([t, w, d, s]) => [t, w, d, s]))}</ol>
+    </div>
+  </section>
+
+  <section class="cv-block">
+    <div class="wrap cv-grid">
+      <h2>Education</h2>
+      <ol class="cv-list">${simple(cv.education)}</ol>
+    </div>
+  </section>
+
+  <section class="cv-block">
+    <div class="wrap cv-grid">
+      <h2>Languages</h2>
+      <ul class="cv-langs">${cv.languages.map(([l, v]) => `<li><strong>${esc(l)}</strong><span>${esc(v)}</span></li>`).join("")}</ul>
+    </div>
+  </section>
+</main>
+${contact(prefix)}`;
+  const dir = path.join(ROOT, "cv");
+  fs.mkdirSync(dir, { recursive: true });
+  fs.writeFileSync(path.join(dir, "index.html"), html);
+}
+
 // ---------------- 404 ----------------
 // GitHub Pages serves this file for any missing URL, at any depth, so asset
 // paths are resolved at runtime from the site root (works on a project page
@@ -430,6 +532,7 @@ ${contact("")}`;
 
 fs.rmSync(path.join(ROOT, "work"), { recursive: true, force: true });
 build404();
+buildCV();
 buildHome();
 buildProjects();
 console.log(`Built index.html and ${projects.length} project pages.`);

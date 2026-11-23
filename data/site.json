@@ -199,5 +199,146 @@
       "Handover",
       "You get all source files and guidelines, ready for print, web and social."
     ]
-  ]
+  ],
+  "cv": {
+    "name": "Iskandar Norkulov",
+    "role": "Graphic and brand identity designer",
+    "bio": [
+      "I'm a graphic designer from Tashkent. I build brands from the logo up: identity systems, brand books, packaging, print and the social media graphics that keep a brand visible every day.",
+      "I work with companies of every size, from startups to schools and banks, in Uzbekistan and abroad. No brief yet? I'll help you write one."
+    ],
+    "expertise": [
+      [
+        "Graphic design",
+        "2018-07-01"
+      ],
+      [
+        "UI/UX design",
+        "2021-03-04"
+      ]
+    ],
+    "jobs": [
+      {
+        "company": "Inter Nation English School",
+        "period": "June 2023 – present",
+        "role": "Graphic Designer",
+        "tags": "Social media design, graphic design, print, motion",
+        "points": [
+          "The company's only graphic designer, working in the marketing team.",
+          "All social media visuals for Instagram, YouTube and Telegram: posts, stories, animations and video covers.",
+          "POS materials and all printed design.",
+          "Keeping the brand consistent across every channel."
+        ],
+        "links": [
+          [
+            "Inter Nation English School",
+            "inter-nation"
+          ]
+        ]
+      },
+      {
+        "company": "Ultraluxe Designs (freelance)",
+        "period": "2017 – present",
+        "role": "Brand identity and graphic designer",
+        "tags": "Branding, logo design, packaging, social media, 3D",
+        "points": [
+          "Logos, identities and brand books for clients in eleven countries.",
+          "Projects for Gorinvestment, Mverse, Online Pizza, BMC Coffee, Visual Addiction and Lieblingsgarn."
+        ],
+        "links": []
+      },
+      {
+        "company": "United Marketing",
+        "period": "November 2022 – June 2023",
+        "role": "Graphic and UI/UX Designer",
+        "tags": "Branding, logo design, identity, packaging, social media, 3D, UI, motion",
+        "points": [
+          "Static and motion graphics for the social media of Euroasia Insurance, Agisept, ART Discoveries Group and Asia Alliance Bank.",
+          "POS materials, branding and logo design, UI and UX design."
+        ],
+        "links": [
+          [
+            "Euroasia Insurance",
+            "euroasia-insurance"
+          ],
+          [
+            "Agisept",
+            "agisept"
+          ],
+          [
+            "Asia Alliance Bank",
+            "asia-alliance-bank"
+          ]
+        ]
+      },
+      {
+        "company": "International IT Forces (IITF)",
+        "period": "January 2022 – November 2022",
+        "role": "Product Designer",
+        "tags": "Product design, user flows, UX research, wireframing, prototyping",
+        "points": [
+          "Responsible for every design process in the company.",
+          "Interfaces for startups: the BSpace fintech CRM, an ERP system for private schools, the Yubor money-transfer app, the MyWork admin panel and the iConsult video-conferencing web app."
+        ],
+        "links": [
+          [
+            "BSpace",
+            "bspace"
+          ],
+          [
+            "ERP system",
+            "erp"
+          ],
+          [
+            "MyWork",
+            "mywork"
+          ],
+          [
+            "iConsult",
+            "iconsult"
+          ]
+        ]
+      },
+      {
+        "company": "World.uz",
+        "period": "May 2019 – June 2020",
+        "role": "Social Media Marketing Manager and Lead Designer",
+        "tags": "Social media marketing, graphic design, motion, targeting, photography",
+        "points": [
+          "Responsible for marketing, advertising, content, photography and design, and lead designer for all 13 branches.",
+          "Grew followers across Instagram, Telegram, Facebook and YouTube from 10K to 30K+ in one year."
+        ],
+        "links": []
+      }
+    ],
+    "awards": [
+      [
+        "1st place, university logo competition",
+        "March 2020",
+        "Logo for the Economics with Finance module at Westminster International University in Tashkent.",
+        "economics-with-finance"
+      ]
+    ],
+    "education": [
+      [
+        "Westminster International University in Tashkent",
+        "September 2018 – May 2022",
+        "BSc in Business Information Systems"
+      ]
+    ],
+    "languages": [
+      [
+        "English",
+        "C2"
+      ],
+      [
+        "Russian",
+        "Fluent"
+      ],
+      [
+        "Uzbek",
+        "Fluent"
+      ]
+    ]
+  }
 }

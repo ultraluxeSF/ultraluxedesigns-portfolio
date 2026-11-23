@@ -634,4 +634,17 @@
       requestAnimationFrame(float);
     })();
   }
+
+  /* ---------------------------------------------------------------
+     CV: years of experience counted from the start date, and print to PDF
+  --------------------------------------------------------------- */
+  document.querySelectorAll("[data-years-since]").forEach(function (el) {
+    var since = new Date(el.getAttribute("data-years-since"));
+    var now = new Date();
+    var years = now.getFullYear() - since.getFullYear();
+    if (now.getMonth() < since.getMonth() || (now.getMonth() === since.getMonth() && now.getDate() < since.getDate())) years--;
+    el.textContent = years + "+";
+  });
+  var printBtn = document.querySelector("[data-print]");
+  if (printBtn) printBtn.addEventListener("click", function () { window.print(); });
 })();
