@@ -219,13 +219,18 @@ ${header(prefix, "home")}
     </div>
   </section>
 
-  <div class="marquee" aria-label="Clients">
+  <nav class="marquee" aria-label="Clients">
     <div class="marquee-track">${[0, 1]
       .map(
-        (k) => `<ul${k ? ' aria-hidden="true"' : ""}>${site.clients.map((c) => `<li>${esc(c)}${LOGO}</li>`).join("")}</ul>`
+        (k) => `<ul${k ? ' aria-hidden="true"' : ""}>${site.clients
+          .map(
+            ([c, slug]) =>
+              `<li><a href="work/${slug}/" data-project="${slug}"${k ? ' tabindex="-1"' : ""}>${esc(c)}</a>${LOGO}</li>`
+          )
+          .join("")}</ul>`
       )
       .join("")}</div>
-  </div>
+  </nav>
 
   <section class="section" id="cases">
     <div class="wrap">

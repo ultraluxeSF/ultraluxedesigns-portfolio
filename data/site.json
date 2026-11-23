@@ -93,20 +93,62 @@
     ]
   ],
   "clients": [
-    "Inter Nation",
-    "Gorinvestment",
-    "Mverse",
-    "Online Pizza",
-    "BMC Coffee",
-    "Visual Addiction",
-    "Lieblingsgarn",
-    "Asia Alliance Bank",
-    "Euroasia Insurance",
-    "Garanti Express",
-    "Cerom",
-    "Aristocrat Home",
-    "Utopia",
-    "Central Asian Green University"
+    [
+      "Inter Nation",
+      "inter-nation"
+    ],
+    [
+      "Gorinvestment",
+      "gorinvestment"
+    ],
+    [
+      "Mverse",
+      "mverse"
+    ],
+    [
+      "Online Pizza",
+      "onlinepizza"
+    ],
+    [
+      "BMC Coffee",
+      "bmc"
+    ],
+    [
+      "Visual Addiction",
+      "visualaddiction"
+    ],
+    [
+      "Lieblingsgarn",
+      "lieblingsgarn"
+    ],
+    [
+      "Asia Alliance Bank",
+      "asia-alliance-bank"
+    ],
+    [
+      "Euroasia Insurance",
+      "euroasia-insurance"
+    ],
+    [
+      "Garanti Express",
+      "garanti-express"
+    ],
+    [
+      "Cerom",
+      "cerom"
+    ],
+    [
+      "Aristocrat Home",
+      "aristocrat-home"
+    ],
+    [
+      "Utopia",
+      "utopia-approved"
+    ],
+    [
+      "Central Asian Green University",
+      "cagu"
+    ]
   ],
   "featured": [
     {
@@ -121,7 +163,7 @@
     },
     {
       "slug": "inter-nation",
-      "image": "images/designs/SMM/internation/vol6/vol6-11.webp",
+      "image": "images/designs/SMM/internation/internation-feature.webp",
       "line": "Every Instagram graphic since 2023: six volumes of posts plus YouTube thumbnails."
     },
     {

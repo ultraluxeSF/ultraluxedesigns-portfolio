@@ -71,7 +71,7 @@
       var nearEnd = window.scrollY > (document.documentElement.scrollHeight - window.innerHeight) / 2;
       if (nearEnd !== bottom) {
         bottom = nearEnd;
-        root.style.backgroundColor = nearEnd ? "#ff4f1a" : "#ffffff";
+        root.style.backgroundColor = nearEnd ? (getComputedStyle(root).getPropertyValue("--accent").trim() || "#ffffff") : "#ffffff";
       }
     }
     window.addEventListener("scroll", paint, { passive: true });

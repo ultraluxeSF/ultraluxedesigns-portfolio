@@ -5,12 +5,13 @@
   --ink: #1b1b1d;
   --ink-2: #26262a;
   --muted: #6b6b66;
-  --accent: #ff4f1a;       /* signal orange: the one loud colour */
+  --accent: #ff4f1a;       /* the one loud colour */
   --accent-ink: #1b1b1d;   /* text on accent */
+  --accent-text: #e8400c;  /* accent when used as text on white */
   --line: rgba(27, 27, 29, 0.12);
   --line-strong: rgba(27, 27, 29, 0.85);
 
-  --gutter: clamp(16px, 3.2vw, 48px);
+  --gutter: clamp(14px, 2.4vw, 36px);
   --max: 1680px;
   --radius: 18px;
 
@@ -88,7 +89,7 @@ ul, ol { list-style: none; margin: 0; padding: 0; }
   pointer-events: none;
 }
 .site-header.on-dark { color: #fff; background: rgba(27, 27, 29, 0.88); }
-.site-header.on-accent { color: var(--accent-ink); background: rgba(255, 79, 26, 0.94); }
+.site-header.on-accent { color: var(--accent-ink); background: var(--accent); }
 .site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 76px; }
 .site-header a, .site-header button { pointer-events: auto; }
 .brand { display: inline-flex; align-items: center; gap: 12px; font-weight: 600; font-size: 1.0625rem; letter-spacing: -0.02em; }
@@ -119,7 +120,7 @@ ul, ol { list-style: none; margin: 0; padding: 0; }
 }
 .hero > .wrap { position: relative; z-index: 2; }
 .hero h1 {
-  font-size: var(--fs-display);
+  font-size: clamp(3rem, 7.4vw, 8.75rem);
   font-weight: 600;
   line-height: 0.98;
   letter-spacing: -0.055em;
@@ -174,7 +175,14 @@ ul, ol { list-style: none; margin: 0; padding: 0; }
   padding-right: clamp(20px, 2.4vw, 36px);
   font-size: clamp(1.5rem, 2.8vw, 2.75rem); font-weight: 600; letter-spacing: -0.035em; white-space: nowrap;
 }
-.marquee .logo-mark { width: 0.7em; height: 0.7em; }
+.marquee .logo-mark { width: 0.7em; height: 0.7em; flex: none; }
+.marquee a { position: relative; transition: color 0.3s; }
+.marquee a::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0.02em; height: 0.08em;
+  background: var(--accent); transform: scaleX(0); transform-origin: right; transition: transform 0.5s var(--ease);
+}
+.marquee a:hover::after, .marquee a:focus-visible::after { transform: scaleX(1); transform-origin: left; }
+.marquee a:hover { color: var(--accent-text); }
 @keyframes marquee { to { transform: translateX(-50%); } }
 
 /* ---------- Section heads ---------- */
@@ -184,7 +192,7 @@ ul, ol { list-style: none; margin: 0; padding: 0; }
   gap: 20px 40px; margin-bottom: clamp(36px, 4.5vw, 64px);
 }
 .section-head h2 { font-size: var(--fs-xl); font-weight: 600; letter-spacing: -0.05em; line-height: 0.98; }
-.section-head h2 sup { font-size: 0.3em; font-weight: 500; letter-spacing: 0; vertical-align: top; margin-left: 0.3em; color: var(--accent); }
+.section-head h2 sup { font-size: 0.3em; font-weight: 500; letter-spacing: 0; vertical-align: top; margin-left: 0.3em; color: var(--accent-text); }
 .section-head p { max-width: 30em; color: var(--muted); }
 
 /* ---------- Featured cases ---------- */
@@ -277,7 +285,7 @@ ul, ol { list-style: none; margin: 0; padding: 0; }
 .row a > span:last-child { text-align: right; }
 .index:hover .row a { color: rgba(27,27,29,0.35); }
 .index .row a:hover { color: var(--ink); padding-left: 14px; }
-.index .row a:hover > span:not(:first-child) { color: var(--accent); }
+.index .row a:hover > span:not(:first-child) { color: var(--accent-text); }
 .preview {
   position: fixed; left: 0; top: 0; z-index: 40; pointer-events: none;
   width: clamp(220px, 22vw, 380px); aspect-ratio: 1; border-radius: 14px;
@@ -312,7 +320,7 @@ ul, ol { list-style: none; margin: 0; padding: 0; }
 .process li { border-top: 1.5px solid var(--ink); padding-top: 20px; counter-increment: step; }
 .process li::before {
   content: counter(step, decimal-leading-zero); display: block;
-  font-size: 0.9375rem; font-weight: 600; color: var(--accent); margin-bottom: 28px;
+  font-size: 0.9375rem; font-weight: 600; color: var(--accent-text); margin-bottom: 28px;
 }
 .process h3 { font-size: clamp(1.375rem, 1.8vw, 1.75rem); font-weight: 600; letter-spacing: -0.03em; margin-bottom: 10px; }
 .process p { color: var(--muted); }
@@ -395,6 +403,7 @@ ul, ol { list-style: none; margin: 0; padding: 0; }
 /* ---------- Sections (Inter Nation volumes) ---------- */
 .sections-index { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; margin-bottom: clamp(40px, 5vw, 72px); border-radius: var(--radius); overflow: hidden; }
 .sections-index a { position: relative; display: block; aspect-ratio: 1 / 1; overflow: hidden; background: var(--ink-2); }
+.sections-index a:nth-child(7):last-child { grid-column: span 2; aspect-ratio: auto; }
 .sections-index img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity 0.45s var(--ease), transform 1.2s var(--ease); }
 .sections-index .cover-hover { opacity: 0; }
 .sections-index a.has-hover:hover .cover-hover, .sections-index a.has-hover:focus-visible .cover-hover { opacity: 1; }
@@ -476,7 +485,7 @@ html.viewer-open, html.viewer-open body { overflow: hidden; }
 /* ---------- 404 ---------- */
 .nf { position: relative; overflow: hidden; min-height: 100svh; display: flex; align-items: flex-end; padding: 140px 0 clamp(40px, 6vw, 88px); }
 .nf-inner { position: relative; z-index: 2; }
-.nf-code { font-size: clamp(6rem, 22vw, 20rem); font-weight: 600; letter-spacing: -0.07em; line-height: 0.85; color: var(--accent); }
+.nf-code { font-size: clamp(6rem, 22vw, 20rem); font-weight: 600; letter-spacing: -0.07em; line-height: 0.85; color: var(--accent-text); }
 .nf h1 { margin-top: 24px; font-size: var(--fs-xl); font-weight: 600; letter-spacing: -0.05em; line-height: 1.05; }
 .nf-text { margin-top: 16px; color: var(--muted); max-width: 34em; }
 .nf .btn { margin-top: 32px; }
@@ -556,6 +565,7 @@ html.viewer-open, html.viewer-open body { overflow: hidden; }
   .viewer-close { margin-bottom: 28px; }
   .viewer-images { grid-column: 1; }
   .sections-index { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sections-index a:nth-child(7):last-child { aspect-ratio: 2 / 1; }
   .sections-body { grid-template-columns: minmax(0, 1fr); }
   .section-rail { display: none; }
   .to-top { width: 44px; height: 44px; }
