@@ -2166,49 +2166,6 @@
   ]
  },
  {
-  "slug": "bmc-container",
-  "title": "BMC Container",
-  "category": "3d",
-  "date": "17 Jun 2022",
-  "year": 2022,
-  "thumb": "images/designs/3d/bmc-container/container-thumb.webp",
-  "images": [
-   "images/designs/3d/bmc-container/Co1.webp",
-   "images/designs/3d/bmc-container/Co2.webp",
-   "images/designs/3d/bmc-container/Co3.webp",
-   "images/designs/3d/bmc-container/Co4.webp"
-  ],
-  "tags": [
-   "container",
-   "bmc",
-   "coffee",
-   "blender",
-   "modeling",
-   "render"
-  ],
-  "description": "A 3D model of the BMC coffee container.",
-  "links": [],
-  "hover": "images/designs/onm/container-onm.webp",
-  "dims": [
-   [
-    1920,
-    1080
-   ],
-   [
-    1920,
-    1080
-   ],
-   [
-    1920,
-    1080
-   ],
-   [
-    1920,
-    1080
-   ]
-  ]
- },
- {
   "slug": "sk1n",
   "title": "Sk1n",
   "category": "branding",
@@ -2324,39 +2281,6 @@
   ]
  },
  {
-  "slug": "isometric-room",
-  "title": "Isometric Room",
-  "category": "3d",
-  "date": "14 May 2022",
-  "year": 2022,
-  "thumb": "images/designs/3d/Night-thumb.webp",
-  "images": [
-   "images/designs/3d/Night-des.webp",
-   "images/designs/3d/IsometricRoom2ed.webp"
-  ],
-  "tags": [
-   "3d",
-   "room",
-   "isometric",
-   "blender",
-   "modeling",
-   "render"
-  ],
-  "description": "An isometric night-time room modelled and rendered in Blender.",
-  "links": [],
-  "hover": "images/designs/onm/Isometric-onm.webp",
-  "dims": [
-   [
-    2000,
-    2000
-   ],
-   [
-    2000,
-    2000
-   ]
-  ]
- },
- {
   "slug": "hestira",
   "title": "Hestira",
   "category": "branding",
@@ -2406,132 +2330,6 @@
    [
     1920,
     4939
-   ]
-  ]
- },
- {
-  "slug": "axe",
-  "title": "Axe on the Wall",
-  "category": "3d",
-  "date": "15 Mar 2022",
-  "year": 2022,
-  "thumb": "images/designs/3d/axe3d/axe-thumb.webp",
-  "images": [
-   "images/designs/3d/axe3d/Axe3.webp",
-   "images/designs/3d/axe3d/Axe4.webp",
-   "images/designs/3d/axe3d/AxeWall.webp",
-   "images/designs/3d/axe3d/s1.webp",
-   "images/designs/3d/axe3d/s2.webp",
-   "images/designs/3d/axe3d/s3.webp",
-   "images/designs/3d/axe3d/s4.webp",
-   "images/designs/3d/axe3d/s5.webp",
-   "images/designs/3d/axe3d/s6.webp",
-   "images/designs/3d/axe3d/s7.webp"
-  ],
-  "tags": [
-   "axe",
-   "universitywork",
-   "fancy",
-   "warhammer",
-   "blender",
-   "render"
-  ],
-  "description": "A decorative axe mounted on a wall, modelled in Blender as a university project.",
-  "links": [],
-  "hover": null,
-  "dims": [
-   [
-    1920,
-    1080
-   ],
-   [
-    1920,
-    1080
-   ],
-   [
-    1920,
-    1080
-   ],
-   [
-    1920,
-    1080
-   ],
-   [
-    1920,
-    1080
-   ],
-   [
-    1920,
-    1080
-   ],
-   [
-    1920,
-    1080
-   ],
-   [
-    1920,
-    1080
-   ],
-   [
-    1920,
-    1080
-   ],
-   [
-    1920,
-    1080
-   ]
-  ]
- },
- {
-  "slug": "iphone13",
-  "title": "iPhone 13 Pro",
-  "category": "3d",
-  "date": "4 Mar 2022",
-  "year": 2022,
-  "thumb": "images/designs/3d/iphone/iphone-thumb.webp",
-  "images": [
-   "images/designs/3d/iphone/2ED.webp",
-   "images/designs/3d/iphone/11ed.webp",
-   "images/designs/3d/iphone/9ed1.webp",
-   "images/designs/3d/iphone/9ed.webp",
-   "images/designs/3d/iphone/8ed1.webp",
-   "images/designs/3d/iphone/8ed.webp"
-  ],
-  "tags": [
-   "3d",
-   "iphone",
-   "asset",
-   "apple",
-   "blender",
-   "render"
-  ],
-  "description": "A detailed iPhone 13 Pro model, built in Blender as a reusable mockup asset.",
-  "links": [],
-  "hover": "images/designs/onm/iphone-onm.webp",
-  "dims": [
-   [
-    2000,
-    1125
-   ],
-   [
-    2000,
-    1125
-   ],
-   [
-    2000,
-    1125
-   ],
-   [
-    2000,
-    1125
-   ],
-   [
-    2000,
-    1125
-   ],
-   [
-    2000,
-    1125
    ]
   ]
  },
@@ -3202,30 +3000,6 @@
   ]
  },
  {
-  "slug": "mandolin-mondays",
-  "title": "Mandolin Mondays",
-  "category": "branding",
-  "date": "",
-  "year": null,
-  "thumb": "images/designs/mandolinmondays.webp",
-  "images": [
-   "images/designs/mandolinmondays.webp"
-  ],
-  "tags": [
-   "logo"
-  ],
-  "description": "Logo for Mandolin Mondays.",
-  "links": [],
-  "archive": true,
-  "hover": "images/designs/onm/mmonm.webp",
-  "dims": [
-   [
-    900,
-    900
-   ]
-  ]
- },
- {
   "slug": "stairway",
   "title": "Stairway",
   "category": "branding",
@@ -3442,54 +3216,6 @@
   ]
  },
  {
-  "slug": "resort",
-  "title": "Resort",
-  "category": "branding",
-  "date": "",
-  "year": null,
-  "thumb": "images/designs/resortsq.webp",
-  "images": [
-   "images/designs/resortsq.webp"
-  ],
-  "tags": [
-   "logo"
-  ],
-  "description": "Logo for a resort.",
-  "links": [],
-  "archive": true,
-  "hover": "images/designs/onm/resortonm.webp",
-  "dims": [
-   [
-    900,
-    900
-   ]
-  ]
- },
- {
-  "slug": "not-news",
-  "title": "Not News",
-  "category": "branding",
-  "date": "",
-  "year": null,
-  "thumb": "images/designs/notnews.webp",
-  "images": [
-   "images/designs/notnews.webp"
-  ],
-  "tags": [
-   "logo"
-  ],
-  "description": "Logo for Not News.",
-  "links": [],
-  "archive": true,
-  "hover": "images/designs/onm/nnonm.webp",
-  "dims": [
-   [
-    900,
-    900
-   ]
-  ]
- },
- {
   "slug": "spur",
   "title": "Spur",
   "category": "branding",
@@ -3506,57 +3232,6 @@
   "links": [],
   "archive": true,
   "hover": "images/designs/onm/sponm.webp",
-  "dims": [
-   [
-    900,
-    900
-   ]
-  ]
- },
- {
-  "slug": "cirilla",
-  "title": "Cirilla",
-  "category": "ui",
-  "date": "",
-  "year": null,
-  "thumb": "images/designs/CirillaUI.webp",
-  "images": [
-   "images/designs/CirillaUI.webp"
-  ],
-  "tags": [
-   "ui",
-   "ux"
-  ],
-  "description": "Interface design for Cirilla.",
-  "links": [],
-  "archive": true,
-  "hover": null,
-  "dims": [
-   [
-    900,
-    899
-   ]
-  ]
- },
- {
-  "slug": "bottles",
-  "title": "Bottle Practice",
-  "category": "3d",
-  "date": "",
-  "year": null,
-  "thumb": "images/designs/3d/Bottles.webp",
-  "images": [
-   "images/designs/3d/Bottles.webp"
-  ],
-  "tags": [
-   "3d",
-   "blender",
-   "render"
-  ],
-  "description": "Bottle rendering practice in Blender.",
-  "links": [],
-  "archive": true,
-  "hover": null,
   "dims": [
    [
     900,
