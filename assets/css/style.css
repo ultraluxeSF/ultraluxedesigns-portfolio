@@ -5,9 +5,9 @@
   --ink: #1b1b1d;
   --ink-2: #26262a;
   --muted: #6b6b66;
-  --accent: #ff4f1a;       /* the one loud colour */
+  --accent: #b6e03a;       /* the one loud colour: bright khaki-green, the brand colour turned up */
   --accent-ink: #1b1b1d;   /* text on accent */
-  --accent-text: #e8400c;  /* accent when used as text on white */
+  --accent-text: #5f7d0e;  /* accent when used as text on white */
   --line: rgba(27, 27, 29, 0.12);
   --line-strong: rgba(27, 27, 29, 0.85);
 
