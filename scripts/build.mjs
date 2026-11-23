@@ -702,6 +702,32 @@ function buildSitemap() {
   fs.writeFileSync(path.join(ROOT, "robots.txt"), `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}sitemap.xml\n`);
 }
 
+// ---------------- redirects from the previous site's URLs ----------------
+// Old pages (e.g. /designs/mverse, /3d/drone, /about) forward to their new
+// addresses so links from Google, Behance and social media keep working.
+function buildRedirects() {
+  const map = read("data/redirects.json");
+  for (const [from, to] of Object.entries(map)) {
+    const up = "../".repeat(from.split("/").length - 1);
+    const target = up + to;
+    const html = `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Ultraluxe Designs</title>
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="${SITE_URL + to.split("#")[0].replace(/index\.html/, "")}">
+<meta http-equiv="refresh" content="0; url=${target}">
+<script>location.replace(${JSON.stringify(target)});</script>
+</head>
+<body><p><a href="${target}">Ultraluxe Designs</a></p></body>
+</html>
+`;
+    fs.mkdirSync(path.join(ROOT, path.dirname(from)), { recursive: true });
+    fs.writeFileSync(path.join(ROOT, from), html);
+  }
+}
+
 for (const l of LANGS) {
   fs.rmSync(path.join(ROOT, dirOf(l), "work"), { recursive: true, force: true });
   buildHome(l);
@@ -710,4 +736,5 @@ for (const l of LANGS) {
 }
 build404();
 buildSitemap();
+buildRedirects();
 console.log(`Built ${LANGS.length} languages × (home, CV, ${projects.length} project pages).`);
