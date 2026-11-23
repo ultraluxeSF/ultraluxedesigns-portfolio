@@ -664,3 +664,18 @@ html:lang(ru) body { font-family: "Montserrat", system-ui, sans-serif; }
 @media (max-width: 760px) {
   :lang(uz) .contact h2, :lang(ru) .contact h2 { font-size: 12.5vw; }
 }
+
+/* ---------- Group headings in All work ---------- */
+.group-head {
+  grid-column: 1 / -1; display: flex; align-items: baseline; gap: 12px;
+  border-top: 1.5px solid var(--ink); padding: 16px 0 14px; margin-top: clamp(32px, 4vw, 56px);
+}
+.group-head:first-child { margin-top: 0; }
+.group-head h3 { font-size: var(--fs-lg); font-weight: 600; letter-spacing: -0.035em; line-height: 1.1; }
+.group-head span { font-size: var(--fs-sm); font-weight: 500; color: var(--muted); }
+.group-head.is-hidden { display: none; }
+.index .group-head { border-bottom: 0; padding-bottom: 6px; }
+.index .group-head + .row { border-top: 0; }
+@media (max-width: 760px) {
+  .group-head { padding: 12px 0 10px; margin-top: 28px; }
+}

@@ -643,14 +643,11 @@
    "utopia-ui": "UI/UX сайта жилого комплекса Utopia.",
    "consultantuz": "Логотип для консалтингового сервиса.",
    "utopia-approved": "Утверждённый логотип жилого комплекса Utopia.",
-   "utopia-rejected": "Более ранний вариант логотипа Utopia, который клиент не выбрал.",
    "aristocrat-home": "Логотип для люксового бренда фарфора.",
-   "bspace": "UI дашборда для финтех-сервиса.",
    "sourcery": "Логотип YouTube-канала о программировании Sourcery, построенный на клавише клавиатуры.",
    "go-anadolu": "Логотип Go Anadolu на основе тюльпана, символа Турции.",
    "maktab-bozor": "Логотип Maktab Bozor, интернет-магазина школьных принадлежностей.",
    "drone": "Футуристичный парящий дрон, модель и рендер в Blender.",
-   "hirerpro": "Логотип для HirerPro, платформы для найма.",
    "happy-horses-nft": "Логотип NFT-коллекции Happy Horses.",
    "croc-trading": "Логотип для Croc Trading.",
    "snail-cream": "Логотип для крема с муцином улитки.",
@@ -710,14 +707,11 @@
    "utopia-ui": "Utopia turar-joy majmuasi sayti uchun UI/UX.",
    "consultantuz": "Konsalting xizmati uchun logotip.",
    "utopia-approved": "Utopia turar-joy majmuasining tasdiqlangan logotipi.",
-   "utopia-rejected": "Mijoz tanlamagan Utopia logotipining oldingi varianti.",
    "aristocrat-home": "Hashamatli chinni brendi uchun logotip.",
-   "bspace": "Fintex xizmati uchun dashboard UI.",
    "sourcery": "Dasturlash haqidagi Sourcery YouTube kanali uchun klaviatura tugmasi asosidagi logotip.",
    "go-anadolu": "Turkiya ramzi bo‘lgan lola asosidagi Go Anadolu logotipi.",
    "maktab-bozor": "Maktab anjomlari onlayn do‘koni Maktab Bozor uchun logotip.",
    "drone": "Blenderda modellashtirilgan va render qilingan futuristik uchuvchi dron.",
-   "hirerpro": "Xodim yollash platformasi HirerPro uchun logotip.",
    "happy-horses-nft": "Happy Horses NFT to‘plami uchun logotip.",
    "croc-trading": "Croc Trading uchun logotip.",
    "snail-cream": "Shilliqqurt kremi uchun logotip.",
@@ -743,6 +737,26 @@
    "unicorn": "Yakkashox tasvirlangan logotip konsepsiyasi.",
    "spur": "Spur uchun logotip.",
    "cf-transport": "Yuk tashish kompaniyasi CF Transport uchun logotip va korporativ uslub: logotiplar tizimi, brend ranglari, tipografika va mokaplar."
+  }
+ },
+ "groups": {
+  "en": {
+   "branding": "Branding and logos",
+   "social": "Graphic and social media design",
+   "3d": "3D",
+   "ui": "UI/UX design"
+  },
+  "ru": {
+   "branding": "Брендинг и логотипы",
+   "social": "Графика и дизайн для соцсетей",
+   "3d": "3D-графика",
+   "ui": "UI/UX-дизайн"
+  },
+  "uz": {
+   "branding": "Brending va logotiplar",
+   "social": "Grafika va SMM dizayn",
+   "3d": "3D grafika",
+   "ui": "UI/UX dizayn"
   }
  }
 }

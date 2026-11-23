@@ -23,7 +23,7 @@ const YM_ID = 54894073;
 
 const LOGO = fs.readFileSync(path.join(ROOT, "assets/logo-inline.svg"), "utf8");
 // branding and graphic work first, UI/UX last; original order kept within each group
-const RANK = { branding: 0, social: 0, "3d": 1, ui: 2 };
+const RANK = { branding: 0, social: 1, "3d": 2, ui: 3 };
 projects.sort((a, b) => RANK[a.category] - RANK[b.category]);
 const bySlug = Object.fromEntries(projects.map((p) => [p.slug, p]));
 const esc = (s = "") =>
@@ -293,9 +293,13 @@ function buildHome(lang) {
   const { t, cats, site } = C;
   const ctx = { lang, R: lang === "en" ? "" : "../", page: "" };
   const R = ctx.R;
+  const groups = I18N.groups[lang];
+  const count = (c) => projects.filter((p) => p.category === c).length;
+  const startsGroup = (p, i) => i === 0 || projects[i - 1].category !== p.category;
   const cards = projects
     .map(
-      (p) => `
+      (p, i) => `${startsGroup(p, i) ? `
+      <div class="group-head" data-cat="${p.category}"><h3>${esc(groups[p.category])}</h3><span>${count(p.category)}</span></div>` : ""}
       <article class="card" data-cat="${p.category}">
         <a href="work/${p.slug}/" data-project="${p.slug}">
           <div class="media${p.hover ? " has-hover" : ""}">
@@ -317,7 +321,8 @@ function buildHome(lang) {
 
   const rows = projects
     .map(
-      (p) => `
+      (p, i) => `${startsGroup(p, i) ? `
+        <li class="group-head" data-cat="${p.category}"><h3>${esc(groups[p.category])}</h3><span>${count(p.category)}</span></li>` : ""}
         <li class="row" data-cat="${p.category}" data-thumb="${asset(p.thumb, R)}">
           <a href="work/${p.slug}/" data-project="${p.slug}"><span>${esc(p.title)}</span><span>${cats[p.category]}</span><span>${esc(p.tags.slice(0, 2).map((x) => "#" + x).join(" "))}</span><span>${p.year || "–"}</span></a>
         </li>`

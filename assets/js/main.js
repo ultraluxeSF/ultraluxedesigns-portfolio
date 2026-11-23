@@ -333,6 +333,7 @@
   if (works) {
     var cards = works.querySelectorAll(".card");
     var rows = works.querySelectorAll(".row");
+    var groupHeads = works.querySelectorAll(".group-head");
     var filterButtons = works.querySelectorAll("[data-filter]");
     var viewButtons = works.querySelectorAll("[data-view-btn]");
 
@@ -340,7 +341,7 @@
       btn.addEventListener("click", function () {
         var f = btn.getAttribute("data-filter");
         filterButtons.forEach(function (b) { b.setAttribute("aria-pressed", String(b === btn)); });
-        [cards, rows].forEach(function (list) {
+        [cards, rows, groupHeads].forEach(function (list) {
           list.forEach(function (el) {
             el.classList.toggle("is-hidden", f !== "all" && el.getAttribute("data-cat") !== f);
           });

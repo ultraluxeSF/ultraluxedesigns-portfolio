@@ -2474,33 +2474,6 @@
   ]
  },
  {
-  "slug": "utopia-rejected",
-  "title": "Utopia, rejected",
-  "category": "branding",
-  "date": "16 Nov 2021",
-  "year": 2021,
-  "thumb": "images/designs/utopiav8.webp",
-  "images": [
-   "images/designs/utopiaPresentation.webp"
-  ],
-  "tags": [
-   "utopia",
-   "residence",
-   "house",
-   "logo",
-   "apartment"
-  ],
-  "description": "An earlier Utopia logo direction that the client turned down.",
-  "links": [],
-  "hover": "images/designs/onm/stationeryMocksqonm.webp",
-  "dims": [
-   [
-    1920,
-    8430
-   ]
-  ]
- },
- {
   "slug": "aristocrat-home",
   "title": "Aristocrat Home",
   "category": "branding",
@@ -2523,32 +2496,6 @@
    [
     1080,
     5318
-   ]
-  ]
- },
- {
-  "slug": "bspace",
-  "title": "BSpace",
-  "category": "ui",
-  "date": "16 Sep 2021",
-  "year": 2021,
-  "thumb": "images/designs/MainThumbnailBSpace.webp",
-  "images": [
-   "images/designs/WidescreenOnPageBspace.webp"
-  ],
-  "tags": [
-   "bspace",
-   "finance",
-   "ui",
-   "dashboard"
-  ],
-  "description": "Fintech dashboard UI.",
-  "links": [],
-  "hover": "images/designs/onm/ThumbnailBSpaceonm.webp",
-  "dims": [
-   [
-    1920,
-    2160
    ]
   ]
  },
@@ -2666,30 +2613,6 @@
    [
     1920,
     1002
-   ]
-  ]
- },
- {
-  "slug": "hirerpro",
-  "title": "HirerPro",
-  "category": "branding",
-  "date": "",
-  "year": null,
-  "thumb": "images/designs/HirerPro-thumb.webp",
-  "images": [
-   "images/designs/HirerPro-thumb.webp"
-  ],
-  "tags": [
-   "logo"
-  ],
-  "description": "Logo for HirerPro, a hiring platform.",
-  "links": [],
-  "archive": true,
-  "hover": "images/designs/onm/HirerPro-onm.webp",
-  "dims": [
-   [
-    900,
-    900
    ]
   ]
  },
