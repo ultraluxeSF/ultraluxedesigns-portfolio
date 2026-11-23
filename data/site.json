@@ -46,7 +46,7 @@
   ],
   "about": [
     "Hello, I'm Iskandar. I'm a graphic designer who builds brands: logos, identity systems and the everyday graphics that keep a brand alive.",
-    "I've worked with clients in Uzbekistan, the UK, Germany, Austria, Turkey and Russia, from a yarn store in Berlin to an investment company in the UK. Since 2023 I've also designed every Instagram graphic for Inter Nation English School."
+    "I've worked with clients in Uzbekistan, Russia, Austria, Germany, Switzerland, the UK, Canada, Thailand, Cyprus, Turkey and Chile, from a yarn store in Berlin to an investment company in the UK. Since 2023 I've also designed every Instagram graphic for Inter Nation English School."
   ],
   "facts": [
     [
@@ -59,7 +59,7 @@
     ],
     [
       "Clients from",
-      "Uzbekistan, UK, Germany, Austria, Turkey, Russia"
+      "Uzbekistan, Russia, Austria, Germany, Switzerland, UK, Canada, Thailand, Cyprus, Turkey, Chile"
     ]
   ],
   "social": [
@@ -177,9 +177,9 @@
       "line": "A monochrome coffee brand, from logo rules to cups, caps and a delivery van."
     },
     {
-      "slug": "visualaddiction",
-      "image": "images/designs/visualaddiction/va-pres-08.webp",
-      "line": "Logo redesign for an Austrian design agency."
+      "slug": "lieblingsgarn",
+      "image": "images/designs/lieblingsgarn-feature.webp",
+      "line": "Logo and identity for a Berlin yarn store: a yarn-ball mark, a striped pattern and tote bags."
     }
   ],
   "process": [

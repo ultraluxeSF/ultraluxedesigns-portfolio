@@ -236,7 +236,7 @@ ${header(prefix, "home")}
     <div class="wrap">
       <div class="section-head">
         <h2>Selected<br>branding</h2>
-        <p>Identities, brand books and graphic systems for companies in Uzbekistan, Europe and the UK.</p>
+        <p>Identities, brand books and graphic systems for companies in Uzbekistan and ten other countries.</p>
       </div>
       <div class="cases">${featured}</div>
     </div>
