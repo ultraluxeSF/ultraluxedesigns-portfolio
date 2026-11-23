@@ -1,5 +1,35 @@
 [
  {
+  "slug": "cf-transport",
+  "title": "CF Transport",
+  "category": "branding",
+  "date": "April 2026",
+  "year": 2026,
+  "thumb": "images/designs/cft-transport-thumb.webp",
+  "images": [
+   "images/designs/cft-transport-branding.webp"
+  ],
+  "tags": [
+   "cftransport",
+   "transport",
+   "logistics",
+   "trucking",
+   "freight",
+   "branding",
+   "identity",
+   "logo"
+  ],
+  "description": "Logo and brand identity for CF Transport, a freight trucking company: logo system, brand colours, typography and mockups.",
+  "links": [],
+  "hover": "images/designs/onm/cft-transport-onm.webp",
+  "dims": [
+   [
+    2000,
+    3556
+   ]
+  ]
+ },
+ {
   "slug": "mverse",
   "title": "Mverse",
   "category": "branding",

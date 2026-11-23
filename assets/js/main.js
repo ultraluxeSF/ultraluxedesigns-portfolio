@@ -471,6 +471,8 @@
     var updateViewerTop = initToTop(viewer.querySelector("[data-to-top]"), scrollEl, function () { return viewerScroller; });
     var current = null, lastFocus = null, pageY = 0;
 
+    var T = { date: "Date", links: "Links", imageOf: "image {i} of {n}" };
+    try { var tj = document.getElementById("i18n"); if (tj) T = JSON.parse(tj.textContent); } catch (e) {}
     function text(node, value) { node.textContent = value || ""; node.hidden = !value; }
     function visibleOrder() {
       // previous / next follow the active filter
@@ -493,7 +495,7 @@
         if (typeof v === "string") dd.textContent = v; else dd.appendChild(v);
         el.meta.appendChild(dt); el.meta.appendChild(dd);
       }
-      if (p.date) row("Date", p.date);
+      if (p.date) row(T.date, p.date);
       if (p.links && p.links.length) {
         var frag = document.createDocumentFragment();
         p.links.forEach(function (l, i) {
@@ -501,7 +503,7 @@
           var a = document.createElement("a"); a.href = l[1]; a.textContent = l[0]; a.target = "_blank"; a.rel = "noopener";
           frag.appendChild(a);
         });
-        row("Links", frag);
+        row(T.links, frag);
       }
       el.meta.hidden = !el.meta.children.length;
       el.images.innerHTML = "";
@@ -509,7 +511,7 @@
         list.forEach(function (src, i) {
           var img = document.createElement("img");
           img.src = src;
-          img.alt = label + ", image " + (i + 1) + " of " + list.length;
+          img.alt = label + ", " + T.imageOf.replace("{i}", i + 1).replace("{n}", list.length);
           if (dims && dims[i]) { img.width = dims[i][0]; img.height = dims[i][1]; }
           img.decoding = "async";
           if (i > 1) img.loading = "lazy";
