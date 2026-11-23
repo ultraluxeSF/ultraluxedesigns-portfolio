@@ -240,9 +240,10 @@ ul, ol { list-style: none; margin: 0; padding: 0; }
 .views button { border-color: transparent; }
 
 /* ---------- Grid view ---------- */
-.grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; border-radius: var(--radius); overflow: hidden; }
+.grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
 .card a { display: block; }
-.card .media { position: relative; overflow: hidden; background: #e6e6e2; aspect-ratio: 1 / 1; }
+.card .media { position: relative; overflow: hidden; background: #e6e6e2; aspect-ratio: 1 / 1; border-radius: 14px; }
+.card a:focus-visible { border-radius: 14px; }
 .card .media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .card .media .thumb { opacity: 0; transition: opacity 0.6s, transform 1.2s var(--ease); }
 .card .media .thumb.is-loaded { opacity: 1; }
@@ -538,7 +539,8 @@ html.viewer-open, html.viewer-open body { overflow: hidden; }
   .case:nth-child(n) { grid-column: 1 / -1; }
   .case-media { height: 72vw; border-radius: 14px; }
   .case-open { opacity: 1; transform: none; }
-  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); border-radius: 14px; }
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+  .card .media { border-radius: 12px; }
   .views { display: none; }
   .index-head, .row a { grid-template-columns: minmax(0, 1fr) auto; }
   .index-head span:nth-child(2), .index-head span:nth-child(3),
