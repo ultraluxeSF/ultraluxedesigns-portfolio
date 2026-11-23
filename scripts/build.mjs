@@ -154,7 +154,7 @@ function buildHome() {
     .map(
       (p) => `
         <li class="row" data-cat="${p.category}" data-thumb="${asset(p.thumb, prefix)}">
-          <a href="work/${p.slug}/" data-project="${p.slug}"><span>${esc(p.title)}</span><span>${CATS[p.category]}</span><span>${esc(p.tags.slice(0, 2).map((t) => "#" + t).join(" "))}</span><span>${p.year || "—"}</span></a>
+          <a href="work/${p.slug}/" data-project="${p.slug}"><span>${esc(p.title)}</span><span>${CATS[p.category]}</span><span>${esc(p.tags.slice(0, 2).map((t) => "#" + t).join(" "))}</span><span>${p.year || "–"}</span></a>
         </li>`
     )
     .join("");
