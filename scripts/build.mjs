@@ -297,7 +297,7 @@ function buildHome(lang) {
   const count = (c) => projects.filter((p) => p.category === c).length;
   const startsGroup = (p, i) => i === 0 || projects[i - 1].category !== p.category;
   // Long groups show their first SHOW cards; the rest open with a "See more" button.
-  const SHOW = 10;
+  const SHOW = 8;
   const posInGroup = (p, i) => projects.slice(0, i).filter((x) => x.category === p.category).length;
   const moreButton = (c) => `
       <button type="button" class="show-more" data-more="${c}" data-cat="${c}" aria-expanded="false">${t.showMore}<span>+${count(c) - SHOW}</span></button>`;
