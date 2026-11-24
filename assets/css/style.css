@@ -11,16 +11,16 @@
   --line: rgba(27, 27, 29, 0.12);
   --line-strong: rgba(27, 27, 29, 0.85);
 
-  --gutter: clamp(14px, 2.4vw, 36px);
-  --max: 1680px;
+  --gutter: clamp(14px, 2.4vw, 56px);
+  --max: 2560px;
   --radius: 18px;
 
   --fs-sm: 0.875rem;
   --fs-base: 1rem;
   --fs-md: 1.25rem;
   --fs-lg: clamp(1.5rem, 2.2vw, 2rem);
-  --fs-xl: clamp(2.5rem, 5.4vw, 5.5rem);
-  --fs-display: clamp(3.25rem, 9vw, 10.5rem);
+  --fs-xl: clamp(2.5rem, 5.4vw, 7rem);
+  --fs-display: clamp(3.25rem, 9vw, 13rem);
 
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -120,7 +120,7 @@ ul, ol { list-style: none; margin: 0; padding: 0; }
 }
 .hero > .wrap { position: relative; z-index: 2; }
 .hero h1 {
-  font-size: clamp(3rem, 7.4vw, 8.75rem);
+  font-size: clamp(3rem, 7.2vw, 11.5rem);
   font-weight: 600;
   line-height: 0.98;
   letter-spacing: -0.055em;
@@ -143,7 +143,7 @@ ul, ol { list-style: none; margin: 0; padding: 0; }
 .hero-head {
   position: absolute; z-index: 1; pointer-events: none;
   right: clamp(16px, 5vw, 110px); top: calc(50% - 70px);
-  height: min(62vh, 640px); aspect-ratio: 820 / 1100;
+  height: min(62vh, 780px); aspect-ratio: 820 / 1100;
   transform: translateY(-50%);
 }
 .hero-head::before {
