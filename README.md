@@ -1,6 +1,6 @@
 # Ultraluxe Designs portfolio
 
-Static portfolio site for [Ultraluxe Designs](https://ultraluxedesigns.com), hosted on GitHub Pages. No framework and no build dependencies: plain HTML, CSS and JavaScript, Poppins from Google Fonts.
+Static portfolio site for [Ultraluxe Designs](https://ultraluxedesigns.com), hosted on GitHub Pages. No framework and no build dependencies: plain HTML, CSS and JavaScript, Golos Text from Google Fonts (Latin and Cyrillic).
 
 ## Structure
 
@@ -29,7 +29,7 @@ A white circle that turns black over light backgrounds and light parts of images
 
 ## Languages
 
-English pages live at the root, Russian in `/ru/`, Uzbek (Latin script) in `/uz/`. Each page links to its versions in the other languages (switch in the header, `hreflang` in the head). Poppins has no Cyrillic, so Russian pages use Montserrat.
+English pages live at the root, Russian in `/ru/`, Uzbek (Latin script) in `/uz/`. Each page links to its versions in the other languages (switch in the header, `hreflang` in the head).
 
 ## Analytics
 
