@@ -33,7 +33,7 @@ English pages live at the root, Russian in `/ru/`, Uzbek (Latin script) in `/uz/
 
 ## Analytics
 
-Google Analytics (G-FDHWKRH7W0) and Yandex Metrika (54894073) load only on ultraluxedesigns.com, so test builds on github.io don't affect the stats. `assets/js/analytics.js` sends link clicks, project opens and contact clicks as events.
+Google Analytics (G-FDHWKRH7W0), Yandex Metrika (54894073, with Webvisor) and Microsoft Clarity (zjbpoh70qd, session recordings and heatmaps) load only on ultraluxedesigns.com, so test builds on github.io don't affect the stats. `assets/js/analytics.js` sends link clicks, project opens and contact clicks as events.
 
 ## Deploying to ultraluxedesigns.com
 
